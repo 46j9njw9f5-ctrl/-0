@@ -1,13 +1,15 @@
-import type { Company, Evaluation } from '../types'
-import { levelColor } from '../ui'
+import type { Company, Evaluation, GrowthEvaluation } from '../types'
+import { growthColor, levelColor } from '../ui'
 import { Avatar } from './Bits'
 
 interface Row {
   company: Company
-  evaluation: Evaluation
+  growth: GrowthEvaluation
+  evaluation?: Evaluation
 }
 
 export function ComparePanel({ rows, onClose }: { rows: Row[]; onClose: () => void }) {
+  const anyLabor = rows.some((r) => r.evaluation)
   return (
     <div className="overlay" onClick={onClose}>
       <div className="modal" style={{ maxWidth: 820 }} onClick={(e) => e.stopPropagation()}>
@@ -35,36 +37,55 @@ export function ComparePanel({ rows, onClose }: { rows: Row[]; onClose: () => vo
             </thead>
             <tbody>
               <tr>
-                <td>ブラック度</td>
+                <td>将来性スコア</td>
                 {rows.map((r) => (
-                  <td key={r.company.id} style={{ fontWeight: 800, color: levelColor[r.evaluation.level] }}>
-                    {r.evaluation.blackScore}
+                  <td key={r.company.id} style={{ fontWeight: 800, color: growthColor(r.growth.growthScore) }}>
+                    {r.growth.growthScore}
                   </td>
                 ))}
               </tr>
               <tr>
-                <td>区分</td>
+                <td>成長ステージ</td>
                 {rows.map((r) => (
-                  <td key={r.company.id} style={{ color: levelColor[r.evaluation.level] }}>
-                    {r.evaluation.levelLabel}
+                  <td key={r.company.id} style={{ color: growthColor(r.growth.growthScore) }}>
+                    {r.growth.stageLabel}
                   </td>
                 ))}
               </tr>
-              <Metric rows={rows} label="月残業(h)" get={(c) => c.metrics.avgOvertimeHours} lowerBetter />
-              <Metric rows={rows} label="3年離職率(%)" get={(c) => c.metrics.turnover3yrRate} lowerBetter />
-              <Metric rows={rows} label="有給消化(%)" get={(c) => c.metrics.paidLeaveRate} />
-              <Metric rows={rows} label="平均勤続(年)" get={(c) => c.metrics.avgTenureYears} />
-              <Metric rows={rows} label="残業代支給(%)" get={(c) => c.metrics.overtimePaidRate} />
-              <Metric rows={rows} label="平均年収(万円)" get={(c) => c.avgAnnualSalary} />
-              <Metric rows={rows} label="是正勧告(件)" get={(c) => c.metrics.laborViolationCount} lowerBetter />
               <tr>
-                <td>危険信号</td>
+                <td>売上成長(年率)</td>
                 {rows.map((r) => (
-                  <td key={r.company.id} style={{ color: r.evaluation.redFlags.length ? 'var(--danger)' : 'var(--text-faint)' }}>
-                    {r.evaluation.redFlags.length} 件
+                  <td key={r.company.id}>
+                    {r.growth.revenueCagr !== null ? `${r.growth.revenueCagr.toFixed(1)}%` : '—'}
                   </td>
                 ))}
               </tr>
+              <Metric rows={rows} label="従業員数" get={(c) => c.company.employees} />
+              <Metric rows={rows} label="設立年" get={(c) => c.company.founded ?? 0} lowerBetter />
+
+              {anyLabor && (
+                <>
+                  <tr>
+                    <td colSpan={rows.length + 1} style={{ paddingTop: 14, color: 'var(--text-faint)', fontSize: 12 }}>
+                      — 労働環境 —
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ブラック度</td>
+                    {rows.map((r) => (
+                      <td
+                        key={r.company.id}
+                        style={{ fontWeight: 800, color: r.evaluation ? levelColor[r.evaluation.level] : 'var(--text-faint)' }}
+                      >
+                        {r.evaluation ? r.evaluation.blackScore : '未連携'}
+                      </td>
+                    ))}
+                  </tr>
+                  <LaborMetric rows={rows} label="月残業(h)" get={(m) => m.avgOvertimeHours} lowerBetter />
+                  <LaborMetric rows={rows} label="3年離職率(%)" get={(m) => m.turnover3yrRate} lowerBetter />
+                  <LaborMetric rows={rows} label="有給消化(%)" get={(m) => m.paidLeaveRate} />
+                </>
+              )}
             </tbody>
           </table>
         </div>
@@ -73,7 +94,6 @@ export function ComparePanel({ rows, onClose }: { rows: Row[]; onClose: () => vo
   )
 }
 
-/** 各行。最良の値をハイライト。 */
 function Metric({
   rows,
   label,
@@ -82,22 +102,51 @@ function Metric({
 }: {
   rows: Row[]
   label: string
-  get: (c: Company) => number
+  get: (r: Row) => number
   lowerBetter?: boolean
 }) {
-  const vals = rows.map((r) => get(r.company))
-  const best = lowerBetter ? Math.min(...vals) : Math.max(...vals)
+  const vals = rows.map(get)
+  const valid = vals.filter((v) => v > 0)
+  const best = valid.length ? (lowerBetter ? Math.min(...valid) : Math.max(...valid)) : NaN
   return (
     <tr>
       <td>{label}</td>
       {rows.map((r, i) => {
         const isBest = vals[i] === best && rows.length > 1
         return (
-          <td
-            key={r.company.id}
-            style={{ fontWeight: isBest ? 800 : 400, color: isBest ? 'var(--excellent)' : 'var(--text)' }}
-          >
-            {vals[i]}
+          <td key={r.company.id} style={{ fontWeight: isBest ? 800 : 400, color: isBest ? 'var(--excellent)' : 'var(--text)' }}>
+            {vals[i] > 0 ? vals[i].toLocaleString() : '—'}
+            {isBest ? ' ◎' : ''}
+          </td>
+        )
+      })}
+    </tr>
+  )
+}
+
+function LaborMetric({
+  rows,
+  label,
+  get,
+  lowerBetter,
+}: {
+  rows: Row[]
+  label: string
+  get: (m: NonNullable<Company['metrics']>) => number
+  lowerBetter?: boolean
+}) {
+  const vals = rows.map((r) => (r.company.metrics ? get(r.company.metrics) : null))
+  const present = vals.filter((v): v is number => v !== null)
+  const best = present.length ? (lowerBetter ? Math.min(...present) : Math.max(...present)) : NaN
+  return (
+    <tr>
+      <td>{label}</td>
+      {rows.map((r, i) => {
+        const v = vals[i]
+        const isBest = v === best && present.length > 1
+        return (
+          <td key={r.company.id} style={{ fontWeight: isBest ? 800 : 400, color: isBest ? 'var(--excellent)' : 'var(--text)' }}>
+            {v === null ? '—' : v}
             {isBest ? ' ◎' : ''}
           </td>
         )

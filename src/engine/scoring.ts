@@ -1,4 +1,4 @@
-import type { Company, Evaluation, FactorScore, RiskLevel } from '../types'
+import type { CompanyWithLabor, Evaluation, FactorScore, RiskLevel } from '../types'
 
 /**
  * ブラック企業スコアリングエンジン。
@@ -108,7 +108,7 @@ export function riskLevel(blackScore: number): { level: RiskLevel; label: string
   return { level: 'danger', label: 'ブラック危険' }
 }
 
-function buildFactors(c: Company): FactorScore[] {
+function buildFactors(c: CompanyWithLabor): FactorScore[] {
   const m = c.metrics
   const defs: Omit<FactorScore, 'contribution'>[] = [
     {
@@ -183,7 +183,7 @@ function buildFactors(c: Company): FactorScore[] {
 }
 
 /** 明示条件による危険信号。 */
-function buildRedFlags(c: Company): string[] {
+function buildRedFlags(c: CompanyWithLabor): string[] {
   const m = c.metrics
   const flags: string[] = []
   if (m.avgOvertimeHours >= 80)
@@ -207,7 +207,7 @@ function buildRedFlags(c: Company): string[] {
 }
 
 /** 就職者向けの良い点。 */
-function buildGoodPoints(c: Company): string[] {
+function buildGoodPoints(c: CompanyWithLabor): string[] {
   const m = c.metrics
   const good: string[] = []
   if (m.avgOvertimeHours <= 20) good.push(`残業が少ない（${m.avgOvertimeHours}h/月）`)
@@ -215,7 +215,11 @@ function buildGoodPoints(c: Company): string[] {
   if (m.turnover3yrRate <= 10) good.push(`定着率が高い（3年離職率 ${m.turnover3yrRate}%）`)
   if (m.avgTenureYears >= 10) good.push(`平均勤続 ${m.avgTenureYears}年 — 長く働ける`)
   if (m.overtimePaidRate >= 100) good.push('残業代は全額支給')
-  if (c.avgAnnualSalary >= c.industryAvgSalary * 1.1)
+  if (
+    c.avgAnnualSalary !== undefined &&
+    c.industryAvgSalary !== undefined &&
+    c.avgAnnualSalary >= c.industryAvgSalary * 1.1
+  )
     good.push(`年収が業界平均を上回る（${c.avgAnnualSalary}万円）`)
   if (m.womenManagerRate >= 20) good.push(`女性管理職比率 ${m.womenManagerRate}%`)
   if (m.laborViolationCount === 0 && m.socialInsurance)
@@ -223,7 +227,7 @@ function buildGoodPoints(c: Company): string[] {
   return good
 }
 
-function buildVerdict(blackScore: number, level: RiskLevel, c: Company): string {
+function buildVerdict(blackScore: number, level: RiskLevel, c: CompanyWithLabor): string {
   const name = c.name
   switch (level) {
     case 'danger':
@@ -238,7 +242,7 @@ function buildVerdict(blackScore: number, level: RiskLevel, c: Company): string 
 }
 
 /** 企業を評価して結果を返す。純粋関数。 */
-export function evaluate(c: Company): Evaluation {
+export function evaluate(c: CompanyWithLabor): Evaluation {
   const factors = buildFactors(c)
   const blackScoreRaw = factors.reduce((s, f) => s + f.contribution, 0)
   const blackScore = Math.round(clamp(blackScoreRaw))

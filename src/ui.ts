@@ -1,4 +1,4 @@
-import type { RiskLevel } from './types'
+import type { GrowthStage, RiskLevel } from './types'
 
 export const levelClass: Record<RiskLevel, string> = {
   excellent: 'lv-excellent',
@@ -20,4 +20,26 @@ export function riskColor(risk: number): string {
   if (risk < 50) return 'var(--standard)'
   if (risk < 70) return 'var(--caution)'
   return 'var(--danger)'
+}
+
+// ---------- 将来性 ----------
+
+export const stageClass: Record<GrowthStage, string> = {
+  hypergrowth: 'lv-excellent',
+  growth: 'lv-standard',
+  mature: 'lv-caution',
+  declining: 'lv-danger',
+}
+
+/** 将来性スコア(0-100)の色。高いほど良い（緑）。 */
+export function growthColor(score: number): string {
+  if (score >= 70) return 'var(--excellent)'
+  if (score >= 58) return 'var(--standard)'
+  if (score >= 46) return 'var(--caution)'
+  return 'var(--danger)'
+}
+
+/** ポテンシャルポイント(0-100)のバー色（高いほど良い）。 */
+export function potentialColor(p: number): string {
+  return growthColor(p)
 }

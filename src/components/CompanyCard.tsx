@@ -1,9 +1,10 @@
-import type { Company, Evaluation } from '../types'
-import { Avatar, RiskBadge, ScoreDonut } from './Bits'
+import type { Company, Evaluation, GrowthEvaluation } from '../types'
+import { Avatar, GrowthBadge, GrowthDonut } from './Bits'
 
 interface Props {
   company: Company
-  evaluation: Evaluation
+  growth: GrowthEvaluation
+  evaluation?: Evaluation
   isFavorite: boolean
   inCompare: boolean
   onOpen: () => void
@@ -13,6 +14,7 @@ interface Props {
 
 export function CompanyCard({
   company,
+  growth,
   evaluation,
   isFavorite,
   inCompare,
@@ -34,36 +36,61 @@ export function CompanyCard({
       </div>
 
       <div className="score-wrap">
-        <ScoreDonut evaluation={evaluation} />
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-          <RiskBadge evaluation={evaluation} />
+        <GrowthDonut growth={growth} />
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 6, minWidth: 0 }}>
+          <GrowthBadge growth={growth} />
           <span style={{ fontSize: 12, color: 'var(--text-faint)' }}>
-            ホワイト度 {evaluation.whiteScore} / 平均年収 {company.avgAnnualSalary}万円
+            {growth.revenueCagr !== null
+              ? `売上 年率 ${growth.revenueCagr.toFixed(1)}%`
+              : company.founded
+                ? `設立 ${company.founded}年`
+                : company.listed
+                  ? '上場企業'
+                  : '非上場'}
           </span>
-          {evaluation.redFlags.length > 0 && (
-            <span style={{ fontSize: 12, color: 'var(--danger)' }}>
-              ⚠ 危険信号 {evaluation.redFlags.length} 件
+          {evaluation && (
+            <span
+              className={`badge ${evaluation.redFlags.length ? 'lv-danger' : 'lv-standard'}`}
+              style={{ fontSize: 11 }}
+            >
+              ブラック度 {evaluation.blackScore}
+              {evaluation.redFlags.length > 0 ? ` ・⚠${evaluation.redFlags.length}` : ''}
             </span>
           )}
         </div>
       </div>
 
-      <p className="card__blurb">{company.blurb}</p>
+      {company.blurb && <p className="card__blurb">{company.blurb}</p>}
 
       <div className="card__stats">
-        <div className="stat">
-          <div className="stat__val">{m.avgOvertimeHours}h</div>
-          <div className="stat__label">月残業</div>
-        </div>
-        <div className="stat">
-          <div className="stat__val">{m.turnover3yrRate}%</div>
-          <div className="stat__label">3年離職率</div>
-        </div>
-        <div className="stat">
-          <div className="stat__val">{m.paidLeaveRate}%</div>
-          <div className="stat__label">有給消化</div>
-        </div>
+        {m ? (
+          <>
+            <Stat val={`${m.avgOvertimeHours}h`} label="月残業" />
+            <Stat val={`${m.turnover3yrRate}%`} label="3年離職率" />
+            <Stat val={`${m.paidLeaveRate}%`} label="有給消化" />
+          </>
+        ) : (
+          <>
+            <Stat val={company.employees.toLocaleString()} label="従業員数" />
+            <Stat val={company.founded ? `${company.founded}` : '—'} label="設立年" />
+            <Stat val={company.listed ? '上場' : '非上場'} label="上場区分" />
+          </>
+        )}
       </div>
+
+      {company.source && (
+        <div style={{ fontSize: 11, color: 'var(--text-faint)' }}>
+          出典: {company.source.name}（{company.source.license}）
+          {company.website && (
+            <>
+              {' ・ '}
+              <a href={company.website} target="_blank" rel="noreferrer">
+                公式サイト
+              </a>
+            </>
+          )}
+        </div>
+      )}
 
       <div className="card__actions">
         <button className="btn btn--primary" onClick={onOpen}>
@@ -85,6 +112,15 @@ export function CompanyCard({
           {isFavorite ? '★' : '☆'}
         </button>
       </div>
+    </div>
+  )
+}
+
+function Stat({ val, label }: { val: string; label: string }) {
+  return (
+    <div className="stat">
+      <div className="stat__val">{val}</div>
+      <div className="stat__label">{label}</div>
     </div>
   )
 }

@@ -1,0 +1,2962 @@
+[
+  {
+    "id": "Q183275",
+    "name": "三菱グループ",
+    "industry": "機械・重工業",
+    "industryRaw": [
+      "軍需産業",
+      "取引"
+    ],
+    "location": "日本",
+    "employees": 350000,
+    "founded": 1870,
+    "listed": false,
+    "website": "https://www.mitsubishi.com/en/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2010,
+        "value": 350000
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2018,
+        "value": 532600000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q183275"
+    }
+  },
+  {
+    "id": "Q53247",
+    "name": "パナソニックホールディングス",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学",
+      "家電機器"
+    ],
+    "location": "大阪府",
+    "employees": 257533,
+    "founded": 1918,
+    "listed": true,
+    "website": "https://holdings.panasonic/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2017,
+        "value": 257533
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2008,
+        "value": 9068928000000
+      },
+      {
+        "year": 2009,
+        "value": 7765507000000
+      },
+      {
+        "year": 2010,
+        "value": 7417980000000
+      },
+      {
+        "year": 2011,
+        "value": 8692372000000
+      },
+      {
+        "year": 2012,
+        "value": 7846216000000
+      },
+      {
+        "year": 2013,
+        "value": 7303045000000
+      },
+      {
+        "year": 2014,
+        "value": 7736541000000
+      },
+      {
+        "year": 2015,
+        "value": 7715037000000
+      },
+      {
+        "year": 2016,
+        "value": 7626306000000
+      },
+      {
+        "year": 2017,
+        "value": 7343707000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q53247"
+    }
+  },
+  {
+    "id": "Q9584",
+    "name": "本田技研工業",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "製造業",
+      "自動車産業"
+    ],
+    "location": "東京都",
+    "employees": 204035,
+    "founded": 1948,
+    "listed": true,
+    "website": "https://global.honda",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 204035
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2022,
+        "value": 14950000000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q9584"
+    }
+  },
+  {
+    "id": "Q186394",
+    "name": "富士通",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電気通信産業",
+      "電子工業"
+    ],
+    "location": "日本",
+    "employees": 200000,
+    "founded": 1935,
+    "listed": true,
+    "website": "https://global.fujitsu",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 200000
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2010,
+        "value": 50317000000
+      },
+      {
+        "year": 2018,
+        "value": 1270000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q186394"
+    }
+  },
+  {
+    "id": "Q20165",
+    "name": "日産自動車",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "日本",
+    "employees": 136134,
+    "founded": 1933,
+    "listed": true,
+    "website": "https://www.nissan-global.com/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2005,
+        "value": 159800
+      },
+      {
+        "year": 2017,
+        "value": 137250
+      },
+      {
+        "year": 2018,
+        "value": 138910
+      },
+      {
+        "year": 2020,
+        "value": 136134
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2013,
+        "value": 8737320000000
+      },
+      {
+        "year": 2014,
+        "value": 10482520000000
+      },
+      {
+        "year": 2015,
+        "value": 11375207000000
+      },
+      {
+        "year": 2016,
+        "value": 12189519000000
+      },
+      {
+        "year": 2017,
+        "value": 11720041000000
+      },
+      {
+        "year": 2018,
+        "value": 11951169000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q20165"
+    }
+  },
+  {
+    "id": "Q41187",
+    "name": "ソニーグループ",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "コンピュータゲーム産業",
+      "電気産業",
+      "電子工業"
+    ],
+    "location": "東京都",
+    "employees": 112300,
+    "founded": 1946,
+    "listed": true,
+    "website": "https://www.sony.co.in/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 2019,
+        "value": 114400
+      },
+      {
+        "year": 2021,
+        "value": 109700
+      },
+      {
+        "year": 2023,
+        "value": 113000
+      },
+      {
+        "year": 2024,
+        "value": 113000
+      },
+      {
+        "year": 2025,
+        "value": 112300
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2020,
+        "value": 7252766000000
+      },
+      {
+        "year": 2022,
+        "value": 10095841000000
+      },
+      {
+        "year": 2023,
+        "value": 11260037000000
+      },
+      {
+        "year": 2024,
+        "value": 11260037000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q41187"
+    }
+  },
+  {
+    "id": "Q409907",
+    "name": "アイシン",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "愛知県",
+    "employees": 100000,
+    "founded": 1949,
+    "listed": true,
+    "website": "https://www.aisin.com/jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 100000
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q409907"
+    }
+  },
+  {
+    "id": "Q745099",
+    "name": "京セラ",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "工業",
+      "電子工学"
+    ],
+    "location": "京都市",
+    "employees": 79185,
+    "founded": 1959,
+    "listed": true,
+    "website": "https://global.kyocera.com/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2024,
+        "value": 79185
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q745099"
+    }
+  },
+  {
+    "id": "Q164740",
+    "name": "富士フイルムホールディングス",
+    "industry": "精密・光学機器",
+    "industryRaw": [
+      "現像",
+      "医用画像処理",
+      "再生医学",
+      "写真産業",
+      "印刷会社",
+      "Document Solutions"
+    ],
+    "location": "東京都",
+    "employees": 75845,
+    "founded": 1934,
+    "listed": true,
+    "website": "https://www.fujifilm.com/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2006,
+        "value": 75845
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 1999,
+        "value": 1387026000000
+      },
+      {
+        "year": 2000,
+        "value": 1348841000000
+      },
+      {
+        "year": 2001,
+        "value": 1383369000000
+      },
+      {
+        "year": 2002,
+        "value": 2407517000000
+      },
+      {
+        "year": 2003,
+        "value": 2511921000000
+      },
+      {
+        "year": 2004,
+        "value": 2566725000000
+      },
+      {
+        "year": 2005,
+        "value": 2527374000000
+      },
+      {
+        "year": 2006,
+        "value": 2667495000000
+      },
+      {
+        "year": 2007,
+        "value": 2782526000000
+      },
+      {
+        "year": 2008,
+        "value": 2846828000000
+      },
+      {
+        "year": 2009,
+        "value": 2434344000000
+      },
+      {
+        "year": 2010,
+        "value": 2181693000000
+      },
+      {
+        "year": 2011,
+        "value": 2217084000000
+      },
+      {
+        "year": 2012,
+        "value": 2199540000000
+      },
+      {
+        "year": 2013,
+        "value": 2418095000000
+      },
+      {
+        "year": 2014,
+        "value": 2463387000000
+      },
+      {
+        "year": 2015,
+        "value": 2460383000000
+      },
+      {
+        "year": 2016,
+        "value": 2322163000000
+      },
+      {
+        "year": 2017,
+        "value": 2433365000000
+      },
+      {
+        "year": 2018,
+        "value": 2431489000000
+      },
+      {
+        "year": 2019,
+        "value": 2315141000000
+      },
+      {
+        "year": 2020,
+        "value": 2192519000000
+      },
+      {
+        "year": 2021,
+        "value": 2525773000000
+      },
+      {
+        "year": 2022,
+        "value": 2859041000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q164740"
+    }
+  },
+  {
+    "id": "Q159614",
+    "name": "セイコーエプソン",
+    "industry": "機械・重工業",
+    "industryRaw": [
+      "精密機械",
+      "電子工業"
+    ],
+    "location": "長野県",
+    "employees": 74464,
+    "founded": 1881,
+    "listed": true,
+    "website": "https://corporate.epson/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2024,
+        "value": 74464
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q159614"
+    }
+  },
+  {
+    "id": "Q499071",
+    "name": "東日本旅客鉄道",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "鉄道輸送"
+    ],
+    "location": "日本",
+    "employees": 73063,
+    "founded": 1987,
+    "listed": true,
+    "website": "https://www.jreast.co.jp/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 73063
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2007,
+        "value": 2657346000000
+      },
+      {
+        "year": 2008,
+        "value": 2703564000000
+      },
+      {
+        "year": 2009,
+        "value": 2697000000000
+      },
+      {
+        "year": 2010,
+        "value": 2573724000000
+      },
+      {
+        "year": 2011,
+        "value": 2537353000000
+      },
+      {
+        "year": 2012,
+        "value": 2532174000000
+      },
+      {
+        "year": 2013,
+        "value": 2671823000000
+      },
+      {
+        "year": 2014,
+        "value": 2702917000000
+      },
+      {
+        "year": 2015,
+        "value": 2756165000000
+      },
+      {
+        "year": 2016,
+        "value": 2867200000000
+      },
+      {
+        "year": 2017,
+        "value": 2880802000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q499071"
+    }
+  },
+  {
+    "id": "Q181642",
+    "name": "スズキ",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "静岡県",
+    "employees": 68499,
+    "founded": 1909,
+    "listed": true,
+    "website": "https://www.globalsuzuki.com/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 68499
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q181642"
+    }
+  },
+  {
+    "id": "Q201653",
+    "name": "ソフトバンクグループ",
+    "industry": "IT・ソフトウェア",
+    "industryRaw": [
+      "電気通信",
+      "情報技術",
+      "国際標準産業分類",
+      "電気通信産業"
+    ],
+    "location": "東京都",
+    "employees": 68402,
+    "founded": 1981,
+    "listed": true,
+    "website": "https://group.softbank/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 68402
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2007,
+        "value": 2544219000000
+      },
+      {
+        "year": 2008,
+        "value": 2776169000000
+      },
+      {
+        "year": 2009,
+        "value": 2673035000000
+      },
+      {
+        "year": 2010,
+        "value": 2763406000000
+      },
+      {
+        "year": 2011,
+        "value": 3004640000000
+      },
+      {
+        "year": 2012,
+        "value": 3202436000000
+      },
+      {
+        "year": 2013,
+        "value": 3202536000000
+      },
+      {
+        "year": 2014,
+        "value": 6666651000000
+      },
+      {
+        "year": 2015,
+        "value": 8504135000000
+      },
+      {
+        "year": 2016,
+        "value": 8881777000000
+      },
+      {
+        "year": 2017,
+        "value": 8901004000000
+      },
+      {
+        "year": 2018,
+        "value": 9158765000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q201653"
+    }
+  },
+  {
+    "id": "Q648280",
+    "name": "三菱重工業",
+    "industry": "機械・重工業",
+    "industryRaw": [
+      "重工業"
+    ],
+    "location": "東京都",
+    "employees": 68213,
+    "founded": 1934,
+    "listed": true,
+    "website": "https://www.mhi.com",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 68213
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2018,
+        "value": 3620000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q648280"
+    }
+  },
+  {
+    "id": "Q4538440",
+    "name": "日本赤十字社",
+    "industry": "emergency and relief",
+    "industryRaw": [
+      "emergency and relief"
+    ],
+    "location": "港区",
+    "employees": 67526,
+    "founded": 1877,
+    "listed": false,
+    "website": "https://www.jrc.or.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2019,
+        "value": 67679
+      },
+      {
+        "year": 2020,
+        "value": 67556
+      },
+      {
+        "year": 2021,
+        "value": 67574
+      },
+      {
+        "year": 2022,
+        "value": 67403
+      },
+      {
+        "year": 2023,
+        "value": 67526
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q4538440"
+    }
+  },
+  {
+    "id": "Q482841",
+    "name": "ロッテグループ",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "小売",
+      "化学工業",
+      "食産業",
+      "ホテル産業",
+      "飲料産業",
+      "電子工業",
+      "建設業",
+      "出版産業",
+      "娯楽産業"
+    ],
+    "location": "日本",
+    "employees": 60000,
+    "founded": 1948,
+    "listed": false,
+    "website": "https://www.lotte.co.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 60000
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q482841"
+    }
+  },
+  {
+    "id": "Q639447",
+    "name": "セブン&アイ・ホールディングス",
+    "industry": "小売・流通",
+    "industryRaw": [
+      "小売"
+    ],
+    "location": "千代田区",
+    "employees": 55815,
+    "founded": 2005,
+    "listed": true,
+    "website": "http://www.7andi.com/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 55815
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2023,
+        "value": 11811303000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q639447"
+    }
+  },
+  {
+    "id": "Q855479",
+    "name": "TDK",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学"
+    ],
+    "location": "東京都",
+    "employees": 53923,
+    "founded": 1935,
+    "listed": true,
+    "website": "https://www.tdk.com/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 53923
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q855479"
+    }
+  },
+  {
+    "id": "Q158888",
+    "name": "ヤマハ発動機",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "機械工学",
+      "製造業",
+      "自動車産業"
+    ],
+    "location": "静岡県",
+    "employees": 53701,
+    "founded": 1955,
+    "listed": true,
+    "website": "https://global.yamaha-motor.com/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 53701
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2023,
+        "value": 2414759000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q158888"
+    }
+  },
+  {
+    "id": "Q11229272",
+    "name": "LIXILグループ",
+    "industry": "鉄鋼・金属",
+    "industryRaw": [
+      "金属製品"
+    ],
+    "location": "東京都",
+    "employees": 53206,
+    "founded": 1949,
+    "listed": true,
+    "website": "https://www.lixil.co.jp/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 53206
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2025,
+        "value": 150469700000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11229272"
+    }
+  },
+  {
+    "id": "Q833986",
+    "name": "タカタ",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "東京都",
+    "employees": 50530,
+    "founded": 1933,
+    "listed": false,
+    "website": null,
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2010,
+        "value": 35000
+      },
+      {
+        "year": 2015,
+        "value": 48775
+      },
+      {
+        "year": 2016,
+        "value": 50530
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2015,
+        "value": 642810000000
+      },
+      {
+        "year": 2016,
+        "value": 718003000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q833986"
+    }
+  },
+  {
+    "id": "Q53227",
+    "name": "シャープ",
+    "industry": "半導体",
+    "industryRaw": [
+      "半導体産業",
+      "consumer electronics industry"
+    ],
+    "location": "大阪府",
+    "employees": 50253,
+    "founded": 1912,
+    "listed": true,
+    "website": "https://global.sharp",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2014,
+        "value": 50253
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2014,
+        "value": 28700000000
+      },
+      {
+        "year": 2017,
+        "value": 2050639000000
+      },
+      {
+        "year": 2018,
+        "value": 2427271000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q53227"
+    }
+  },
+  {
+    "id": "Q204284",
+    "name": "全日本空輸",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "航空"
+    ],
+    "location": "港区",
+    "employees": 42196,
+    "founded": 1952,
+    "listed": true,
+    "website": "https://www.ana.co.jp",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 42196
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q204284"
+    }
+  },
+  {
+    "id": "Q128577",
+    "name": "ENEOSホールディングス",
+    "industry": "エネルギー・インフラ",
+    "industryRaw": [
+      "石油産業"
+    ],
+    "location": "大手町",
+    "employees": 40695,
+    "founded": 2010,
+    "listed": true,
+    "website": "https://www.hd.eneos.co.jp/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 2019,
+        "value": 40695
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q128577"
+    }
+  },
+  {
+    "id": "Q904240",
+    "name": "三井物産",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "物流",
+      "総合商社"
+    ],
+    "location": "日本",
+    "employees": 40026,
+    "founded": 1947,
+    "listed": true,
+    "website": "https://www.mitsui.com/jp/ja",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2011,
+        "value": 40026
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2011,
+        "value": 9424000000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q904240"
+    }
+  },
+  {
+    "id": "Q748148",
+    "name": "川崎重工業",
+    "industry": "機械・重工業",
+    "industryRaw": [
+      "軍需産業",
+      "機械産業"
+    ],
+    "location": "中央区",
+    "employees": 32706,
+    "founded": 1878,
+    "listed": true,
+    "website": "http://global.kawasaki.com/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2011,
+        "value": 32706
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2018,
+        "value": 2260000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q748148"
+    }
+  },
+  {
+    "id": "Q326700",
+    "name": "日本板硝子",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "ガラス"
+    ],
+    "location": "日本",
+    "employees": 29340,
+    "founded": 1918,
+    "listed": true,
+    "website": "https://www.nsg.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2011,
+        "value": 29340
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q326700"
+    }
+  },
+  {
+    "id": "Q728185",
+    "name": "資生堂",
+    "industry": "化粧品・日用品",
+    "industryRaw": [
+      "化粧品産業"
+    ],
+    "location": "日本",
+    "employees": 28793,
+    "founded": 1872,
+    "listed": true,
+    "website": "https://corp.shiseido.com/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 28793
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q728185"
+    }
+  },
+  {
+    "id": "Q866991",
+    "name": "大創産業",
+    "industry": "バラエティ・ストア",
+    "industryRaw": [
+      "バラエティ・ストア"
+    ],
+    "location": "東広島市",
+    "employees": 24750,
+    "founded": 1977,
+    "listed": false,
+    "website": "https://www.daiso-sangyo.co.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 24750
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q866991"
+    }
+  },
+  {
+    "id": "Q26070",
+    "name": "ユニクロ",
+    "industry": "繊維・アパレル",
+    "industryRaw": [
+      "小売",
+      "ファストファッション"
+    ],
+    "location": "日本",
+    "employees": 20853,
+    "founded": 1984,
+    "listed": false,
+    "website": "https://www.uniqlo.com/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 30000
+      },
+      {
+        "year": 2025,
+        "value": 20853
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q26070"
+    }
+  },
+  {
+    "id": "Q513679",
+    "name": "東海旅客鉄道",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "鉄道輸送"
+    ],
+    "location": "中村区",
+    "employees": 18148,
+    "founded": 1987,
+    "listed": true,
+    "website": "https://global.jr-central.co.jp/de/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2015,
+        "value": 18231
+      },
+      {
+        "year": 2016,
+        "value": 18164
+      },
+      {
+        "year": 2017,
+        "value": 18054
+      },
+      {
+        "year": 2018,
+        "value": 18116
+      },
+      {
+        "year": 2019,
+        "value": 18148
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2013,
+        "value": 1585300000000
+      },
+      {
+        "year": 2014,
+        "value": 1652500000000
+      },
+      {
+        "year": 2015,
+        "value": 1672295000000
+      },
+      {
+        "year": 2016,
+        "value": 1738409000000
+      },
+      {
+        "year": 2017,
+        "value": 1756980000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q513679"
+    }
+  },
+  {
+    "id": "Q1111609",
+    "name": "帝人",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業"
+    ],
+    "location": "大阪府",
+    "employees": 16819,
+    "founded": 1918,
+    "listed": false,
+    "website": "https://www.teijin.co.jp",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 16819
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1111609"
+    }
+  },
+  {
+    "id": "Q1640290",
+    "name": "ENEOS",
+    "industry": "エネルギー・インフラ",
+    "industryRaw": [
+      "石油産業"
+    ],
+    "location": "大手町",
+    "employees": 13290,
+    "founded": 1888,
+    "listed": false,
+    "website": "https://www.eneos.co.jp/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 14114
+      },
+      {
+        "year": 2007,
+        "value": 13290
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1640290"
+    }
+  },
+  {
+    "id": "Q11297236",
+    "name": "キャメル珈琲",
+    "industry": "食品・飲料",
+    "industryRaw": [
+      "外食産業",
+      "小売",
+      "卸売"
+    ],
+    "location": "世田谷区",
+    "employees": 12700,
+    "founded": 1977,
+    "listed": false,
+    "website": "https://camelcoffee.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 12700
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11297236"
+    }
+  },
+  {
+    "id": "Q115681659",
+    "name": "クリエイトエス・ディー",
+    "industry": "小売・流通",
+    "industryRaw": [
+      "小売"
+    ],
+    "location": "青葉区",
+    "employees": 11442,
+    "founded": 1975,
+    "listed": true,
+    "website": "https://www.create-sd.co.jp/corpo/tabid/91/Default.aspx",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 11442
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q115681659"
+    }
+  },
+  {
+    "id": "Q905412",
+    "name": "昭和電工",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業"
+    ],
+    "location": "東京都",
+    "employees": 10864,
+    "founded": 1939,
+    "listed": true,
+    "website": "https://www.resonac.com/jp",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2017,
+        "value": 10864
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 0,
+        "value": 1.419
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q905412"
+    }
+  },
+  {
+    "id": "Q45700",
+    "name": "コナミグループ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "日本",
+    "employees": 10392,
+    "founded": 1969,
+    "listed": true,
+    "website": "https://www.konami.com/en/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 10392
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q45700"
+    }
+  },
+  {
+    "id": "Q5361268",
+    "name": "ユニ・チャーム",
+    "industry": "化粧品・日用品",
+    "industryRaw": [
+      "日用消費財"
+    ],
+    "location": "東京都",
+    "employees": 10287,
+    "founded": 1961,
+    "listed": false,
+    "website": "http://www.unicharm.co.jp/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 10287
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q5361268"
+    }
+  },
+  {
+    "id": "Q683146",
+    "name": "レクシスネクシス",
+    "industry": "メディア・出版",
+    "industryRaw": [
+      "出版"
+    ],
+    "location": "日本",
+    "employees": 10000,
+    "founded": 1973,
+    "listed": false,
+    "website": "https://www.lexisnexis.com/en-us/home.page",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 10000
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q683146"
+    }
+  },
+  {
+    "id": "Q973054",
+    "name": "楽天グループ",
+    "industry": "IT・インターネット",
+    "industryRaw": [
+      "インターネット産業"
+    ],
+    "location": "世田谷区",
+    "employees": 9885,
+    "founded": 1997,
+    "listed": true,
+    "website": "https://corp.rakuten.co.jp/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 10000
+      },
+      {
+        "year": 2024,
+        "value": 9885
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2021,
+        "value": 1681000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q973054"
+    }
+  },
+  {
+    "id": "Q327247",
+    "name": "アシックス",
+    "industry": "繊維・アパレル",
+    "industryRaw": [
+      "繊維産業"
+    ],
+    "location": "兵庫県",
+    "employees": 9039,
+    "founded": 1949,
+    "listed": true,
+    "website": "https://www.asics.com/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2015,
+        "value": 7264
+      },
+      {
+        "year": 2019,
+        "value": 9039
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q327247"
+    }
+  },
+  {
+    "id": "Q212116",
+    "name": "ファナック",
+    "industry": "製造業",
+    "industryRaw": [
+      "製造業"
+    ],
+    "location": "南都留郡",
+    "employees": 8675,
+    "founded": 1956,
+    "listed": true,
+    "website": "https://www.fanuc.co.jp/index.html",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2021,
+        "value": 8675
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 0,
+        "value": 4683990000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q212116"
+    }
+  },
+  {
+    "id": "Q11278357",
+    "name": "セブン-イレブン・ジャパン",
+    "industry": "小売・流通",
+    "industryRaw": [
+      "小売"
+    ],
+    "location": "千代田区",
+    "employees": 8549,
+    "founded": 1973,
+    "listed": false,
+    "website": "https://www.sej.co.jp/company/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 8549
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11278357"
+    }
+  },
+  {
+    "id": "Q1081154",
+    "name": "鹿島建設",
+    "industry": "建設・不動産",
+    "industryRaw": [
+      "建設"
+    ],
+    "location": "港区",
+    "employees": 8129,
+    "founded": 1840,
+    "listed": true,
+    "website": "http://www.kajima.co.jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 8129
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1081154"
+    }
+  },
+  {
+    "id": "Q1397688",
+    "name": "ファーストリテイリング",
+    "industry": "小売・流通",
+    "industryRaw": [
+      "小売"
+    ],
+    "location": "山口県",
+    "employees": 8055,
+    "founded": 1963,
+    "listed": true,
+    "website": "https://www.fastretailing.com/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 8055
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1397688"
+    }
+  },
+  {
+    "id": "Q5302643",
+    "name": "DOWAホールディングス",
+    "industry": "鉄鋼・金属",
+    "industryRaw": [
+      "環境資源管理",
+      "熱処理",
+      "インダストリアル・エンジニアリング",
+      "非鉄金属",
+      "Electronic Materials",
+      "metal processing plant operators"
+    ],
+    "location": "日本",
+    "employees": 7500,
+    "founded": 1937,
+    "listed": true,
+    "website": "http://www.dowa.co.jp/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 7500
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q5302643"
+    }
+  },
+  {
+    "id": "Q53293",
+    "name": "日清食品",
+    "industry": "食品・飲料",
+    "industryRaw": [
+      "食産業"
+    ],
+    "location": "淀川区",
+    "employees": 7408,
+    "founded": 1958,
+    "listed": false,
+    "website": "https://www.nissin.com/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 7408
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2022,
+        "value": 204710000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q53293"
+    }
+  },
+  {
+    "id": "Q8093",
+    "name": "任天堂",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "京都府",
+    "employees": 7317,
+    "founded": 1889,
+    "listed": true,
+    "website": "https://www.nintendo.com/jp/index.html",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 6413
+      },
+      {
+        "year": 2022,
+        "value": 6717
+      },
+      {
+        "year": 2023,
+        "value": 7317
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q8093"
+    }
+  },
+  {
+    "id": "Q7499501",
+    "name": "静岡銀行",
+    "industry": "金融・保険",
+    "industryRaw": [
+      "金融業"
+    ],
+    "location": "静岡県",
+    "employees": 6541,
+    "founded": 1943,
+    "listed": true,
+    "website": "https://www.shizuokabank.co.jp",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2021,
+        "value": 6541
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2021,
+        "value": 222592000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q7499501"
+    }
+  },
+  {
+    "id": "Q89826762",
+    "name": "日本トイザらス",
+    "industry": "商社",
+    "industryRaw": [
+      "取引"
+    ],
+    "location": "日本",
+    "employees": 6500,
+    "founded": 1989,
+    "listed": false,
+    "website": "https://www.toysrus.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 6500
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q89826762"
+    }
+  },
+  {
+    "id": "Q119197575",
+    "name": "夢真",
+    "industry": "サービス",
+    "industryRaw": [
+      "第三次産業"
+    ],
+    "location": "港区",
+    "employees": 6043,
+    "founded": 2019,
+    "listed": false,
+    "website": "https://www.yumeshin.co.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 6043
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q119197575"
+    }
+  },
+  {
+    "id": "Q277115",
+    "name": "昭和シェル石油",
+    "industry": "エネルギー・インフラ",
+    "industryRaw": [
+      "石油産業"
+    ],
+    "location": "東京都",
+    "employees": 6000,
+    "founded": 1985,
+    "listed": true,
+    "website": "http://www.showa-shell.co.jp/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 6000
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2015,
+        "value": 28300000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q277115"
+    }
+  },
+  {
+    "id": "Q4042332",
+    "name": "興和",
+    "industry": "製薬・医療",
+    "industryRaw": [
+      "紡績",
+      "医薬品製造業",
+      "写真産業"
+    ],
+    "location": "愛知県",
+    "employees": 5819,
+    "founded": 1894,
+    "listed": false,
+    "website": "http://www.kowa.co.jp/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 5819
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q4042332"
+    }
+  },
+  {
+    "id": "Q1156731",
+    "name": "ミズノ",
+    "industry": "繊維・アパレル",
+    "industryRaw": [
+      "アパレル産業"
+    ],
+    "location": "大阪府",
+    "employees": 5808,
+    "founded": 1906,
+    "listed": false,
+    "website": "https://corp.mizuno.com/en",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 5808
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1156731"
+    }
+  },
+  {
+    "id": "Q207784",
+    "name": "スクウェア・エニックス",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業",
+      "映画産業",
+      "出版"
+    ],
+    "location": "新宿区",
+    "employees": 5077,
+    "founded": 1975,
+    "listed": true,
+    "website": "https://www.jp.square-enix.com/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 5077
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2020,
+        "value": 260527000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q207784"
+    }
+  },
+  {
+    "id": "Q2744340",
+    "name": "横浜銀行",
+    "industry": "金融・保険",
+    "industryRaw": [
+      "銀行業",
+      "金融業"
+    ],
+    "location": "日本",
+    "employees": 4733,
+    "founded": 1920,
+    "listed": true,
+    "website": "https://www.boy.co.jp/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 4733
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2021,
+        "value": 291732000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2744340"
+    }
+  },
+  {
+    "id": "Q123319566",
+    "name": "シーエックスカーゴ",
+    "industry": "運送",
+    "industryRaw": [
+      "運送"
+    ],
+    "location": "埼玉県",
+    "employees": 4694,
+    "founded": 1991,
+    "listed": false,
+    "website": "https://www.cx-cargo.co.jp/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 4694
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q123319566"
+    }
+  },
+  {
+    "id": "Q139971064",
+    "name": "ウィルオブ・ワーク株式会社",
+    "industry": "サービス",
+    "industryRaw": [
+      "ビジネス・プロセス・アウトソーシング"
+    ],
+    "location": "東京都",
+    "employees": 4608,
+    "founded": 1997,
+    "listed": false,
+    "website": "https://www.willof-work.co.jp/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 4608
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q139971064"
+    }
+  },
+  {
+    "id": "Q777141",
+    "name": "三井化学",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業"
+    ],
+    "location": "東京都",
+    "employees": 4275,
+    "founded": 1997,
+    "listed": true,
+    "website": "https://www.mitsuichemicals.com/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 4275
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q777141"
+    }
+  },
+  {
+    "id": "Q11509093",
+    "name": "日本触媒",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業"
+    ],
+    "location": "大阪市",
+    "employees": 4219,
+    "founded": 1941,
+    "listed": true,
+    "website": "https://www.shokubai.co.jp/ja/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 4219
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11509093"
+    }
+  },
+  {
+    "id": "Q886564",
+    "name": "サイゼリヤ",
+    "industry": "食品・飲料",
+    "industryRaw": [
+      "外食産業",
+      "小売"
+    ],
+    "location": "日本",
+    "employees": 4134,
+    "founded": 1973,
+    "listed": true,
+    "website": "http://www.saizeriya.com.cn/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 4134
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q886564"
+    }
+  },
+  {
+    "id": "Q11299598",
+    "name": "クレハ",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業"
+    ],
+    "location": "中央区",
+    "employees": 4080,
+    "founded": 1944,
+    "listed": true,
+    "website": "http://www.kureha.co.jp/en/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 4080
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11299598"
+    }
+  },
+  {
+    "id": "Q2669683",
+    "name": "モルテン",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "スポーツ産業"
+    ],
+    "location": "広島県",
+    "employees": 3900,
+    "founded": 1958,
+    "listed": false,
+    "website": "https://www.molten.co.jp/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 3900
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2669683"
+    }
+  },
+  {
+    "id": "Q83584",
+    "name": "小田急電鉄",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "公共交通機関",
+      "鉄道輸送"
+    ],
+    "location": "渋谷区",
+    "employees": 3760,
+    "founded": 1923,
+    "listed": true,
+    "website": "https://www.odakyu.jp/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2021,
+        "value": 3760
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2021,
+        "value": 114366000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q83584"
+    }
+  },
+  {
+    "id": "Q1185060",
+    "name": "UCC上島珈琲",
+    "industry": "食品・飲料",
+    "industryRaw": [
+      "食産業"
+    ],
+    "location": "中央区",
+    "employees": 3668,
+    "founded": 1933,
+    "listed": false,
+    "website": "https://www.ucc.co.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 3668
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1185060"
+    }
+  },
+  {
+    "id": "Q1153275",
+    "name": "国立研究開発法人理化学研究所",
+    "industry": "研究・サービス",
+    "industryRaw": [
+      "研究"
+    ],
+    "location": "埼玉県",
+    "employees": 3451,
+    "founded": 1917,
+    "listed": false,
+    "website": "https://www.riken.jp/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 3572
+      },
+      {
+        "year": 2021,
+        "value": 3451
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1153275"
+    }
+  },
+  {
+    "id": "Q112748629",
+    "name": "パルライン",
+    "industry": "運送",
+    "industryRaw": [
+      "運送"
+    ],
+    "location": "東京都",
+    "employees": 3412,
+    "founded": 1987,
+    "listed": false,
+    "website": "https://www.palline.co.jp/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 3412
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q112748629"
+    }
+  },
+  {
+    "id": "Q637440",
+    "name": "ラザード",
+    "industry": "金融・保険",
+    "industryRaw": [
+      "アセット・マネジメント",
+      "investment banking",
+      "金融サービス活動 (保険および年金基金を除く)",
+      "金融業"
+    ],
+    "location": "日本",
+    "employees": 3291,
+    "founded": 1848,
+    "listed": true,
+    "website": "https://lazard.com/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2014,
+        "value": 2523
+      },
+      {
+        "year": 2023,
+        "value": 3291
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q637440"
+    }
+  },
+  {
+    "id": "Q122741",
+    "name": "セガ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 3238,
+    "founded": 1960,
+    "listed": false,
+    "website": "https://www.sega.com",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": null,
+        "value": 5349
+      },
+      {
+        "year": 2020,
+        "value": 3238
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q122741"
+    }
+  },
+  {
+    "id": "Q848490",
+    "name": "ローランド",
+    "industry": "IT・ソフトウェア",
+    "industryRaw": [
+      "ソフトウェア産業",
+      "楽器製作者"
+    ],
+    "location": "静岡県",
+    "employees": 3060,
+    "founded": 1972,
+    "listed": false,
+    "website": "http://www.roland.com",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2013,
+        "value": 3060
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q848490"
+    }
+  },
+  {
+    "id": "Q1372049",
+    "name": "日本郵政",
+    "industry": "金融・保険",
+    "industryRaw": [
+      "銀行業",
+      "郵便サービス"
+    ],
+    "location": "大手町",
+    "employees": 2886,
+    "founded": 2006,
+    "listed": true,
+    "website": "https://www.japanpost.jp",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2016,
+        "value": 2886
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2016,
+        "value": 14257541000000
+      },
+      {
+        "year": 2017,
+        "value": 13326534000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1372049"
+    }
+  },
+  {
+    "id": "Q14428",
+    "name": "カプコン",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "大阪市",
+    "employees": 2832,
+    "founded": 1979,
+    "listed": true,
+    "website": "https://www.capcom.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 2832
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2020,
+        "value": 783200000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q14428"
+    }
+  },
+  {
+    "id": "Q1058127",
+    "name": "西日本高速道路",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "道路運送固定施設業"
+    ],
+    "location": "日本",
+    "employees": 2744,
+    "founded": 2005,
+    "listed": false,
+    "website": "https://www.w-nexco.co.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 2744
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1058127"
+    }
+  },
+  {
+    "id": "Q7711979",
+    "name": "七十七銀行",
+    "industry": "金融・保険",
+    "industryRaw": [
+      "銀行業",
+      "金融業"
+    ],
+    "location": "宮城県",
+    "employees": 2724,
+    "founded": 1878,
+    "listed": false,
+    "website": "https://www.77bank.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 2724
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q7711979"
+    }
+  },
+  {
+    "id": "Q11295397",
+    "name": "カワチ薬品",
+    "industry": "小売・流通",
+    "industryRaw": [
+      "小売"
+    ],
+    "location": "日本",
+    "employees": 2616,
+    "founded": 1980,
+    "listed": true,
+    "website": "https://www.cawachi.co.jp/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 2616
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11295397"
+    }
+  },
+  {
+    "id": "Q11503608",
+    "name": "新潟鐵工所",
+    "industry": "機械・重工業",
+    "industryRaw": [
+      "造船",
+      "鉄道車両メーカー",
+      "建設業"
+    ],
+    "location": "東京都",
+    "employees": 2338,
+    "founded": 1910,
+    "listed": true,
+    "website": null,
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2001,
+        "value": 2338
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11503608"
+    }
+  },
+  {
+    "id": "Q11506946",
+    "name": "日本マクドナルド",
+    "industry": "その他",
+    "industryRaw": [],
+    "location": "日本",
+    "employees": 2272,
+    "founded": 2002,
+    "listed": false,
+    "website": "https://www.mcdonalds.co.jp/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2013,
+        "value": 2764
+      },
+      {
+        "year": 2014,
+        "value": 2679
+      },
+      {
+        "year": 2015,
+        "value": 2419
+      },
+      {
+        "year": 2016,
+        "value": 2239
+      },
+      {
+        "year": 2017,
+        "value": 2255
+      },
+      {
+        "year": 2018,
+        "value": 2145
+      },
+      {
+        "year": 2019,
+        "value": 2085
+      },
+      {
+        "year": 2020,
+        "value": 2083
+      },
+      {
+        "year": 2021,
+        "value": 2272
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11506946"
+    }
+  },
+  {
+    "id": "Q1104912",
+    "name": "リョービ",
+    "industry": "機械・重工業",
+    "industryRaw": [
+      "機械産業"
+    ],
+    "location": "広島県",
+    "employees": 1722,
+    "founded": 1943,
+    "listed": true,
+    "website": "http://www.ryobi-group.co.jp/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2019,
+        "value": 1722
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1104912"
+    }
+  },
+  {
+    "id": "Q779730",
+    "name": "共同通信社",
+    "industry": "通信",
+    "industryRaw": [
+      "通信社"
+    ],
+    "location": "港区",
+    "employees": 1683,
+    "founded": 1945,
+    "listed": false,
+    "website": "https://www.kyodonews.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 1683
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q779730"
+    }
+  },
+  {
+    "id": "Q503673",
+    "name": "ペンタックス",
+    "industry": "精密・光学機器",
+    "industryRaw": [
+      "写真産業"
+    ],
+    "location": "日本",
+    "employees": 1661,
+    "founded": 1919,
+    "listed": false,
+    "website": "https://www.ricoh-imaging.co.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2005,
+        "value": 1661
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q503673"
+    }
+  },
+  {
+    "id": "Q117115106",
+    "name": "ニデック",
+    "industry": "製薬・医療",
+    "industryRaw": [
+      "医療機器産業"
+    ],
+    "location": "愛知県",
+    "employees": 1628,
+    "founded": 1971,
+    "listed": false,
+    "website": "https://www.nidek.co.jp/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 1628
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q117115106"
+    }
+  },
+  {
+    "id": "Q3437504",
+    "name": "Roche Bobois",
+    "industry": "製造業",
+    "industryRaw": [
+      "製造業",
+      "本社の活動"
+    ],
+    "location": "日本",
+    "employees": 1038,
+    "founded": 1960,
+    "listed": false,
+    "website": "https://www.roche-bobois.com",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 1038
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q3437504"
+    }
+  },
+  {
+    "id": "Q108390523",
+    "name": "グロービス",
+    "industry": "教育、学習支援業",
+    "industryRaw": [
+      "教育、学習支援業",
+      "professional services industry"
+    ],
+    "location": "東京都",
+    "employees": 1004,
+    "founded": 1992,
+    "listed": false,
+    "website": "https://www.globis.co.jp",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 1004
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q108390523"
+    }
+  },
+  {
+    "id": "Q11304101",
+    "name": "シミックヘルスケア・インスティテュート株式会社",
+    "industry": "ヘルスケア産業",
+    "industryRaw": [
+      "ヘルスケア産業"
+    ],
+    "location": "日本",
+    "employees": 1000,
+    "founded": 1999,
+    "listed": false,
+    "website": "https://www.cmic-hci.com/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 1000
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11304101"
+    }
+  },
+  {
+    "id": "Q11634601",
+    "name": "財宝",
+    "industry": "小売・流通",
+    "industryRaw": [
+      "製造業",
+      "飲食店",
+      "小売商"
+    ],
+    "location": "鹿児島県",
+    "employees": 977,
+    "founded": 1986,
+    "listed": false,
+    "website": "https://www.zaiho.jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2017,
+        "value": 977
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11634601"
+    }
+  },
+  {
+    "id": "Q726081",
+    "name": "講談社",
+    "industry": "メディア・出版",
+    "industryRaw": [
+      "出版産業"
+    ],
+    "location": "文京区",
+    "employees": 945,
+    "founded": 1909,
+    "listed": false,
+    "website": "https://www.kodansha.co.jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 945
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2023,
+        "value": 172000000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q726081"
+    }
+  },
+  {
+    "id": "Q105199985",
+    "name": "長田広告",
+    "industry": "広告・マーケティング",
+    "industryRaw": [
+      "広告代理店"
+    ],
+    "location": "日本",
+    "employees": 882,
+    "founded": 1976,
+    "listed": false,
+    "website": "https://ad-nagata.com/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 882
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q105199985"
+    }
+  },
+  {
+    "id": "Q1027454",
+    "name": "カルピス",
+    "industry": "食品・飲料",
+    "industryRaw": [
+      "食産業"
+    ],
+    "location": "墨田区",
+    "employees": 852,
+    "founded": 1948,
+    "listed": true,
+    "website": "https://www.calpis.co.jp/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 852
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1027454"
+    }
+  },
+  {
+    "id": "Q11361587",
+    "name": "不動テトラ",
+    "industry": "建設・不動産",
+    "industryRaw": [
+      "建設業"
+    ],
+    "location": "中央区",
+    "employees": 845,
+    "founded": 1947,
+    "listed": true,
+    "website": "http://www.fudotetra.co.jp/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 845
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11361587"
+    }
+  },
+  {
+    "id": "Q844822",
+    "name": "集英社",
+    "industry": "メディア・出版",
+    "industryRaw": [
+      "出版産業"
+    ],
+    "location": "千代田区",
+    "employees": 812,
+    "founded": 1925,
+    "listed": false,
+    "website": "https://www.shueisha.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 812
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q844822"
+    }
+  }
+]

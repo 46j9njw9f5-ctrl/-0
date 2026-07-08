@@ -1,5 +1,5 @@
-import type { Company, Evaluation } from '../types'
-import { levelClass, levelColor } from '../ui'
+import type { Company, Evaluation, GrowthEvaluation, SeriesPoint } from '../types'
+import { growthColor, levelClass, levelColor, stageClass } from '../ui'
 
 /** 企業ロゴの代替アバター（頭文字）。 */
 export function Avatar({ company, size }: { company: Company; size?: number }) {
@@ -14,7 +14,7 @@ export function Avatar({ company, size }: { company: Company; size?: number }) {
   )
 }
 
-/** リスク区分バッジ。 */
+/** リスク区分バッジ（ブラック度）。 */
 export function RiskBadge({ evaluation }: { evaluation: Evaluation }) {
   return (
     <span className={`badge ${levelClass[evaluation.level]}`}>
@@ -24,26 +24,87 @@ export function RiskBadge({ evaluation }: { evaluation: Evaluation }) {
   )
 }
 
-/**
- * スコアのドーナツ。ブラック度を表示（高いほど危険な色）。
- */
-export function ScoreDonut({ evaluation }: { evaluation: Evaluation }) {
+/** 成長ステージのバッジ（将来性）。 */
+export function GrowthBadge({ growth }: { growth: GrowthEvaluation }) {
+  return (
+    <span className={`badge ${stageClass[growth.stage]}`}>
+      <span className="badge__dot" />
+      {growth.stageLabel}
+    </span>
+  )
+}
+
+/** ブラック度ドーナツ（高いほど危険＝赤）。 */
+export function ScoreDonut({ evaluation, size }: { evaluation: Evaluation; size?: number }) {
+  return (
+    <Donut value={evaluation.blackScore} color={levelColor[evaluation.level]} caption="ブラック度" size={size} />
+  )
+}
+
+/** 将来性ドーナツ（高いほど有望＝緑）。 */
+export function GrowthDonut({ growth, size }: { growth: GrowthEvaluation; size?: number }) {
+  return (
+    <Donut value={growth.growthScore} color={growthColor(growth.growthScore)} caption="将来性" size={size} />
+  )
+}
+
+function Donut({
+  value,
+  color,
+  caption,
+  size,
+}: {
+  value: number
+  color: string
+  caption: string
+  size?: number
+}) {
+  const s = size ?? 66
   return (
     <div
       className="donut"
-      style={
-        {
-          '--p': evaluation.blackScore,
-          '--c': levelColor[evaluation.level],
-        } as React.CSSProperties
-      }
+      style={{ '--p': value, '--c': color, width: s, height: s } as React.CSSProperties}
     >
       <div style={{ textAlign: 'center' }}>
-        <div className="donut__num" style={{ color: levelColor[evaluation.level] }}>
-          {evaluation.blackScore}
+        <div className="donut__num" style={{ color, fontSize: s * 0.29 }}>
+          {value}
         </div>
-        <div className="donut__cap">ブラック度</div>
+        <div className="donut__cap">{caption}</div>
       </div>
     </div>
+  )
+}
+
+/** 時系列のスパークライン（実データの推移を可視化）。 */
+export function Sparkline({
+  series,
+  color,
+  width = 160,
+  height = 40,
+}: {
+  series: SeriesPoint[]
+  color: string
+  width?: number
+  height?: number
+}) {
+  const pts = series.filter((p) => p.year > 0 && p.value > 0).sort((a, b) => a.year - b.year)
+  if (pts.length < 2) return null
+  const xs = pts.map((p) => p.year)
+  const ys = pts.map((p) => p.value)
+  const minX = Math.min(...xs)
+  const maxX = Math.max(...xs)
+  const minY = Math.min(...ys)
+  const maxY = Math.max(...ys)
+  const nx = (x: number) => (maxX === minX ? 0 : ((x - minX) / (maxX - minX)) * (width - 6) + 3)
+  const ny = (y: number) =>
+    maxY === minY ? height / 2 : height - 4 - ((y - minY) / (maxY - minY)) * (height - 8)
+  const d = pts.map((p, i) => `${i === 0 ? 'M' : 'L'} ${nx(p.year).toFixed(1)} ${ny(p.value).toFixed(1)}`).join(' ')
+  return (
+    <svg width={width} height={height} style={{ display: 'block' }}>
+      <path d={d} fill="none" stroke={color} strokeWidth={2} strokeLinejoin="round" strokeLinecap="round" />
+      {pts.map((p, i) => (
+        <circle key={i} cx={nx(p.year)} cy={ny(p.value)} r={2.2} fill={color} />
+      ))}
+    </svg>
   )
 }

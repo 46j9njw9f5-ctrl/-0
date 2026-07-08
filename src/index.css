@@ -152,6 +152,40 @@ a {
   margin: 6px 2px 14px;
 }
 
+/* ---------- dataset tabs ---------- */
+.dataset-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 8px;
+  flex-wrap: wrap;
+}
+.dataset-tab {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.15s;
+}
+.dataset-tab:hover {
+  color: var(--text);
+  border-color: var(--accent-dim);
+}
+.dataset-tab--active {
+  background: linear-gradient(120deg, #2b3f66, #3a2b66);
+  border-color: var(--accent);
+  color: #fff;
+}
+.dataset-desc {
+  color: var(--text-faint);
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin: 0 2px 6px;
+  max-width: 900px;
+}
+
 /* ---------- grid + card ---------- */
 .grid {
   display: grid;
@@ -408,6 +442,61 @@ a {
   background: color-mix(in srgb, var(--excellent) 10%, transparent);
   border: 1px solid color-mix(in srgb, var(--excellent) 26%, transparent);
   color: #ccf5da;
+}
+.warn-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.warn-list li {
+  font-size: 13.5px;
+  line-height: 1.5;
+  padding: 9px 12px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--caution) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--caution) 28%, transparent);
+  color: #ffe6bf;
+}
+
+/* history sparklines */
+.history-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.history {
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.history__label {
+  font-size: 11px;
+  color: var(--text-faint);
+  margin-bottom: 6px;
+}
+
+.notice {
+  margin-top: 8px;
+  background: var(--bg-elev-2);
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-dim);
+}
+
+.source-line {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-faint);
 }
 
 /* factor bars */

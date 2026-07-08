@@ -9,9 +9,9 @@ import {
   riskLevel,
   WEIGHTS,
 } from './scoring'
-import type { Company } from '../types'
+import type { Company, CompanyMetrics, CompanyWithLabor } from '../types'
 
-function makeCompany(overrides: Partial<Company['metrics']> = {}, base: Partial<Company> = {}): Company {
+function makeCompany(overrides: Partial<CompanyMetrics> = {}, base: Partial<Company> = {}): CompanyWithLabor {
   return {
     id: 'test',
     name: 'テスト社',
