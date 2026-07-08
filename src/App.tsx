@@ -2,24 +2,40 @@ import { useEffect, useMemo, useState } from 'react'
 import { datasets, type DatasetKey } from './data'
 import { evaluate } from './engine/scoring'
 import { evaluateGrowth } from './engine/growth'
-import { hasLabor, type Company, type Evaluation, type GrowthEvaluation } from './types'
+import { evaluateProductivity } from './engine/productivity'
+import { evaluateStock } from './engine/stock'
+import { evaluateWorkability } from './engine/workability'
+import {
+  hasLabor,
+  type Company,
+  type Evaluation,
+  type GrowthEvaluation,
+  type ProductivityEvaluation,
+  type StockSnapshot,
+  type WorkabilityEvaluation,
+} from './types'
 import { CompanyCard } from './components/CompanyCard'
 import { CompanyDetail } from './components/CompanyDetail'
 import { ComparePanel } from './components/ComparePanel'
 
-interface Row {
+export interface Row {
   company: Company
   growth: GrowthEvaluation
+  productivity: ProductivityEvaluation
+  stock: StockSnapshot
   evaluation?: Evaluation
+  workability?: WorkabilityEvaluation
 }
 
-type SortKey = 'growth' | 'growthLow' | 'white' | 'black' | 'employees' | 'young'
+type SortKey = 'growth' | 'growthLow' | 'productivity' | 'white' | 'black' | 'work' | 'employees' | 'young'
 
 const SORTS: { key: SortKey; label: string; laborOnly?: boolean }[] = [
   { key: 'growth', label: '将来性が高い順' },
   { key: 'growthLow', label: '将来性が低い順' },
+  { key: 'productivity', label: '生産性が高い順' },
   { key: 'employees', label: '規模が大きい順' },
   { key: 'young', label: '設立が新しい順' },
+  { key: 'work', label: '働きやすい順', laborOnly: true },
   { key: 'white', label: 'ホワイト度が高い順', laborOnly: true },
   { key: 'black', label: 'ブラック度が高い順', laborOnly: true },
 ]
@@ -32,7 +48,10 @@ const evaluatedByDataset: Record<DatasetKey, Row[]> = datasets.reduce(
     acc[ds.key] = ds.companies.map((c) => ({
       company: c,
       growth: evaluateGrowth(c),
+      productivity: evaluateProductivity(c),
+      stock: evaluateStock(c),
       evaluation: hasLabor(c) ? evaluate(c) : undefined,
+      workability: hasLabor(c) ? evaluateWorkability(c) : undefined,
     }))
     return acc
   },
@@ -75,7 +94,7 @@ export default function App() {
     setCompare([])
     setDetailId(null)
     setShowCompare(false)
-    if (!dataset.hasLabor && (sort === 'white' || sort === 'black')) setSort('growth')
+    if (!dataset.hasLabor && (sort === 'white' || sort === 'black' || sort === 'work')) setSort('growth')
     if (!dataset.hasLabor) setSafeOnly(false)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [datasetKey])
@@ -110,6 +129,10 @@ export default function App() {
           return b.growth.growthScore - a.growth.growthScore
         case 'growthLow':
           return a.growth.growthScore - b.growth.growthScore
+        case 'productivity':
+          return (b.productivity.score ?? -1) - (a.productivity.score ?? -1)
+        case 'work':
+          return (b.workability?.score ?? -1) - (a.workability?.score ?? -1)
         case 'employees':
           return b.company.employees - a.company.employees
         case 'young':
@@ -218,7 +241,9 @@ export default function App() {
               key={r.company.id}
               company={r.company}
               growth={r.growth}
+              productivity={r.productivity}
               evaluation={r.evaluation}
+              workability={r.workability}
               isFavorite={favorites.includes(r.company.id)}
               inCompare={compare.includes(r.company.id)}
               onOpen={() => setDetailId(r.company.id)}
@@ -240,7 +265,10 @@ export default function App() {
         <CompanyDetail
           company={detail.company}
           growth={detail.growth}
+          productivity={detail.productivity}
+          stock={detail.stock}
           evaluation={detail.evaluation}
+          workability={detail.workability}
           onClose={() => setDetailId(null)}
         />
       )}

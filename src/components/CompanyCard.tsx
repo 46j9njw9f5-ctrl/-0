@@ -1,10 +1,19 @@
-import type { Company, Evaluation, GrowthEvaluation } from '../types'
+import type {
+  Company,
+  Evaluation,
+  GrowthEvaluation,
+  ProductivityEvaluation,
+  WorkabilityEvaluation,
+} from '../types'
+import { formatYen } from '../ui'
 import { Avatar, GrowthBadge, GrowthDonut } from './Bits'
 
 interface Props {
   company: Company
   growth: GrowthEvaluation
+  productivity: ProductivityEvaluation
   evaluation?: Evaluation
+  workability?: WorkabilityEvaluation
   isFavorite: boolean
   inCompare: boolean
   onOpen: () => void
@@ -15,7 +24,9 @@ interface Props {
 export function CompanyCard({
   company,
   growth,
+  productivity,
   evaluation,
+  workability,
   isFavorite,
   inCompare,
   onOpen,
@@ -48,14 +59,23 @@ export function CompanyCard({
                   ? '上場企業'
                   : '非上場'}
           </span>
-          {evaluation && (
-            <span
-              className={`badge ${evaluation.redFlags.length ? 'lv-danger' : 'lv-standard'}`}
-              style={{ fontSize: 11 }}
-            >
-              ブラック度 {evaluation.blackScore}
-              {evaluation.redFlags.length > 0 ? ` ・⚠${evaluation.redFlags.length}` : ''}
+          {evaluation && workability ? (
+            <span style={{ fontSize: 12, color: 'var(--text-faint)' }}>
+              働きやすさ <b style={{ color: 'var(--text)' }}>{workability.score}</b>
+              {' ・ '}
+              <span style={{ color: evaluation.redFlags.length ? 'var(--danger)' : 'var(--text-faint)' }}>
+                ブラック度 {evaluation.blackScore}
+                {evaluation.redFlags.length > 0 ? `⚠${evaluation.redFlags.length}` : ''}
+              </span>
             </span>
+          ) : (
+            productivity.score !== null && (
+              <span style={{ fontSize: 12, color: 'var(--text-faint)' }}>
+                生産性 <b style={{ color: 'var(--text)' }}>{productivity.score}</b>
+                {' ・ 一人当たり '}
+                {formatYen(productivity.revenuePerEmployee)}
+              </span>
+            )
           )}
         </div>
       </div>

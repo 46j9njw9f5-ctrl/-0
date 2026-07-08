@@ -48,7 +48,7 @@ export function GrowthDonut({ growth, size }: { growth: GrowthEvaluation; size?:
   )
 }
 
-function Donut({
+export function Donut({
   value,
   color,
   caption,
@@ -87,7 +87,11 @@ export function Sparkline({
   width?: number
   height?: number
 }) {
-  const pts = series.filter((p) => p.year > 0 && p.value > 0).sort((a, b) => a.year - b.year)
+  const valid = series.filter((p) => p.year > 0 && p.value > 0).sort((a, b) => a.year - b.year)
+  // 単位不整合の外れ値を中央値基準で除外（成長率計算と整合させる）
+  const sortedVals = valid.map((p) => p.value).sort((a, b) => a - b)
+  const median = sortedVals[Math.floor(sortedVals.length / 2)] ?? 0
+  const pts = valid.filter((p) => p.value >= median * 0.25 && p.value <= median * 4)
   if (pts.length < 2) return null
   const xs = pts.map((p) => p.year)
   const ys = pts.map((p) => p.value)

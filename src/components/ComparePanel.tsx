@@ -1,15 +1,24 @@
-import type { Company, Evaluation, GrowthEvaluation } from '../types'
-import { growthColor, levelColor } from '../ui'
+import type {
+  Company,
+  Evaluation,
+  GrowthEvaluation,
+  ProductivityEvaluation,
+  WorkabilityEvaluation,
+} from '../types'
+import { formatYen, growthColor, levelColor } from '../ui'
 import { Avatar } from './Bits'
 
 interface Row {
   company: Company
   growth: GrowthEvaluation
+  productivity: ProductivityEvaluation
   evaluation?: Evaluation
+  workability?: WorkabilityEvaluation
 }
 
 export function ComparePanel({ rows, onClose }: { rows: Row[]; onClose: () => void }) {
   const anyLabor = rows.some((r) => r.evaluation)
+  const anyProductivity = rows.some((r) => r.productivity.score !== null)
   return (
     <div className="overlay" onClick={onClose}>
       <div className="modal" style={{ maxWidth: 820 }} onClick={(e) => e.stopPropagation()}>
@@ -63,12 +72,45 @@ export function ComparePanel({ rows, onClose }: { rows: Row[]; onClose: () => vo
               <Metric rows={rows} label="従業員数" get={(c) => c.company.employees} />
               <Metric rows={rows} label="設立年" get={(c) => c.company.founded ?? 0} lowerBetter />
 
+              {anyProductivity && (
+                <>
+                  <tr>
+                    <td>生産性スコア</td>
+                    {rows.map((r) => (
+                      <td
+                        key={r.company.id}
+                        style={{ fontWeight: 800, color: r.productivity.score !== null ? growthColor(r.productivity.score) : 'var(--text-faint)' }}
+                      >
+                        {r.productivity.score ?? '—'}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td>一人当たり売上</td>
+                    {rows.map((r) => (
+                      <td key={r.company.id}>{formatYen(r.productivity.revenuePerEmployee)}</td>
+                    ))}
+                  </tr>
+                </>
+              )}
+
               {anyLabor && (
                 <>
                   <tr>
                     <td colSpan={rows.length + 1} style={{ paddingTop: 14, color: 'var(--text-faint)', fontSize: 12 }}>
                       — 労働環境 —
                     </td>
+                  </tr>
+                  <tr>
+                    <td>働きやすさ</td>
+                    {rows.map((r) => (
+                      <td
+                        key={r.company.id}
+                        style={{ fontWeight: 800, color: r.workability ? growthColor(r.workability.score) : 'var(--text-faint)' }}
+                      >
+                        {r.workability ? r.workability.score : '—'}
+                      </td>
+                    ))}
                   </tr>
                   <tr>
                     <td>ブラック度</td>

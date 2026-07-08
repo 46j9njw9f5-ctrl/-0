@@ -14,6 +14,20 @@ export interface SeriesPoint {
   value: number
 }
 
+/** 財務・株式情報（実データ。取れた範囲のみ・単位は円）。 */
+export interface Financials {
+  /** 純利益 */
+  netProfit?: number
+  /** 営業利益 */
+  operatingIncome?: number
+  /** 時価総額 */
+  marketCap?: number
+  /** ティッカーシンボル */
+  ticker?: string
+  /** 上場市場 */
+  exchange?: string
+}
+
 /** 労働環境の指標（ブラック度スコアの入力）。実データが無い企業では未連携となる。 */
 export interface CompanyMetrics {
   /** 月平均残業時間（時間） */
@@ -67,6 +81,8 @@ export interface Company {
   employeeHistory?: SeriesPoint[]
   /** 売上高の推移 */
   revenueHistory?: SeriesPoint[]
+  /** 財務・株式情報 */
+  financials?: Financials
   /** 出典 */
   source?: DataSource
   /** 労働環境の指標（未連携なら undefined） */
@@ -140,4 +156,57 @@ export interface GrowthEvaluation {
   revenueCagr: number | null
   /** 従業員 CAGR（%） */
   headcountCagr: number | null
+}
+
+// ---------- 生産性評価 ----------
+
+export type Tier = 'high' | 'mid' | 'low'
+
+export interface ProductivityEvaluation {
+  /** 一人当たり売上高（円）。算出できない場合は null */
+  revenuePerEmployee: number | null
+  /** 一人当たり営業利益（円） */
+  profitPerEmployee: number | null
+  /** 営業利益率（%） */
+  operatingMargin: number | null
+  /** 生産性スコア 0–100（一人当たり売上を対数スケールで） */
+  score: number | null
+  tier: Tier
+  note: string
+}
+
+// ---------- 株・投資（財務スナップショット） ----------
+
+export interface StockSnapshot {
+  /** 最新売上高（円） */
+  revenue: number | null
+  /** 純利益（円） */
+  netProfit: number | null
+  /** 営業利益（円） */
+  operatingIncome: number | null
+  /** 純利益率（%） */
+  netMargin: number | null
+  /** 時価総額（円） */
+  marketCap: number | null
+  /** 売上成長率（年率 %） */
+  revenueCagr: number | null
+  ticker?: string
+  exchange?: string
+  listed: boolean
+  /** データが取得できたか */
+  hasData: boolean
+  /** 収益性の簡易評価（利益率ベース、投資助言ではない） */
+  profitability: Tier | null
+  note: string
+}
+
+// ---------- 働きやすさ評価 ----------
+
+export interface WorkabilityEvaluation {
+  /** 働きやすさスコア 0–100（高いほど働きやすい） */
+  score: number
+  tier: Tier
+  tierLabel: string
+  factors: GrowthFactor[]
+  highlights: string[]
 }

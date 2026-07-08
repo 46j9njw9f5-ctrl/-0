@@ -1,5 +1,50 @@
 [
   {
+    "id": "Q53268",
+    "name": "トヨタ自動車",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "愛知県",
+    "employees": 359542,
+    "founded": 1937,
+    "listed": true,
+    "website": "https://global.toyota",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 359542
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2015,
+        "value": 27234521000000
+      },
+      {
+        "year": 2016,
+        "value": 28403118000000
+      },
+      {
+        "year": 2024,
+        "value": 410890000000
+      }
+    ],
+    "financials": {
+      "netProfit": 2312694000000,
+      "operatingIncome": 2853971000000,
+      "marketCap": 249042000000,
+      "exchange": "東京証券取引所"
+    },
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q53268"
+    }
+  },
+  {
     "id": "Q183275",
     "name": "三菱グループ",
     "industry": "機械・重工業",
@@ -12,7 +57,7 @@
     "founded": 1870,
     "listed": false,
     "website": "https://www.mitsubishi.com/en/",
-    "accent": "#a855f7",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 2010,
@@ -25,6 +70,10 @@
         "value": 532600000000
       }
     ],
+    "financials": {
+      "netProfit": 7100000000,
+      "operatingIncome": 7200000000
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -34,17 +83,19 @@
   {
     "id": "Q53247",
     "name": "パナソニックホールディングス",
-    "industry": "エレクトロニクス",
+    "industry": "半導体",
     "industryRaw": [
       "電子工学",
-      "家電機器"
+      "家電機器",
+      "コンピュータゲーム産業",
+      "半導体産業"
     ],
     "location": "大阪府",
     "employees": 257533,
     "founded": 1918,
     "listed": true,
     "website": "https://holdings.panasonic/",
-    "accent": "#0ea5e9",
+    "accent": "#e11d48",
     "employeeHistory": [
       {
         "year": 2017,
@@ -93,6 +144,11 @@
         "value": 7343707000000
       }
     ],
+    "financials": {
+      "netProfit": 149360000000,
+      "operatingIncome": 276784000000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -112,7 +168,7 @@
     "founded": 1948,
     "listed": true,
     "website": "https://global.honda",
-    "accent": "#84cc16",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
         "year": 2022,
@@ -125,6 +181,11 @@
         "value": 14950000000000
       }
     ],
+    "financials": {
+      "netProfit": 707000000000,
+      "operatingIncome": 871200000000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -144,7 +205,7 @@
     "founded": 1935,
     "listed": true,
     "website": "https://global.fujitsu",
-    "accent": "#14b8a6",
+    "accent": "#f59e0b",
     "employeeHistory": [
       {
         "year": 0,
@@ -161,10 +222,113 @@
         "value": 1270000000
       }
     ],
+    "financials": {
+      "netProfit": 1001000000,
+      "operatingIncome": 1015000000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
       "url": "https://www.wikidata.org/wiki/Q186394"
+    }
+  },
+  {
+    "id": "Q62621",
+    "name": "キヤノン",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学",
+      "電気産業"
+    ],
+    "location": "東京都",
+    "employees": 194151,
+    "founded": 1937,
+    "listed": true,
+    "website": "https://global.canon/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2011,
+        "value": 198307
+      },
+      {
+        "year": 2012,
+        "value": 196968
+      },
+      {
+        "year": 2013,
+        "value": 194151
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2016,
+        "value": 3401000000000
+      }
+    ],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q62621"
+    }
+  },
+  {
+    "id": "Q6584353",
+    "name": "ヤマト運輸",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "運輸業"
+    ],
+    "location": "日本",
+    "employees": 191172,
+    "founded": 2005,
+    "listed": false,
+    "website": "https://www.kuronekoyamato.co.jp/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 191172
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q6584353"
+    }
+  },
+  {
+    "id": "Q1814247",
+    "name": "住友電気工業",
+    "industry": "鉄鋼・金属",
+    "industryRaw": [
+      "非鉄金属"
+    ],
+    "location": "大阪府",
+    "employees": 182773,
+    "founded": 1897,
+    "listed": true,
+    "website": "https://sumitomoelectric.com",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2011,
+        "value": 182773
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1814247"
     }
   },
   {
@@ -179,7 +343,7 @@
     "founded": 1933,
     "listed": true,
     "website": "https://www.nissan-global.com/",
-    "accent": "#3b82f6",
+    "accent": "#f59e0b",
     "employeeHistory": [
       {
         "year": 2005,
@@ -224,6 +388,11 @@
         "value": 11951169000000
       }
     ],
+    "financials": {
+      "netProfit": 763657000000,
+      "operatingIncome": 574760000000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -231,64 +400,34 @@
     }
   },
   {
-    "id": "Q41187",
-    "name": "ソニーグループ",
-    "industry": "エレクトロニクス",
+    "id": "Q1542175",
+    "name": "三菱UFJフィナンシャル・グループ",
+    "industry": "金融・保険",
     "industryRaw": [
-      "コンピュータゲーム産業",
-      "電気産業",
-      "電子工業"
+      "金融サービス",
+      "金融業"
     ],
-    "location": "東京都",
-    "employees": 112300,
-    "founded": 1946,
+    "location": "日本",
+    "employees": 104900,
+    "founded": 2005,
     "listed": true,
-    "website": "https://www.sony.co.in/",
-    "accent": "#ec4899",
+    "website": "http://www.mufg.jp/",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
-        "year": 2019,
-        "value": 114400
-      },
-      {
-        "year": 2021,
-        "value": 109700
-      },
-      {
-        "year": 2023,
-        "value": 113000
-      },
-      {
-        "year": 2024,
-        "value": 113000
-      },
-      {
-        "year": 2025,
-        "value": 112300
+        "year": 2016,
+        "value": 104900
       }
     ],
-    "revenueHistory": [
-      {
-        "year": 2020,
-        "value": 7252766000000
-      },
-      {
-        "year": 2022,
-        "value": 10095841000000
-      },
-      {
-        "year": 2023,
-        "value": 11260037000000
-      },
-      {
-        "year": 2024,
-        "value": 11260037000000
-      }
-    ],
+    "revenueHistory": [],
+    "financials": {
+      "netProfit": 793238000000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q41187"
+      "url": "https://www.wikidata.org/wiki/Q1542175"
     }
   },
   {
@@ -303,7 +442,7 @@
     "founded": 1949,
     "listed": true,
     "website": "https://www.aisin.com/jp/",
-    "accent": "#06b6d4",
+    "accent": "#14b8a6",
     "employeeHistory": [
       {
         "year": 0,
@@ -311,6 +450,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -330,7 +472,7 @@
     "founded": 1959,
     "listed": true,
     "website": "https://global.kyocera.com/",
-    "accent": "#e11d48",
+    "accent": "#3b82f6",
     "employeeHistory": [
       {
         "year": 2024,
@@ -338,6 +480,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -361,7 +506,7 @@
     "founded": 1934,
     "listed": true,
     "website": "https://www.fujifilm.com/",
-    "accent": "#14b8a6",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 2006,
@@ -466,6 +611,10 @@
         "value": 2859041000000
       }
     ],
+    "financials": {
+      "netProfit": 104431000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -485,7 +634,7 @@
     "founded": 1881,
     "listed": true,
     "website": "https://corporate.epson/",
-    "accent": "#a855f7",
+    "accent": "#3b82f6",
     "employeeHistory": [
       {
         "year": 2024,
@@ -493,6 +642,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -511,7 +663,7 @@
     "founded": 1987,
     "listed": true,
     "website": "https://www.jreast.co.jp/",
-    "accent": "#ec4899",
+    "accent": "#84cc16",
     "employeeHistory": [
       {
         "year": 0,
@@ -564,6 +716,11 @@
         "value": 2880802000000
       }
     ],
+    "financials": {
+      "netProfit": 279435000000,
+      "operatingIncome": 466310000000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -582,7 +739,7 @@
     "founded": 1909,
     "listed": true,
     "website": "https://www.globalsuzuki.com/",
-    "accent": "#8b5cf6",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 2020,
@@ -590,6 +747,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -611,7 +771,7 @@
     "founded": 1981,
     "listed": true,
     "website": "https://group.softbank/",
-    "accent": "#e11d48",
+    "accent": "#14b8a6",
     "employeeHistory": [
       {
         "year": 0,
@@ -668,6 +828,11 @@
         "value": 9158765000000
       }
     ],
+    "financials": {
+      "netProfit": 1237812000000,
+      "operatingIncome": 1303801000000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -686,7 +851,7 @@
     "founded": 1934,
     "listed": true,
     "website": "https://www.mhi.com",
-    "accent": "#a855f7",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 0,
@@ -699,6 +864,9 @@
         "value": 3620000000
       }
     ],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -748,6 +916,46 @@
     }
   },
   {
+    "id": "Q717093",
+    "name": "伊藤忠商事",
+    "industry": "商社",
+    "industryRaw": [
+      "取引",
+      "総合商社"
+    ],
+    "location": "港区",
+    "employees": 62500,
+    "founded": 1949,
+    "listed": true,
+    "website": "https://www.itochu.co.jp",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2010,
+        "value": 62500
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2011,
+        "value": 43900000000
+      },
+      {
+        "year": 2021,
+        "value": 10362628000000
+      }
+    ],
+    "financials": {
+      "netProfit": 1900,
+      "exchange": "東京証券取引所"
+    },
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q717093"
+    }
+  },
+  {
     "id": "Q482841",
     "name": "ロッテグループ",
     "industry": "エレクトロニクス",
@@ -767,7 +975,7 @@
     "founded": 1948,
     "listed": false,
     "website": "https://www.lotte.co.jp/",
-    "accent": "#84cc16",
+    "accent": "#06b6d4",
     "employeeHistory": [
       {
         "year": 0,
@@ -793,7 +1001,7 @@
     "founded": 2005,
     "listed": true,
     "website": "http://www.7andi.com/",
-    "accent": "#e11d48",
+    "accent": "#84cc16",
     "employeeHistory": [
       {
         "year": 2023,
@@ -806,36 +1014,13 @@
         "value": 11811303000000
       }
     ],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
       "url": "https://www.wikidata.org/wiki/Q639447"
-    }
-  },
-  {
-    "id": "Q855479",
-    "name": "TDK",
-    "industry": "エレクトロニクス",
-    "industryRaw": [
-      "電子工学"
-    ],
-    "location": "東京都",
-    "employees": 53923,
-    "founded": 1935,
-    "listed": true,
-    "website": "https://www.tdk.com/",
-    "accent": "#a855f7",
-    "employeeHistory": [
-      {
-        "year": 0,
-        "value": 53923
-      }
-    ],
-    "revenueHistory": [],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q855479"
     }
   },
   {
@@ -852,7 +1037,7 @@
     "founded": 1955,
     "listed": true,
     "website": "https://global.yamaha-motor.com/",
-    "accent": "#f59e0b",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 2023,
@@ -865,6 +1050,9 @@
         "value": 2414759000000
       }
     ],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -883,7 +1071,7 @@
     "founded": 1949,
     "listed": true,
     "website": "https://www.lixil.co.jp/",
-    "accent": "#e11d48",
+    "accent": "#06b6d4",
     "employeeHistory": [
       {
         "year": 2025,
@@ -896,53 +1084,13 @@
         "value": 150469700000
       }
     ],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
       "url": "https://www.wikidata.org/wiki/Q11229272"
-    }
-  },
-  {
-    "id": "Q833986",
-    "name": "タカタ",
-    "industry": "自動車・輸送機器",
-    "industryRaw": [
-      "自動車産業"
-    ],
-    "location": "東京都",
-    "employees": 50530,
-    "founded": 1933,
-    "listed": false,
-    "website": null,
-    "accent": "#0ea5e9",
-    "employeeHistory": [
-      {
-        "year": 2010,
-        "value": 35000
-      },
-      {
-        "year": 2015,
-        "value": 48775
-      },
-      {
-        "year": 2016,
-        "value": 50530
-      }
-    ],
-    "revenueHistory": [
-      {
-        "year": 2015,
-        "value": 642810000000
-      },
-      {
-        "year": 2016,
-        "value": 718003000000
-      }
-    ],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q833986"
     }
   },
   {
@@ -958,7 +1106,7 @@
     "founded": 1912,
     "listed": true,
     "website": "https://global.sharp",
-    "accent": "#0ea5e9",
+    "accent": "#8b5cf6",
     "employeeHistory": [
       {
         "year": 2014,
@@ -979,6 +1127,11 @@
         "value": 2427271000000
       }
     ],
+    "financials": {
+      "netProfit": 70225000000,
+      "operatingIncome": 1060000000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -997,7 +1150,7 @@
     "founded": 1952,
     "listed": true,
     "website": "https://www.ana.co.jp",
-    "accent": "#8b5cf6",
+    "accent": "#f97316",
     "employeeHistory": [
       {
         "year": 2022,
@@ -1005,10 +1158,80 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
       "url": "https://www.wikidata.org/wiki/Q204284"
+    }
+  },
+  {
+    "id": "Q1611033",
+    "name": "アルプスアルパイン",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学"
+    ],
+    "location": "東京都",
+    "employees": 42053,
+    "founded": 1948,
+    "listed": false,
+    "website": "https://www.alpsalpine.com/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2011,
+        "value": 5600
+      },
+      {
+        "year": 2013,
+        "value": 36199
+      },
+      {
+        "year": 2016,
+        "value": 39443
+      },
+      {
+        "year": 2017,
+        "value": 42053
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1611033"
+    }
+  },
+  {
+    "id": "Q1514221",
+    "name": "クボタ",
+    "industry": "機械・重工業",
+    "industryRaw": [
+      "機械産業"
+    ],
+    "location": "大阪府",
+    "employees": 41605,
+    "founded": 1890,
+    "listed": true,
+    "website": "https://www.kubota.com/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 41605
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1514221"
     }
   },
   {
@@ -1023,7 +1246,7 @@
     "founded": 2010,
     "listed": true,
     "website": "https://www.hd.eneos.co.jp/",
-    "accent": "#ec4899",
+    "accent": "#06b6d4",
     "employeeHistory": [
       {
         "year": 2019,
@@ -1031,6 +1254,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -1038,67 +1264,129 @@
     }
   },
   {
-    "id": "Q904240",
-    "name": "三井物産",
-    "industry": "物流・運輸",
+    "id": "Q118911",
+    "name": "コニカミノルタ",
+    "industry": "エレクトロニクス",
     "industryRaw": [
-      "物流",
-      "総合商社"
+      "電子工学"
     ],
-    "location": "日本",
-    "employees": 40026,
-    "founded": 1947,
+    "location": "東京都",
+    "employees": 36000,
+    "founded": 2003,
     "listed": true,
-    "website": "https://www.mitsui.com/jp/ja",
-    "accent": "#f97316",
+    "website": "https://kmbs.konicaminolta.us/",
+    "accent": "#e11d48",
     "employeeHistory": [
       {
-        "year": 2011,
-        "value": 40026
+        "year": 0,
+        "value": 36000
       }
     ],
-    "revenueHistory": [
-      {
-        "year": 2011,
-        "value": 9424000000000
-      }
-    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q904240"
+      "url": "https://www.wikidata.org/wiki/Q118911"
     }
   },
   {
-    "id": "Q748148",
-    "name": "川崎重工業",
-    "industry": "機械・重工業",
+    "id": "Q11257037",
+    "name": "あきんどスシロー",
+    "industry": "食品・飲料",
     "industryRaw": [
-      "軍需産業",
-      "機械産業"
+      "レストラン",
+      "外食産業",
+      "小売",
+      "レストランチェーン",
+      "レストラン産業"
     ],
-    "location": "中央区",
-    "employees": 32706,
-    "founded": 1878,
+    "location": "日本",
+    "employees": 35509,
+    "founded": 1984,
     "listed": true,
-    "website": "http://global.kawasaki.com/",
-    "accent": "#06b6d4",
+    "website": "https://www.akindo-sushiro.co.jp/",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
-        "year": 2011,
-        "value": 32706
+        "year": 2025,
+        "value": 35509
       }
     ],
     "revenueHistory": [
       {
-        "year": 2018,
-        "value": 2260000000
+        "year": 2025,
+        "value": 2880000000
       }
     ],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q748148"
+      "url": "https://www.wikidata.org/wiki/Q11257037"
+    }
+  },
+  {
+    "id": "Q1993298",
+    "name": "日本通運",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "物流"
+    ],
+    "location": "東京都",
+    "employees": 35174,
+    "founded": 1937,
+    "listed": true,
+    "website": "https://www.nittsu.co.jp/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 35174
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1993298"
+    }
+  },
+  {
+    "id": "Q720489",
+    "name": "旭化成",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業",
+      "医薬品製造業"
+    ],
+    "location": "東京都",
+    "employees": 34670,
+    "founded": 1931,
+    "listed": true,
+    "website": "http://asahi-kasei.co.jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 34670
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q720489"
     }
   },
   {
@@ -1113,7 +1401,7 @@
     "founded": 1918,
     "listed": true,
     "website": "https://www.nsg.co.jp/",
-    "accent": "#3b82f6",
+    "accent": "#f59e0b",
     "employeeHistory": [
       {
         "year": 2011,
@@ -1121,6 +1409,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -1139,7 +1430,7 @@
     "founded": 1872,
     "listed": true,
     "website": "https://corp.shiseido.com/",
-    "accent": "#8b5cf6",
+    "accent": "#84cc16",
     "employeeHistory": [
       {
         "year": 0,
@@ -1147,6 +1438,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -1154,29 +1448,32 @@
     }
   },
   {
-    "id": "Q866991",
-    "name": "大創産業",
-    "industry": "バラエティ・ストア",
+    "id": "Q1812086",
+    "name": "東京海上ホールディングス",
+    "industry": "金融・保険",
     "industryRaw": [
-      "バラエティ・ストア"
+      "保険業"
     ],
-    "location": "東広島市",
-    "employees": 24750,
-    "founded": 1977,
-    "listed": false,
-    "website": "https://www.daiso-sangyo.co.jp/",
-    "accent": "#14b8a6",
+    "location": "東京都",
+    "employees": 24959,
+    "founded": 1879,
+    "listed": true,
+    "website": "https://www.tokiomarinehd.com",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
-        "year": 2025,
-        "value": 24750
+        "year": 2008,
+        "value": 24959
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q866991"
+      "url": "https://www.wikidata.org/wiki/Q1812086"
     }
   },
   {
@@ -1192,7 +1489,7 @@
     "founded": 1984,
     "listed": false,
     "website": "https://www.uniqlo.com/",
-    "accent": "#84cc16",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
         "year": 2023,
@@ -1204,10 +1501,71 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "operatingIncome": 1773000000
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
       "url": "https://www.wikidata.org/wiki/Q26070"
+    }
+  },
+  {
+    "id": "Q1365015",
+    "name": "関西電力",
+    "industry": "エネルギー・インフラ",
+    "industryRaw": [
+      "電力会社"
+    ],
+    "location": "北区",
+    "employees": 20628,
+    "founded": 1951,
+    "listed": true,
+    "website": "https://www.kepco.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 20628
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1365015"
+    }
+  },
+  {
+    "id": "Q15731340",
+    "name": "DIC",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業"
+    ],
+    "location": "日本",
+    "employees": 20411,
+    "founded": 1908,
+    "listed": true,
+    "website": "http://www.dic-global.com",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 20411
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q15731340"
     }
   },
   {
@@ -1267,6 +1625,11 @@
         "value": 1756980000000
       }
     ],
+    "financials": {
+      "netProfit": 391624000000,
+      "operatingIncome": 619564000000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -1274,29 +1637,32 @@
     }
   },
   {
-    "id": "Q1111609",
-    "name": "帝人",
-    "industry": "化学・素材",
+    "id": "Q1368019",
+    "name": "シチズン時計",
+    "industry": "精密・光学機器",
     "industryRaw": [
-      "化学工業"
+      "時計学"
     ],
-    "location": "大阪府",
-    "employees": 16819,
+    "location": "日本",
+    "employees": 18000,
     "founded": 1918,
-    "listed": false,
-    "website": "https://www.teijin.co.jp",
-    "accent": "#84cc16",
+    "listed": true,
+    "website": "http://www.citizen.co.jp",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 0,
-        "value": 16819
+        "value": 18000
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q1111609"
+      "url": "https://www.wikidata.org/wiki/Q1368019"
     }
   },
   {
@@ -1311,7 +1677,7 @@
     "founded": 1888,
     "listed": false,
     "website": "https://www.eneos.co.jp/",
-    "accent": "#ec4899",
+    "accent": "#f59e0b",
     "employeeHistory": [
       {
         "year": 0,
@@ -1358,6 +1724,35 @@
     }
   },
   {
+    "id": "Q682894",
+    "name": "東京地下鉄",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "公共交通機関"
+    ],
+    "location": "台東区",
+    "employees": 11794,
+    "founded": 2004,
+    "listed": true,
+    "website": "https://www.tokyometro.jp/lang_es/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 11794
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q682894"
+    }
+  },
+  {
     "id": "Q115681659",
     "name": "クリエイトエス・ディー",
     "industry": "小売・流通",
@@ -1369,7 +1764,7 @@
     "founded": 1975,
     "listed": true,
     "website": "https://www.create-sd.co.jp/corpo/tabid/91/Default.aspx",
-    "accent": "#22c55e",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 2022,
@@ -1377,67 +1772,13 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
       "url": "https://www.wikidata.org/wiki/Q115681659"
-    }
-  },
-  {
-    "id": "Q905412",
-    "name": "昭和電工",
-    "industry": "化学・素材",
-    "industryRaw": [
-      "化学工業"
-    ],
-    "location": "東京都",
-    "employees": 10864,
-    "founded": 1939,
-    "listed": true,
-    "website": "https://www.resonac.com/jp",
-    "accent": "#8b5cf6",
-    "employeeHistory": [
-      {
-        "year": 2017,
-        "value": 10864
-      }
-    ],
-    "revenueHistory": [
-      {
-        "year": 0,
-        "value": 1.419
-      }
-    ],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q905412"
-    }
-  },
-  {
-    "id": "Q45700",
-    "name": "コナミグループ",
-    "industry": "ゲーム・エンタメ",
-    "industryRaw": [
-      "コンピュータゲーム産業"
-    ],
-    "location": "日本",
-    "employees": 10392,
-    "founded": 1969,
-    "listed": true,
-    "website": "https://www.konami.com/en/",
-    "accent": "#0ea5e9",
-    "employeeHistory": [
-      {
-        "year": 0,
-        "value": 10392
-      }
-    ],
-    "revenueHistory": [],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q45700"
     }
   },
   {
@@ -1452,7 +1793,7 @@
     "founded": 1961,
     "listed": false,
     "website": "http://www.unicharm.co.jp/",
-    "accent": "#8b5cf6",
+    "accent": "#f97316",
     "employeeHistory": [
       {
         "year": 0,
@@ -1478,7 +1819,7 @@
     "founded": 1973,
     "listed": false,
     "website": "https://www.lexisnexis.com/en-us/home.page",
-    "accent": "#14b8a6",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 0,
@@ -1493,41 +1834,6 @@
     }
   },
   {
-    "id": "Q973054",
-    "name": "楽天グループ",
-    "industry": "IT・インターネット",
-    "industryRaw": [
-      "インターネット産業"
-    ],
-    "location": "世田谷区",
-    "employees": 9885,
-    "founded": 1997,
-    "listed": true,
-    "website": "https://corp.rakuten.co.jp/",
-    "accent": "#e11d48",
-    "employeeHistory": [
-      {
-        "year": 0,
-        "value": 10000
-      },
-      {
-        "year": 2024,
-        "value": 9885
-      }
-    ],
-    "revenueHistory": [
-      {
-        "year": 2021,
-        "value": 1681000000
-      }
-    ],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q973054"
-    }
-  },
-  {
     "id": "Q327247",
     "name": "アシックス",
     "industry": "繊維・アパレル",
@@ -1539,7 +1845,7 @@
     "founded": 1949,
     "listed": true,
     "website": "https://www.asics.com/",
-    "accent": "#22c55e",
+    "accent": "#e11d48",
     "employeeHistory": [
       {
         "year": 2015,
@@ -1551,6 +1857,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -1569,7 +1878,7 @@
     "founded": 1956,
     "listed": true,
     "website": "https://www.fanuc.co.jp/index.html",
-    "accent": "#06b6d4",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 2021,
@@ -1582,6 +1891,11 @@
         "value": 4683990000
       }
     ],
+    "financials": {
+      "netProfit": 1270300000,
+      "operatingIncome": 1895640,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -1615,32 +1929,6 @@
     }
   },
   {
-    "id": "Q1081154",
-    "name": "鹿島建設",
-    "industry": "建設・不動産",
-    "industryRaw": [
-      "建設"
-    ],
-    "location": "港区",
-    "employees": 8129,
-    "founded": 1840,
-    "listed": true,
-    "website": "http://www.kajima.co.jp/",
-    "accent": "#06b6d4",
-    "employeeHistory": [
-      {
-        "year": 2023,
-        "value": 8129
-      }
-    ],
-    "revenueHistory": [],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q1081154"
-    }
-  },
-  {
     "id": "Q1397688",
     "name": "ファーストリテイリング",
     "industry": "小売・流通",
@@ -1652,7 +1940,7 @@
     "founded": 1963,
     "listed": true,
     "website": "https://www.fastretailing.com/",
-    "accent": "#3b82f6",
+    "accent": "#84cc16",
     "employeeHistory": [
       {
         "year": 0,
@@ -1660,6 +1948,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -1683,7 +1974,7 @@
     "founded": 1937,
     "listed": true,
     "website": "http://www.dowa.co.jp/",
-    "accent": "#f97316",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 0,
@@ -1691,6 +1982,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -1709,7 +2003,7 @@
     "founded": 1958,
     "listed": false,
     "website": "https://www.nissin.com/",
-    "accent": "#f59e0b",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 0,
@@ -1740,7 +2034,7 @@
     "founded": 1889,
     "listed": true,
     "website": "https://www.nintendo.com/jp/index.html",
-    "accent": "#e11d48",
+    "accent": "#3b82f6",
     "employeeHistory": [
       {
         "year": 2020,
@@ -1756,6 +2050,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -1774,7 +2071,7 @@
     "founded": 1943,
     "listed": true,
     "website": "https://www.shizuokabank.co.jp",
-    "accent": "#84cc16",
+    "accent": "#14b8a6",
     "employeeHistory": [
       {
         "year": 2021,
@@ -1787,6 +2084,12 @@
         "value": 222592000000
       }
     ],
+    "financials": {
+      "netProfit": 43722000000,
+      "operatingIncome": 62024000000,
+      "marketCap": 536200000000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -1805,7 +2108,7 @@
     "founded": 1989,
     "listed": false,
     "website": "https://www.toysrus.co.jp/",
-    "accent": "#3b82f6",
+    "accent": "#e11d48",
     "employeeHistory": [
       {
         "year": 2020,
@@ -1831,7 +2134,7 @@
     "founded": 2019,
     "listed": false,
     "website": "https://www.yumeshin.co.jp/",
-    "accent": "#14b8a6",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 0,
@@ -1857,7 +2160,7 @@
     "founded": 1985,
     "listed": true,
     "website": "http://www.showa-shell.co.jp/",
-    "accent": "#f59e0b",
+    "accent": "#14b8a6",
     "employeeHistory": [
       {
         "year": 0,
@@ -1870,6 +2173,10 @@
         "value": 28300000000
       }
     ],
+    "financials": {
+      "marketCap": 3400000000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -1890,7 +2197,7 @@
     "founded": 1894,
     "listed": false,
     "website": "http://www.kowa.co.jp/",
-    "accent": "#8b5cf6",
+    "accent": "#84cc16",
     "employeeHistory": [
       {
         "year": 0,
@@ -1916,7 +2223,7 @@
     "founded": 1906,
     "listed": false,
     "website": "https://corp.mizuno.com/en",
-    "accent": "#06b6d4",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 0,
@@ -1928,6 +2235,35 @@
       "name": "Wikidata",
       "license": "CC0",
       "url": "https://www.wikidata.org/wiki/Q1156731"
+    }
+  },
+  {
+    "id": "Q902855",
+    "name": "花王",
+    "industry": "化粧品・日用品",
+    "industryRaw": [
+      "化粧品産業"
+    ],
+    "location": "中央区",
+    "employees": 5652,
+    "founded": 1940,
+    "listed": true,
+    "website": "https://www.kao.com/cn/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 5652
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q902855"
     }
   },
   {
@@ -1944,7 +2280,7 @@
     "founded": 1975,
     "listed": true,
     "website": "https://www.jp.square-enix.com/",
-    "accent": "#0ea5e9",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
         "year": 2020,
@@ -1957,6 +2293,12 @@
         "value": 260527000000
       }
     ],
+    "financials": {
+      "netProfit": 21346000000,
+      "operatingIncome": 32759000000,
+      "marketCap": 823828000000,
+      "exchange": "OTCマーケッツグループ"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -1976,7 +2318,7 @@
     "founded": 1920,
     "listed": true,
     "website": "https://www.boy.co.jp/",
-    "accent": "#f59e0b",
+    "accent": "#8b5cf6",
     "employeeHistory": [
       {
         "year": 0,
@@ -1989,6 +2331,11 @@
         "value": 291732000000
       }
     ],
+    "financials": {
+      "operatingIncome": 41405000000,
+      "marketCap": 518900000000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -2007,7 +2354,7 @@
     "founded": 1991,
     "listed": false,
     "website": "https://www.cx-cargo.co.jp/",
-    "accent": "#f97316",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 2023,
@@ -2033,7 +2380,7 @@
     "founded": 1997,
     "listed": false,
     "website": "https://www.willof-work.co.jp/",
-    "accent": "#8b5cf6",
+    "accent": "#f59e0b",
     "employeeHistory": [
       {
         "year": 2025,
@@ -2067,6 +2414,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -2085,7 +2435,7 @@
     "founded": 1941,
     "listed": true,
     "website": "https://www.shokubai.co.jp/ja/",
-    "accent": "#3b82f6",
+    "accent": "#14b8a6",
     "employeeHistory": [
       {
         "year": 2018,
@@ -2093,6 +2443,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -2112,7 +2465,7 @@
     "founded": 1973,
     "listed": true,
     "website": "http://www.saizeriya.com.cn/",
-    "accent": "#ec4899",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
         "year": 2020,
@@ -2120,6 +2473,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -2138,7 +2494,7 @@
     "founded": 1944,
     "listed": true,
     "website": "http://www.kureha.co.jp/en/",
-    "accent": "#f59e0b",
+    "accent": "#3b82f6",
     "employeeHistory": [
       {
         "year": 0,
@@ -2146,6 +2502,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -2164,7 +2523,7 @@
     "founded": 1958,
     "listed": false,
     "website": "https://www.molten.co.jp/",
-    "accent": "#0ea5e9",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 0,
@@ -2179,94 +2538,6 @@
     }
   },
   {
-    "id": "Q83584",
-    "name": "小田急電鉄",
-    "industry": "物流・運輸",
-    "industryRaw": [
-      "公共交通機関",
-      "鉄道輸送"
-    ],
-    "location": "渋谷区",
-    "employees": 3760,
-    "founded": 1923,
-    "listed": true,
-    "website": "https://www.odakyu.jp/",
-    "accent": "#22c55e",
-    "employeeHistory": [
-      {
-        "year": 2021,
-        "value": 3760
-      }
-    ],
-    "revenueHistory": [
-      {
-        "year": 2021,
-        "value": 114366000000
-      }
-    ],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q83584"
-    }
-  },
-  {
-    "id": "Q1185060",
-    "name": "UCC上島珈琲",
-    "industry": "食品・飲料",
-    "industryRaw": [
-      "食産業"
-    ],
-    "location": "中央区",
-    "employees": 3668,
-    "founded": 1933,
-    "listed": false,
-    "website": "https://www.ucc.co.jp/",
-    "accent": "#84cc16",
-    "employeeHistory": [
-      {
-        "year": 0,
-        "value": 3668
-      }
-    ],
-    "revenueHistory": [],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q1185060"
-    }
-  },
-  {
-    "id": "Q1153275",
-    "name": "国立研究開発法人理化学研究所",
-    "industry": "研究・サービス",
-    "industryRaw": [
-      "研究"
-    ],
-    "location": "埼玉県",
-    "employees": 3451,
-    "founded": 1917,
-    "listed": false,
-    "website": "https://www.riken.jp/",
-    "accent": "#e11d48",
-    "employeeHistory": [
-      {
-        "year": 2018,
-        "value": 3572
-      },
-      {
-        "year": 2021,
-        "value": 3451
-      }
-    ],
-    "revenueHistory": [],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q1153275"
-    }
-  },
-  {
     "id": "Q112748629",
     "name": "パルライン",
     "industry": "運送",
@@ -2278,7 +2549,7 @@
     "founded": 1987,
     "listed": false,
     "website": "https://www.palline.co.jp/",
-    "accent": "#f59e0b",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 2022,
@@ -2307,7 +2578,7 @@
     "founded": 1848,
     "listed": true,
     "website": "https://lazard.com/",
-    "accent": "#8b5cf6",
+    "accent": "#06b6d4",
     "employeeHistory": [
       {
         "year": 2014,
@@ -2319,6 +2590,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "ニューヨーク証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -2337,15 +2611,15 @@
     "founded": 1960,
     "listed": false,
     "website": "https://www.sega.com",
-    "accent": "#ec4899",
+    "accent": "#f59e0b",
     "employeeHistory": [
-      {
-        "year": null,
-        "value": 5349
-      },
       {
         "year": 2020,
         "value": 3238
+      },
+      {
+        "year": null,
+        "value": 5349
       }
     ],
     "revenueHistory": [],
@@ -2353,33 +2627,6 @@
       "name": "Wikidata",
       "license": "CC0",
       "url": "https://www.wikidata.org/wiki/Q122741"
-    }
-  },
-  {
-    "id": "Q848490",
-    "name": "ローランド",
-    "industry": "IT・ソフトウェア",
-    "industryRaw": [
-      "ソフトウェア産業",
-      "楽器製作者"
-    ],
-    "location": "静岡県",
-    "employees": 3060,
-    "founded": 1972,
-    "listed": false,
-    "website": "http://www.roland.com",
-    "accent": "#22c55e",
-    "employeeHistory": [
-      {
-        "year": 2013,
-        "value": 3060
-      }
-    ],
-    "revenueHistory": [],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q848490"
     }
   },
   {
@@ -2395,7 +2642,7 @@
     "founded": 2006,
     "listed": true,
     "website": "https://www.japanpost.jp",
-    "accent": "#22c55e",
+    "accent": "#06b6d4",
     "employeeHistory": [
       {
         "year": 2016,
@@ -2412,6 +2659,10 @@
         "value": 13326534000000
       }
     ],
+    "financials": {
+      "netProfit": 434333000000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -2430,7 +2681,7 @@
     "founded": 1979,
     "listed": true,
     "website": "https://www.capcom.co.jp/",
-    "accent": "#3b82f6",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 0,
@@ -2443,63 +2694,15 @@
         "value": 783200000
       }
     ],
+    "financials": {
+      "netProfit": 148700000,
+      "operatingIncome": 219100000,
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
       "url": "https://www.wikidata.org/wiki/Q14428"
-    }
-  },
-  {
-    "id": "Q1058127",
-    "name": "西日本高速道路",
-    "industry": "物流・運輸",
-    "industryRaw": [
-      "道路運送固定施設業"
-    ],
-    "location": "日本",
-    "employees": 2744,
-    "founded": 2005,
-    "listed": false,
-    "website": "https://www.w-nexco.co.jp/",
-    "accent": "#14b8a6",
-    "employeeHistory": [
-      {
-        "year": 2022,
-        "value": 2744
-      }
-    ],
-    "revenueHistory": [],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q1058127"
-    }
-  },
-  {
-    "id": "Q7711979",
-    "name": "七十七銀行",
-    "industry": "金融・保険",
-    "industryRaw": [
-      "銀行業",
-      "金融業"
-    ],
-    "location": "宮城県",
-    "employees": 2724,
-    "founded": 1878,
-    "listed": false,
-    "website": "https://www.77bank.co.jp/",
-    "accent": "#3b82f6",
-    "employeeHistory": [
-      {
-        "year": 0,
-        "value": 2724
-      }
-    ],
-    "revenueHistory": [],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q7711979"
     }
   },
   {
@@ -2514,7 +2717,7 @@
     "founded": 1980,
     "listed": true,
     "website": "https://www.cawachi.co.jp/",
-    "accent": "#0ea5e9",
+    "accent": "#84cc16",
     "employeeHistory": [
       {
         "year": 2020,
@@ -2522,6 +2725,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -2542,7 +2748,7 @@
     "founded": 1910,
     "listed": true,
     "website": null,
-    "accent": "#8b5cf6",
+    "accent": "#f59e0b",
     "employeeHistory": [
       {
         "year": 2001,
@@ -2550,6 +2756,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -2566,7 +2775,7 @@
     "founded": 2002,
     "listed": false,
     "website": "https://www.mcdonalds.co.jp/",
-    "accent": "#e11d48",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
         "year": 2013,
@@ -2613,32 +2822,6 @@
     }
   },
   {
-    "id": "Q1104912",
-    "name": "リョービ",
-    "industry": "機械・重工業",
-    "industryRaw": [
-      "機械産業"
-    ],
-    "location": "広島県",
-    "employees": 1722,
-    "founded": 1943,
-    "listed": true,
-    "website": "http://www.ryobi-group.co.jp/",
-    "accent": "#8b5cf6",
-    "employeeHistory": [
-      {
-        "year": 2019,
-        "value": 1722
-      }
-    ],
-    "revenueHistory": [],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q1104912"
-    }
-  },
-  {
     "id": "Q779730",
     "name": "共同通信社",
     "industry": "通信",
@@ -2650,7 +2833,7 @@
     "founded": 1945,
     "listed": false,
     "website": "https://www.kyodonews.jp/",
-    "accent": "#84cc16",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 2018,
@@ -2676,7 +2859,7 @@
     "founded": 1919,
     "listed": false,
     "website": "https://www.ricoh-imaging.co.jp/",
-    "accent": "#14b8a6",
+    "accent": "#8b5cf6",
     "employeeHistory": [
       {
         "year": 2005,
@@ -2702,7 +2885,7 @@
     "founded": 1971,
     "listed": false,
     "website": "https://www.nidek.co.jp/",
-    "accent": "#a855f7",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 0,
@@ -2714,6 +2897,35 @@
       "name": "Wikidata",
       "license": "CC0",
       "url": "https://www.wikidata.org/wiki/Q117115106"
+    }
+  },
+  {
+    "id": "Q16962428",
+    "name": "エイチームホールディングス",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "MMORPG"
+    ],
+    "location": "愛知県",
+    "employees": 1106,
+    "founded": 1997,
+    "listed": true,
+    "website": "https://www.a-tm.co.jp/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 1106
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q16962428"
     }
   },
   {
@@ -2729,7 +2941,7 @@
     "founded": 1960,
     "listed": false,
     "website": "https://www.roche-bobois.com",
-    "accent": "#f97316",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 0,
@@ -2756,7 +2968,7 @@
     "founded": 1992,
     "listed": false,
     "website": "https://www.globis.co.jp",
-    "accent": "#0ea5e9",
+    "accent": "#3b82f6",
     "employeeHistory": [
       {
         "year": 2025,
@@ -2782,7 +2994,7 @@
     "founded": 1999,
     "listed": false,
     "website": "https://www.cmic-hci.com/",
-    "accent": "#a855f7",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 2025,
@@ -2810,7 +3022,7 @@
     "founded": 1986,
     "listed": false,
     "website": "https://www.zaiho.jp/",
-    "accent": "#06b6d4",
+    "accent": "#f97316",
     "employeeHistory": [
       {
         "year": 2017,
@@ -2836,7 +3048,7 @@
     "founded": 1909,
     "listed": false,
     "website": "https://www.kodansha.co.jp/",
-    "accent": "#06b6d4",
+    "accent": "#3b82f6",
     "employeeHistory": [
       {
         "year": 2022,
@@ -2867,7 +3079,7 @@
     "founded": 1976,
     "listed": false,
     "website": "https://ad-nagata.com/",
-    "accent": "#22c55e",
+    "accent": "#06b6d4",
     "employeeHistory": [
       {
         "year": 0,
@@ -2893,7 +3105,7 @@
     "founded": 1948,
     "listed": true,
     "website": "https://www.calpis.co.jp/",
-    "accent": "#0ea5e9",
+    "accent": "#f97316",
     "employeeHistory": [
       {
         "year": 0,
@@ -2901,6 +3113,9 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
@@ -2919,7 +3134,7 @@
     "founded": 1947,
     "listed": true,
     "website": "http://www.fudotetra.co.jp/",
-    "accent": "#f97316",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 2025,
@@ -2927,36 +3142,13 @@
       }
     ],
     "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
     "source": {
       "name": "Wikidata",
       "license": "CC0",
       "url": "https://www.wikidata.org/wiki/Q11361587"
-    }
-  },
-  {
-    "id": "Q844822",
-    "name": "集英社",
-    "industry": "メディア・出版",
-    "industryRaw": [
-      "出版産業"
-    ],
-    "location": "千代田区",
-    "employees": 812,
-    "founded": 1925,
-    "listed": false,
-    "website": "https://www.shueisha.co.jp/",
-    "accent": "#3b82f6",
-    "employeeHistory": [
-      {
-        "year": 0,
-        "value": 812
-      }
-    ],
-    "revenueHistory": [],
-    "source": {
-      "name": "Wikidata",
-      "license": "CC0",
-      "url": "https://www.wikidata.org/wiki/Q844822"
     }
   }
 ]

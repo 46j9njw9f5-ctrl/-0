@@ -71,6 +71,28 @@ SELECT ?company ?revenue ?time WHERE {
   OPTIONAL { ?st pq:P585 ?time }
 }`
 
+/** 任意の金額系プロパティの時系列を取る汎用クエリ。 */
+const historyQuery = (prop) => `
+SELECT ?company ?value ?time WHERE {
+  ?company wdt:P17 wd:Q17 ; wdt:P1128 ?e . FILTER(?e > 800)
+  ?company p:${prop} ?st .
+  ?st ps:${prop} ?value .
+  OPTIONAL { ?st pq:P585 ?time }
+}`
+
+// 純利益(P2295)・営業利益(P3362)・時価総額(P2226)。
+const QUERY_NETPROFIT = historyQuery('P2295')
+const QUERY_OPINCOME = historyQuery('P3362')
+const QUERY_MARKETCAP = historyQuery('P2226')
+
+// 株式情報: ティッカー(P249) と 上場市場(P414) のラベル。
+const QUERY_MARKET = `
+SELECT ?company ?ticker ?exchangeLabel WHERE {
+  ?company wdt:P17 wd:Q17 ; wdt:P1128 ?e . FILTER(?e > 800)
+  OPTIONAL { ?company wdt:P249 ?ticker }
+  OPTIONAL { ?company wdt:P414 ?exch . ?exch rdfs:label ?exchangeLabel . FILTER(lang(?exchangeLabel) = "ja") }
+}`
+
 // --- 正規化ヘルパ ---------------------------------------------------------
 
 /** 時系列を [{year, value}] に整形（年で集約し最新を優先）。 */
@@ -93,6 +115,15 @@ function pickLatest(series) {
   const withYear = series.filter((s) => s.year > 0)
   const src = withYear.length ? withYear : series
   return src.length ? src[src.length - 1].value : null
+}
+
+/** 単位不整合の外れ値を中央値基準で除外してから最新値を返す。 */
+function cleanLatest(series) {
+  if (!series.length) return null
+  const vals = series.map((s) => s.value).sort((a, b) => a - b)
+  const median = vals[Math.floor(vals.length / 2)]
+  const clean = series.filter((s) => s.value >= median * 0.25 && s.value <= median * 4)
+  return pickLatest(clean.length ? clean : series)
 }
 
 // 具体的な業種キーワード → 内部カテゴリ（優先度は配列順）。
@@ -224,12 +255,18 @@ const ACCENTS = [
 
 async function main() {
   console.log('Wikidata から取得中...')
-  const [main, empRows, revRows] = await Promise.all([
+  const [main, empRows, revRows, npRows, opRows, mcRows, marketRows] = await Promise.all([
     sparql(QUERY_MAIN),
     sparql(QUERY_EMPLOYEES),
     sparql(QUERY_REVENUE),
+    sparql(QUERY_NETPROFIT),
+    sparql(QUERY_OPINCOME),
+    sparql(QUERY_MARKETCAP),
+    sparql(QUERY_MARKET),
   ])
-  console.log(`  facts=${main.length} emp=${empRows.length} rev=${revRows.length}`)
+  console.log(
+    `  facts=${main.length} emp=${empRows.length} rev=${revRows.length} np=${npRows.length} mc=${mcRows.length}`,
+  )
 
   // QID ごとに集約
   const byId = new Map()
@@ -273,6 +310,37 @@ async function main() {
     revByCompany.get(id).push(r)
   }
 
+  // 金額系プロパティを company ごとに集約するヘルパ
+  const groupBy = (rows) => {
+    const m = new Map()
+    for (const r of rows) {
+      const id = qid(r.company)
+      if (!byId.has(id)) continue
+      if (!m.has(id)) m.set(id, [])
+      m.get(id).push(r)
+    }
+    return m
+  }
+  const npByCompany = groupBy(npRows)
+  const opByCompany = groupBy(opRows)
+  const mcByCompany = groupBy(mcRows)
+
+  // ティッカー・上場市場
+  const isJpExchange = (s) => /東京|名古屋|福岡|札幌|JASDAQ|マザーズ|東証/.test(s)
+  const marketById = new Map()
+  for (const r of marketRows) {
+    const id = qid(r.company)
+    if (!byId.has(id)) continue
+    const cur = marketById.get(id) || {}
+    if (!cur.ticker && r.ticker) cur.ticker = r.ticker
+    const ex = r.exchangeLabel
+    if (ex && !/^Q\d+$/.test(ex)) {
+      // 国内市場を優先（就職者向けのため）
+      if (!cur.exchange || (isJpExchange(ex) && !isJpExchange(cur.exchange))) cur.exchange = ex
+    }
+    marketById.set(id, cur)
+  }
+
   const currentYear = 2025
   let idx = 0
   const companies = []
@@ -285,6 +353,17 @@ async function main() {
     if (founded && (founded < 1800 || founded > currentYear)) continue
 
     const industry = normalizeIndustry([...c.industries])
+    const netProfit = cleanLatest(toSeries(npByCompany.get(c.id) || [], 'value'))
+    const opIncome = cleanLatest(toSeries(opByCompany.get(c.id) || [], 'value'))
+    const marketCap = cleanLatest(toSeries(mcByCompany.get(c.id) || [], 'value'))
+    const market = marketById.get(c.id) || {}
+    const financials = {}
+    if (netProfit) financials.netProfit = netProfit
+    if (opIncome) financials.operatingIncome = opIncome
+    if (marketCap) financials.marketCap = marketCap
+    if (market.ticker) financials.ticker = market.ticker
+    if (market.exchange) financials.exchange = market.exchange
+
     companies.push({
       id: c.id,
       name: c.name,
@@ -293,11 +372,12 @@ async function main() {
       location: normalizeLocation(c.pref, c.hq),
       employees: Math.round(employees),
       founded,
-      listed: c.listed,
+      listed: c.listed || Boolean(market.exchange),
       website: c.website,
       accent: ACCENTS[idx++ % ACCENTS.length],
       employeeHistory: empSeries,
       revenueHistory: revSeries,
+      ...(Object.keys(financials).length ? { financials } : {}),
       source: { name: 'Wikidata', license: 'CC0', url: `https://www.wikidata.org/wiki/${c.id}` },
     })
   }

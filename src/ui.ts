@@ -43,3 +43,13 @@ export function growthColor(score: number): string {
 export function potentialColor(p: number): string {
   return growthColor(p)
 }
+
+/** 円を兆/億/万で読みやすく整形。 */
+export function formatYen(v: number | null | undefined): string {
+  if (v === null || v === undefined) return '—'
+  const a = Math.abs(v)
+  if (a >= 1e12) return `${(v / 1e12).toFixed(2)}兆円`
+  if (a >= 1e8) return `${(v / 1e8).toFixed(0)}億円`
+  if (a >= 1e4) return `${(v / 1e4).toFixed(0)}万円`
+  return `${Math.round(v)}円`
+}

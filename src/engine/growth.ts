@@ -52,6 +52,20 @@ export function cagr(series: SeriesPoint[] | undefined): number | null {
   return (Math.pow(ratio, 1 / years) - 1) * 100
 }
 
+/** 時系列から単位不整合の外れ値を除いた最新値を返す。 */
+export function cleanLatest(series: SeriesPoint[] | undefined): number | null {
+  if (!series || !series.length) return null
+  const pts = series.filter((p) => Number.isFinite(p.value) && p.value > 0)
+  if (!pts.length) return null
+  const vals = pts.map((p) => p.value).sort((a, b) => a - b)
+  const median = vals[Math.floor(vals.length / 2)]
+  const clean = pts.filter((p) => p.value >= median * 0.25 && p.value <= median * 4)
+  const src = (clean.length ? clean : pts).filter((p) => p.year > 0)
+  const use = src.length ? src : clean.length ? clean : pts
+  const sorted = [...use].sort((a, b) => a.year - b.year)
+  return sorted[sorted.length - 1].value
+}
+
 /** CAGR(%) → ポテンシャルポイント(0–100)。 */
 export const growthRateToPotential = (pct: number): number =>
   piecewise(pct, [
