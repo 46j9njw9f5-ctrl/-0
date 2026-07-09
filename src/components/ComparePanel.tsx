@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import type {
   Company,
   Evaluation,
@@ -19,6 +20,14 @@ interface Row {
 export function ComparePanel({ rows, onClose }: { rows: Row[]; onClose: () => void }) {
   const anyLabor = rows.some((r) => r.evaluation)
   const anyProductivity = rows.some((r) => r.productivity.score !== null)
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onClose])
   return (
     <div className="overlay" onClick={onClose}>
       <div className="modal" style={{ maxWidth: 820 }} onClick={(e) => e.stopPropagation()}>

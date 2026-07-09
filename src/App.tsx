@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
 import { datasets, type DatasetKey } from './data'
 import { evaluate } from './engine/scoring'
-import { evaluateGrowth } from './engine/growth'
+import { evaluateGrowth, scaleToPotential } from './engine/growth'
 import { evaluateProductivity } from './engine/productivity'
 import { evaluateStock } from './engine/stock'
 import { evaluateWorkability } from './engine/workability'
+import { availableAxes, matchScore, type AxisScores } from './engine/fit'
 import {
   hasLabor,
   type Company,
@@ -25,9 +26,10 @@ export interface Row {
   stock: StockSnapshot
   evaluation?: Evaluation
   workability?: WorkabilityEvaluation
+  scores: AxisScores
 }
 
-type SortKey = 'growth' | 'growthLow' | 'productivity' | 'white' | 'black' | 'work' | 'employees' | 'young'
+type SortKey = 'match' | 'growth' | 'growthLow' | 'productivity' | 'white' | 'black' | 'work' | 'employees' | 'young'
 
 const SORTS: { key: SortKey; label: string; laborOnly?: boolean }[] = [
   { key: 'growth', label: '将来性が高い順' },
@@ -40,19 +42,42 @@ const SORTS: { key: SortKey; label: string; laborOnly?: boolean }[] = [
   { key: 'black', label: 'ブラック度が高い順', laborOnly: true },
 ]
 
+function axisScoresOf(
+  growth: GrowthEvaluation,
+  productivity: ProductivityEvaluation,
+  employees: number,
+  evaluation?: Evaluation,
+  workability?: WorkabilityEvaluation,
+): AxisScores {
+  return {
+    growth: growth.growthScore,
+    productivity: productivity.score,
+    scale: scaleToPotential(employees),
+    workability: workability?.score ?? null,
+    safety: evaluation?.whiteScore ?? null,
+  }
+}
+
 const FAV_KEY = 'zero.favorites.v2'
 
 // データセットごとに全企業を評価してキャッシュ。
 const evaluatedByDataset: Record<DatasetKey, Row[]> = datasets.reduce(
   (acc, ds) => {
-    acc[ds.key] = ds.companies.map((c) => ({
-      company: c,
-      growth: evaluateGrowth(c),
-      productivity: evaluateProductivity(c),
-      stock: evaluateStock(c),
-      evaluation: hasLabor(c) ? evaluate(c) : undefined,
-      workability: hasLabor(c) ? evaluateWorkability(c) : undefined,
-    }))
+    acc[ds.key] = ds.companies.map((c) => {
+      const growth = evaluateGrowth(c)
+      const productivity = evaluateProductivity(c)
+      const evaluation = hasLabor(c) ? evaluate(c) : undefined
+      const workability = hasLabor(c) ? evaluateWorkability(c) : undefined
+      return {
+        company: c,
+        growth,
+        productivity,
+        stock: evaluateStock(c),
+        evaluation,
+        workability,
+        scores: axisScoresOf(growth, productivity, c.employees, evaluation, workability),
+      }
+    })
     return acc
   },
   {} as Record<DatasetKey, Row[]>,
@@ -75,6 +100,7 @@ export default function App() {
   const [onlyFavorites, setOnlyFavorites] = useState(false)
   const [promisingOnly, setPromisingOnly] = useState(false)
   const [safeOnly, setSafeOnly] = useState(false)
+  const [priorities, setPriorities] = useState<string[]>([])
   const [favorites, setFavorites] = useState<string[]>(loadFavorites)
   const [compare, setCompare] = useState<string[]>([])
   const [detailId, setDetailId] = useState<string | null>(null)
@@ -94,6 +120,7 @@ export default function App() {
     setCompare([])
     setDetailId(null)
     setShowCompare(false)
+    setPriorities([])
     if (!dataset.hasLabor && (sort === 'white' || sort === 'black' || sort === 'work')) setSort('growth')
     if (!dataset.hasLabor) setSafeOnly(false)
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -104,10 +131,19 @@ export default function App() {
   const toggleCompare = (id: string) =>
     setCompare((c) => (c.includes(id) ? c.filter((x) => x !== id) : c.length >= 4 ? c : [...c, id]))
 
+  const togglePriority = (key: string) =>
+    setPriorities((p) => {
+      const next = p.includes(key) ? p.filter((x) => x !== key) : [...p, key]
+      setSort(next.length ? 'match' : 'growth')
+      return next
+    })
+
   const industries = useMemo(
     () => ['すべて', ...Array.from(new Set(dataset.companies.map((c) => c.industry)))],
     [dataset],
   )
+
+  const fitAxes = useMemo(() => availableAxes(rows.map((r) => r.scores)), [rows])
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
@@ -125,6 +161,8 @@ export default function App() {
     })
     return [...list].sort((a, b) => {
       switch (sort) {
+        case 'match':
+          return (matchScore(b.scores, priorities) ?? -1) - (matchScore(a.scores, priorities) ?? -1)
         case 'growth':
           return b.growth.growthScore - a.growth.growthScore
         case 'growthLow':
@@ -143,7 +181,7 @@ export default function App() {
           return (b.evaluation?.blackScore ?? -1) - (a.evaluation?.blackScore ?? -1)
       }
     })
-  }, [rows, query, industry, sort, onlyFavorites, promisingOnly, safeOnly, favorites])
+  }, [rows, query, industry, sort, onlyFavorites, promisingOnly, safeOnly, favorites, priorities])
 
   const detail = detailId ? rows.find((r) => r.company.id === detailId) : null
   const compareRows = compare
@@ -151,7 +189,10 @@ export default function App() {
     .filter((x): x is Row => Boolean(x))
 
   const promisingCount = rows.filter((r) => r.growth.growthScore >= 74).length
-  const availableSorts = SORTS.filter((s) => !s.laborOnly || dataset.hasLabor)
+  const baseSorts = SORTS.filter((s) => !s.laborOnly || dataset.hasLabor)
+  const availableSorts = priorities.length
+    ? [{ key: 'match' as SortKey, label: 'あなたへのマッチ度順' }, ...baseSorts]
+    : baseSorts
 
   return (
     <div className="app">
@@ -199,6 +240,30 @@ export default function App() {
           </p>
         </div>
       </details>
+
+      {/* 相性診断: あなたが重視することを選ぶとマッチ度でランキング */}
+      <div className="fit">
+        <div className="fit__head">
+          <span className="fit__title">🎯 あなたに合う会社を探す</span>
+          <span className="fit__hint">重視することを選ぶと「マッチ度」で並び替えます</span>
+          {priorities.length > 0 && (
+            <button className="fit__clear" onClick={() => { setPriorities([]); setSort('growth') }}>
+              クリア
+            </button>
+          )}
+        </div>
+        <div className="chip-row">
+          {fitAxes.map((ax) => (
+            <button
+              key={ax.key}
+              className={`chip ${priorities.includes(ax.key) ? 'chip--active' : ''}`}
+              onClick={() => togglePriority(ax.key)}
+            >
+              {ax.label}
+            </button>
+          ))}
+        </div>
+      </div>
 
       <div className="controls">
         <input
@@ -262,6 +327,7 @@ export default function App() {
               productivity={r.productivity}
               evaluation={r.evaluation}
               workability={r.workability}
+              match={priorities.length ? matchScore(r.scores, priorities) : null}
               isFavorite={favorites.includes(r.company.id)}
               inCompare={compare.includes(r.company.id)}
               onOpen={() => setDetailId(r.company.id)}

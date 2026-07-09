@@ -186,6 +186,47 @@ a {
   max-width: 900px;
 }
 
+/* 相性診断 */
+.fit {
+  background: linear-gradient(120deg, color-mix(in srgb, var(--accent) 10%, var(--bg-elev)), var(--bg-elev));
+  border: 1px solid var(--accent-dim);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 6px 0 14px;
+}
+.fit__head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.fit__title {
+  font-weight: 800;
+  font-size: 15px;
+}
+.fit__hint {
+  font-size: 12px;
+  color: var(--text-faint);
+}
+.fit__clear {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12px;
+}
+
+.card__match {
+  border: 1px solid;
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 13px;
+  text-align: center;
+}
+
 .legend {
   margin: 4px 2px 10px;
   font-size: 12.5px;

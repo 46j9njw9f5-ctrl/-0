@@ -5,7 +5,7 @@ import type {
   ProductivityEvaluation,
   WorkabilityEvaluation,
 } from '../types'
-import { formatYen } from '../ui'
+import { formatYen, growthColor } from '../ui'
 import { Avatar, GradeBadge, GrowthBadge } from './Bits'
 
 interface Props {
@@ -14,6 +14,7 @@ interface Props {
   productivity: ProductivityEvaluation
   evaluation?: Evaluation
   workability?: WorkabilityEvaluation
+  match?: number | null
   isFavorite: boolean
   inCompare: boolean
   onOpen: () => void
@@ -27,6 +28,7 @@ export function CompanyCard({
   productivity,
   evaluation,
   workability,
+  match,
   isFavorite,
   inCompare,
   onOpen,
@@ -36,6 +38,11 @@ export function CompanyCard({
   const m = company.metrics
   return (
     <div className="card">
+      {match !== null && match !== undefined && (
+        <div className="card__match" style={{ background: `color-mix(in srgb, ${growthColor(match)} 16%, transparent)`, borderColor: `color-mix(in srgb, ${growthColor(match)} 45%, transparent)` }}>
+          <span style={{ color: growthColor(match), fontWeight: 800 }}>マッチ度 {match}%</span>
+        </div>
+      )}
       <div className="card__top">
         <Avatar company={company} />
         <div style={{ flex: 1, minWidth: 0 }}>
