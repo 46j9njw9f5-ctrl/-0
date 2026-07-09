@@ -8,6 +8,7 @@ import type {
 } from '../types'
 import { formatYen, growthColor, levelColor } from '../ui'
 import { Avatar } from './Bits'
+import { Radar, CATEGORICAL } from './charts'
 
 interface Row {
   company: Company
@@ -37,6 +38,26 @@ export function ComparePanel({ rows, onClose }: { rows: Row[]; onClose: () => vo
             ×
           </button>
         </div>
+
+        {(() => {
+          const AXES = [
+            { label: '将来性', get: (r: Row) => r.growth.growthScore as number | null },
+            { label: '生産性', get: (r: Row) => r.productivity.score },
+            { label: '働きやすさ', get: (r: Row) => r.workability?.score ?? null },
+            { label: '安全度', get: (r: Row) => r.evaluation?.whiteScore ?? null },
+          ]
+          const active = AXES.filter((ax) => rows.every((r) => ax.get(r) !== null && ax.get(r) !== undefined))
+          if (active.length < 3 || rows.length < 2) return null
+          return (
+            <div className="radar-wrap radar-wrap--compare">
+              <Radar
+                axes={active.map((a) => a.label)}
+                series={rows.map((r, i) => ({ label: r.company.name, color: CATEGORICAL[i % CATEGORICAL.length], values: active.map((a) => a.get(r) as number) }))}
+                size={320}
+              />
+            </div>
+          )
+        })()}
 
         <div style={{ overflowX: 'auto', marginTop: 16 }}>
           <table className="cmp-table">

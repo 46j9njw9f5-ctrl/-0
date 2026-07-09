@@ -11,6 +11,7 @@ import { buildOverview } from '../engine/overview'
 import { buildBenchmark } from '../engine/benchmark'
 import { formatYen, growthColor, potentialColor, riskColor } from '../ui'
 import { Avatar, Donut, GradeBadge, GrowthBadge, GrowthDonut, RiskBadge, ScoreDonut, Sparkline } from './Bits'
+import { Radar } from './charts'
 
 interface Props {
   company: Company
@@ -94,6 +95,16 @@ export function CompanyDetail({
                 </div>
               ))}
             </div>
+
+            {overview.axes.length >= 3 && (
+              <div className="radar-wrap">
+                <Radar
+                  axes={overview.axes.map((a) => a.label)}
+                  series={[{ label: company.name, color: 'var(--standard)', values: overview.axes.map((a) => a.score) }]}
+                  size={280}
+                />
+              </div>
+            )}
 
             <div className="verdict verdict--lead">{overview.verdict}</div>
 

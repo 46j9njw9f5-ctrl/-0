@@ -395,6 +395,54 @@ a {
   white-space: nowrap;
 }
 
+/* Radar */
+.radar-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0 6px;
+}
+.radar-wrap--compare {
+  margin: 6px 0 10px;
+}
+.radar {
+  max-width: 340px;
+  width: 100%;
+}
+.radar__ring {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 1;
+}
+.radar__spoke {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+.radar__axis {
+  fill: var(--text-dim);
+  font-size: 11px;
+  font-weight: 700;
+}
+.radar__legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+.radar__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--text-dim);
+  cursor: default;
+}
+.radar__swatch {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+}
+
 /* Scatter */
 .scatter__grid {
   stroke: var(--border);

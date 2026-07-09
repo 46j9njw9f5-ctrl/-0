@@ -136,6 +136,83 @@ export function Scatter({
   )
 }
 
+// 比較用カテゴリカル配色（固定順・CVD検証済み: dark mode 全チェックPASS）。
+export const CATEGORICAL = ['#4f8cff', '#c9821f', '#a855f7', '#0f9488']
+
+export interface RadarSeries {
+  label: string
+  color: string
+  values: number[] // axes と同じ順・長さ（0–100）
+}
+
+/** レーダーチャート（多軸プロフィール）。単系列は凡例なし、複数系列は凡例つき。 */
+export function Radar({
+  axes,
+  series,
+  size = 260,
+}: {
+  axes: string[]
+  series: RadarSeries[]
+  size?: number
+}) {
+  const [hover, setHover] = useState<number | null>(null)
+  const cx = size / 2
+  const cy = size / 2
+  const R = size / 2 - 40
+  const N = axes.length
+  const ang = (i: number) => -Math.PI / 2 + (i * 2 * Math.PI) / N
+  const pt = (i: number, v: number) => {
+    const r = (Math.max(0, Math.min(100, v)) / 100) * R
+    return [cx + r * Math.cos(ang(i)), cy + r * Math.sin(ang(i))]
+  }
+  const rings = [25, 50, 75, 100]
+  const poly = (vals: number[]) => vals.map((v, i) => pt(i, v).map((x) => x.toFixed(1)).join(',')).join(' ')
+
+  return (
+    <div className="radar">
+      <svg viewBox={`0 0 ${size} ${size}`} width="100%" role="img" aria-label="多軸レーダーチャート">
+        {rings.map((rv) => (
+          <polygon key={rv} points={poly(axes.map(() => rv))} className="radar__ring" />
+        ))}
+        {axes.map((a, i) => {
+          const [ex, ey] = pt(i, 100)
+          const [lx, ly] = pt(i, 118)
+          return (
+            <g key={a}>
+              <line x1={cx} y1={cy} x2={ex} y2={ey} className="radar__spoke" />
+              <text x={lx} y={ly} className="radar__axis" textAnchor="middle" dominantBaseline="middle">{a}</text>
+            </g>
+          )
+        })}
+        {series.map((s, si) => (
+          <g key={s.label} opacity={hover === null || hover === si ? 1 : 0.25}>
+            <polygon points={poly(s.values)} fill={s.color} fillOpacity={series.length > 1 ? 0.12 : 0.2} stroke={s.color} strokeWidth={2} />
+            {s.values.map((v, i) => {
+              const [x, y] = pt(i, v)
+              return <circle key={i} cx={x} cy={y} r={3} fill={s.color} />
+            })}
+          </g>
+        ))}
+      </svg>
+      {series.length > 1 && (
+        <div className="radar__legend">
+          {series.map((s, si) => (
+            <span
+              key={s.label}
+              className="radar__legend-item"
+              onMouseEnter={() => setHover(si)}
+              onMouseLeave={() => setHover(null)}
+            >
+              <span className="radar__swatch" style={{ background: s.color }} />
+              {s.label}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
 /** 大きな統計タイル（ヘッドライン数値）。 */
 export function StatTile({ value, unit, label, sub }: { value: string; unit?: string; label: string; sub?: string }) {
   return (
