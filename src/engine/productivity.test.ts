@@ -61,7 +61,7 @@ function withLabor(over: Partial<CompanyWithLabor['metrics']> = {}): CompanyWith
 
 describe('働きやすさ', () => {
   it('良い労働環境は高スコア', () => {
-    const e = evaluateWorkability(withLabor())
+    const e = evaluateWorkability(withLabor().metrics)
     expect(e.score).toBeGreaterThan(70)
     expect(e.tier).toBe('high')
     expect(e.highlights.length).toBeGreaterThan(0)
@@ -69,17 +69,24 @@ describe('働きやすさ', () => {
 
   it('過酷な環境は低スコア', () => {
     const e = evaluateWorkability(
-      withLabor({ avgOvertimeHours: 90, paidLeaveRate: 15, turnover3yrRate: 50, avgTenureYears: 2, womenManagerRate: 3 }),
+      withLabor({ avgOvertimeHours: 90, paidLeaveRate: 15, turnover3yrRate: 50, avgTenureYears: 2, womenManagerRate: 3 }).metrics,
     )
     expect(e.score).toBeLessThan(30)
     expect(e.tier).toBe('low')
   })
 
   it('スコアは0–100、重み合計は1', () => {
-    const e = evaluateWorkability(withLabor())
+    const e = evaluateWorkability(withLabor().metrics)
     expect(e.score).toBeGreaterThanOrEqual(0)
     expect(e.score).toBeLessThanOrEqual(100)
     const w = e.factors.reduce((s, f) => s + f.weight, 0)
     expect(w).toBeCloseTo(1, 6)
+  })
+
+  it('部分的な実データ（残業・有給・女性管理職のみ）でも評価でき、重み合計は1', () => {
+    const e = evaluateWorkability({ avgOvertimeHours: 15, paidLeaveRate: 80, womenManagerRate: 30 })
+    expect(e.factors.length).toBe(3)
+    expect(e.factors.reduce((s, f) => s + f.weight, 0)).toBeCloseTo(1, 6)
+    expect(e.score).toBeGreaterThan(60)
   })
 })

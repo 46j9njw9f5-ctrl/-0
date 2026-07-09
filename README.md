@@ -50,21 +50,31 @@
 node scripts/fetch-companies.mjs   # Wikidata から実データを再取得
 ```
 
-### 実労働データの連携（トークン取得後に有効化）
+### 実労働データの連携
 
-労働環境（残業・離職率・有給・平均年収）は、公的データの連携で実名企業にも表示できます。
-受け皿は実装済みで、トークン/CSV を用意して 1 コマンドで流し込めます（詳細は
-[`src/data/sources/README.md`](src/data/sources/README.md)）。
+**働きやすさ（残業・有給・女性管理職）は、トークン不要の公開データで連携済み。**
+厚労省「女性活躍・両立支援DB」のオープンデータCSVを法人番号で突合し、実名企業に実データで表示します。
+
+```bash
+node scripts/enrich-positive-db.mjs   # 両立支援DB(無認証)から働きやすさを連携（実名企業に反映）
+```
+
+![real-workability](docs/real-workability.png)
+
+ブラック度（離職率・残業代・法令違反）や平均年収など、追加データは以下で拡張できます（詳細は
+[`src/data/sources/README.md`](src/data/sources/README.md)）。しょくばらぼの一括CSVは無認証、
+gBizINFO / EDINET のみ無料トークンが必要です。
 
 ```bash
 cp .env.example .env                 # gBizINFO / しょくばらぼ(CSV) / EDINET を設定
-node scripts/enrich-labor.mjs        # 設定した分だけ metrics / 平均年収を追記（未設定なら no-op）
+node scripts/enrich-labor.mjs        # 設定した分だけ追記（未設定なら no-op）
 ```
 
 | ソース | 取得データ | 認証 |
 | --- | --- | --- |
+| 女性活躍・両立支援DB（厚労省） | **月平均残業・有給取得率・女性管理職比率** | **不要（公開データ）** |
+| しょくばらぼ（厚労省） | 平均残業時間・有給取得率・離職率 | 一括CSV（無償） |
 | gBizINFO（経産省） | 平均勤続年数・女性管理職比率 ほか | 無料トークン |
-| しょくばらぼ（厚労省） | 平均残業時間・有給取得率・離職率 | 一括CSV |
 | EDINET（金融庁） | 平均年間給与・平均勤続年数（上場） | 無料APIキー |
 
 ## 主な機能
@@ -133,7 +143,7 @@ node scripts/enrich-labor.mjs        # 設定した分だけ metrics / 平均年
 
 - Vite + React + TypeScript
 - スタイルは自前の CSS デザインシステム（依存最小・ビルド安定）
-- Vitest（各評価エンジンのユニットテスト 37 件）
+- Vitest（各評価エンジンのユニットテスト 38 件）
 - 実データ: Wikidata SPARQL（`scripts/fetch-companies.mjs` → `companies.generated.json`）
 - データ層を分離（`src/data/index.ts`）。実データ／デモを切替でき、将来 API / DB / ユーザー投稿へ拡張可能
 

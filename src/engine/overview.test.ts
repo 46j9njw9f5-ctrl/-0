@@ -58,7 +58,7 @@ describe('総合コメント', () => {
       productivity: evaluateProductivity(c),
       stock: evaluateStock(c),
       evaluation: evaluate(c),
-      workability: evaluateWorkability(c),
+      workability: evaluateWorkability(c.metrics),
     })
     expect(o.axes.map((a) => a.key)).toContain('safety')
     expect(o.axes.map((a) => a.key)).toContain('workability')
@@ -88,7 +88,7 @@ describe('総合コメント', () => {
       productivity: evaluateProductivity(bad),
       stock: evaluateStock(bad),
       evaluation: evaluate(bad),
-      workability: evaluateWorkability(bad),
+      workability: evaluateWorkability(bad.metrics),
     })
     expect(o.verdict).toContain('慎重')
     expect(o.cons.length).toBeGreaterThan(0)

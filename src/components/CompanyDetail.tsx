@@ -117,10 +117,16 @@ export function CompanyDetail({
               </>
             )}
 
-            {!evaluation && (
+            {!evaluation && workability && company.laborReal && (
+              <div className="notice notice--ok">
+                🌱 働きやすさは <b>{company.laborReal.source}</b>（公開データ）の実データで算出しています。
+                ブラック度（離職率・残業代・法令違反など）は追加の公的データ連携で有効化されます。
+              </div>
+            )}
+            {!evaluation && !workability && (
               <div className="notice">
-                🛡 労働環境（残業・離職率・有給など）と働きやすさは、公的な労働データ（厚労省しょくばらぼ /
-                gBizINFO 等）の連携でこの企業にも表示されます。今すぐ体験するにはヘッダーの「デモ」データへ。
+                🛡 労働環境（残業・離職率・有給など）と働きやすさは、公的な労働データ（厚労省 両立支援DB /
+                しょくばらぼ 等）の連携でこの企業にも表示されます。今すぐ体験するにはヘッダーの「デモ」データへ。
               </div>
             )}
 
@@ -236,8 +242,14 @@ export function CompanyDetail({
                 weight: f.weight,
                 available: true,
               }))}
-              note="※ 各観点の働きやすさ（0〜100、高いほど良い）。"
+              note="※ 各観点の働きやすさ（0〜100、高いほど良い）。揃っている観点だけで重みを再配分。"
             />
+            {company.laborReal && (
+              <div className="source-line" style={{ marginTop: 12 }}>
+                労働データ出典: <b>{company.laborReal.source}</b>
+                {company.laborReal.asOf ? `（${company.laborReal.asOf} 時点）` : ''} ・ 公開オープンデータ
+              </div>
+            )}
           </div>
         )}
 

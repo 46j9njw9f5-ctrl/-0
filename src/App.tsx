@@ -31,15 +31,15 @@ export interface Row {
 
 type SortKey = 'match' | 'growth' | 'growthLow' | 'productivity' | 'white' | 'black' | 'work' | 'employees' | 'young'
 
-const SORTS: { key: SortKey; label: string; laborOnly?: boolean }[] = [
+const SORTS: { key: SortKey; label: string; need?: 'work' | 'eval' }[] = [
   { key: 'growth', label: '将来性が高い順' },
   { key: 'growthLow', label: '将来性が低い順' },
   { key: 'productivity', label: '生産性が高い順' },
   { key: 'employees', label: '規模が大きい順' },
   { key: 'young', label: '設立が新しい順' },
-  { key: 'work', label: '働きやすい順', laborOnly: true },
-  { key: 'white', label: 'ホワイト度が高い順', laborOnly: true },
-  { key: 'black', label: 'ブラック度が高い順', laborOnly: true },
+  { key: 'work', label: '働きやすい順', need: 'work' },
+  { key: 'white', label: 'ホワイト度が高い順', need: 'eval' },
+  { key: 'black', label: 'ブラック度が高い順', need: 'eval' },
 ]
 
 function axisScoresOf(
@@ -67,7 +67,11 @@ const evaluatedByDataset: Record<DatasetKey, Row[]> = datasets.reduce(
       const growth = evaluateGrowth(c)
       const productivity = evaluateProductivity(c)
       const evaluation = hasLabor(c) ? evaluate(c) : undefined
-      const workability = hasLabor(c) ? evaluateWorkability(c) : undefined
+      const workability = hasLabor(c)
+        ? evaluateWorkability(c.metrics)
+        : c.laborReal
+          ? evaluateWorkability(c.laborReal)
+          : undefined
       return {
         company: c,
         growth,
@@ -121,7 +125,7 @@ export default function App() {
     setDetailId(null)
     setShowCompare(false)
     setPriorities([])
-    if (!dataset.hasLabor && (sort === 'white' || sort === 'black' || sort === 'work')) setSort('growth')
+    setSort('growth')
     if (!dataset.hasLabor) setSafeOnly(false)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [datasetKey])
@@ -189,7 +193,9 @@ export default function App() {
     .filter((x): x is Row => Boolean(x))
 
   const promisingCount = rows.filter((r) => r.growth.growthScore >= 74).length
-  const baseSorts = SORTS.filter((s) => !s.laborOnly || dataset.hasLabor)
+  const hasWork = rows.some((r) => r.workability)
+  const hasEval = rows.some((r) => r.evaluation)
+  const baseSorts = SORTS.filter((s) => !s.need || (s.need === 'work' ? hasWork : hasEval))
   const availableSorts = priorities.length
     ? [{ key: 'match' as SortKey, label: 'あなたへのマッチ度順' }, ...baseSorts]
     : baseSorts
@@ -340,9 +346,10 @@ export default function App() {
 
       <div className="disclaimer">
         「実データ（Wikidata）」の事実データ（従業員数・設立年・売上・業種）は Wikidata（CC0）由来です。
-        将来性スコアは業種見通し等の前提を含む<b>参考値</b>で、投資・就職の助言ではありません。
-        労働環境（ブラック度）は、実名企業に推測値を付与しない方針のため、公的労働データの連携時のみ
-        算出します。「デモ」データの企業は架空であり、実在の企業とは関係ありません。
+働きやすさ（残業・有給・
+        女性管理職）は厚労省 女性活躍・両立支援DB（公開データ）由来です。将来性スコアは業種見通し等の前提を含む
+        <b>参考値</b>で、投資・就職の助言ではありません。ブラック度は離職率・残業代・法令違反などの追加連携時のみ
+        算出します（実名企業に推測値は付与しません）。「デモ」データの企業は架空であり、実在の企業とは関係ありません。
       </div>
 
       {detail && (

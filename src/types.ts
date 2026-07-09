@@ -28,6 +28,24 @@ export interface Financials {
   exchange?: string
 }
 
+/** 公的データから取得した実労働データ（部分的。取れた項目のみ）。 */
+export interface RealLabor {
+  /** 月平均残業時間（時間） */
+  avgOvertimeHours?: number
+  /** 年次有給休暇取得率（%） */
+  paidLeaveRate?: number
+  /** 3年以内離職率（%） */
+  turnover3yrRate?: number
+  /** 平均勤続年数（年） */
+  avgTenureYears?: number
+  /** 女性管理職比率（%） */
+  womenManagerRate?: number
+  /** 出典 */
+  source: string
+  /** 取得日 */
+  asOf?: string
+}
+
 /** 労働環境の指標（ブラック度スコアの入力）。実データが無い企業では未連携となる。 */
 export interface CompanyMetrics {
   /** 月平均残業時間（時間） */
@@ -83,6 +101,10 @@ export interface Company {
   revenueHistory?: SeriesPoint[]
   /** 財務・株式情報 */
   financials?: Financials
+  /** 法人番号（公的データとの突合キー） */
+  corporateNumber?: string
+  /** 公的データ由来の実労働データ（部分的） */
+  laborReal?: RealLabor
   /** 出典 */
   source?: DataSource
   /** 労働環境の指標（未連携なら undefined） */

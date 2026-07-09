@@ -64,7 +64,7 @@ export function buildOverview(input: OverviewInput): Overview {
       evaluation.level === 'danger'
         ? ' 労働環境に危険信号があるため、応募は慎重に。'
         : ' 労働環境に気になる点があるので、条件をよく確認しましょう。'
-  } else if (!evaluation) {
+  } else if (!evaluation && !workability) {
     verdict += ' 労働環境の実データは連携待ちです。'
   }
 

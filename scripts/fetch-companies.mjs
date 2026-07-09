@@ -93,6 +93,12 @@ SELECT ?company ?ticker ?exchangeLabel WHERE {
   OPTIONAL { ?company wdt:P414 ?exch . ?exch rdfs:label ?exchangeLabel . FILTER(lang(?exchangeLabel) = "ja") }
 }`
 
+// 法人番号(P3225): 公的労働データ（両立支援DB / しょくばらぼ）との正確な突合に使う。
+const QUERY_CORP = `
+SELECT ?company ?corp WHERE {
+  ?company wdt:P17 wd:Q17 ; wdt:P1128 ?e ; wdt:P3225 ?corp . FILTER(?e > 800)
+}`
+
 // --- 正規化ヘルパ ---------------------------------------------------------
 
 /** 時系列を [{year, value}] に整形（年で集約し最新を優先）。 */
@@ -255,7 +261,7 @@ const ACCENTS = [
 
 async function main() {
   console.log('Wikidata から取得中...')
-  const [main, empRows, revRows, npRows, opRows, mcRows, marketRows] = await Promise.all([
+  const [main, empRows, revRows, npRows, opRows, mcRows, marketRows, corpRows] = await Promise.all([
     sparql(QUERY_MAIN),
     sparql(QUERY_EMPLOYEES),
     sparql(QUERY_REVENUE),
@@ -263,6 +269,7 @@ async function main() {
     sparql(QUERY_OPINCOME),
     sparql(QUERY_MARKETCAP),
     sparql(QUERY_MARKET),
+    sparql(QUERY_CORP),
   ])
   console.log(
     `  facts=${main.length} emp=${empRows.length} rev=${revRows.length} np=${npRows.length} mc=${mcRows.length}`,
@@ -326,6 +333,12 @@ async function main() {
   const mcByCompany = groupBy(mcRows)
 
   // ティッカー・上場市場
+  const corpById = new Map()
+  for (const r of corpRows) {
+    const id = qid(r.company)
+    if (byId.has(id) && !corpById.has(id)) corpById.set(id, r.corp)
+  }
+
   const isJpExchange = (s) => /東京|名古屋|福岡|札幌|JASDAQ|マザーズ|東証/.test(s)
   const marketById = new Map()
   for (const r of marketRows) {
@@ -378,6 +391,7 @@ async function main() {
       employeeHistory: empSeries,
       revenueHistory: revSeries,
       ...(Object.keys(financials).length ? { financials } : {}),
+      ...(corpById.get(c.id) ? { corporateNumber: corpById.get(c.id) } : {}),
       source: { name: 'Wikidata', license: 'CC0', url: `https://www.wikidata.org/wiki/${c.id}` },
     })
   }

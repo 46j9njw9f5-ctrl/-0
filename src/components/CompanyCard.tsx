@@ -54,15 +54,19 @@ export function CompanyCard({
         {isFavorite && <span style={{ color: 'var(--caution)', fontSize: 18 }}>★</span>}
       </div>
 
-      {/* 一目でわかるグレード */}
+      {/* 一目でわかるグレード（データのある軸を最大3つ） */}
       <div className="card__grades">
-        <GradeBadge size="sm" score={growth.growthScore} label="将来性" />
-        {workability ? (
-          <GradeBadge size="sm" score={workability.score} label="働きやすさ" />
-        ) : (
-          productivity.score !== null && <GradeBadge size="sm" score={productivity.score} label="生産性" />
-        )}
-        {evaluation && <GradeBadge size="sm" score={evaluation.whiteScore} label="安全度" />}
+        {[
+          { score: growth.growthScore, label: '将来性' },
+          workability ? { score: workability.score, label: '働きやすさ' } : null,
+          evaluation ? { score: evaluation.whiteScore, label: '安全度' } : null,
+          productivity.score !== null ? { score: productivity.score, label: '生産性' } : null,
+        ]
+          .filter((g): g is { score: number; label: string } => g !== null)
+          .slice(0, 3)
+          .map((g) => (
+            <GradeBadge key={g.label} size="sm" score={g.score} label={g.label} />
+          ))}
       </div>
 
       <div className="card__tagline">

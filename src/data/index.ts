@@ -21,9 +21,9 @@ export interface Dataset {
 export const datasets: Dataset[] = [
   {
     key: 'real',
-    label: '実データ（Wikidata）',
+    label: '実データ（Wikidata＋公的データ）',
     description:
-      '日本の実在企業の事実データ（従業員数・設立年・売上推移・業種）を Wikidata から取得。将来性分析に対応。労働環境データは未連携。',
+      '実在企業の事実データ（従業員数・設立年・売上・業種）を Wikidata から、働きやすさ（残業・有給・女性管理職）を厚労省 女性活躍・両立支援DBから取得（いずれも無認証の公開データ）。ブラック度は離職率・残業代等の追加連携で有効化。',
     companies: realCompanies,
     hasLabor: false,
   },

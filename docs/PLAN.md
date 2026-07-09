@@ -110,12 +110,15 @@ Wikidata には残業・離職率などの労働指標が無い。**実名企業
 - **働きやすさ** `src/engine/workability.ts` — 残業の少なさ・有給・定着・勤続・多様性から
   ワークライフ重視のスコア（労働データがある企業のみ）。
 
-## 8. 実労働データ連携（受け皿を実装済み）
+## 8. 実労働データ連携
 
-`scripts/enrich-labor.mjs` と `.env.example` を用意。gBizINFO / しょくばらぼ(CSV) / EDINET の
-トークン・CSV を設定すると、実名企業に `metrics`（労働指標）・平均年収を追記して
-ブラック度・働きやすさを有効化する。未設定なら安全に no-op。詳細は
-[`src/data/sources/README.md`](../src/data/sources/README.md)。
+**働きやすさ（残業・有給・女性管理職）はトークン不要の公開データで連携済み。**
+`scripts/enrich-positive-db.mjs` が厚労省 女性活躍・両立支援DB のオープンデータCSVを
+法人番号（Wikidata P3225）で突合し、実名企業に `laborReal` を追記する。
+
+ブラック度（離職率・残業代・法令違反）や平均年収は `scripts/enrich-labor.mjs` +
+`.env.example` を用意（しょくばらぼCSVは無認証、gBizINFO / EDINET は無料トークン）。
+未設定なら安全に no-op。詳細は [`src/data/sources/README.md`](../src/data/sources/README.md)。
 
 ## 9. 見やすさ（人間中心のUI）
 

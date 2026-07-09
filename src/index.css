@@ -707,6 +707,11 @@ a {
   line-height: 1.7;
   color: var(--text-dim);
 }
+.notice--ok {
+  border-style: solid;
+  border-color: color-mix(in srgb, var(--excellent) 30%, transparent);
+  background: color-mix(in srgb, var(--excellent) 8%, var(--bg-elev-2));
+}
 
 .source-line {
   margin-top: 20px;
