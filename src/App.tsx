@@ -61,6 +61,22 @@ function axisScoresOf(
 }
 
 const FAV_KEY = 'zero.favorites.v2'
+const THEME_KEY = 'zero.theme'
+
+type Theme = 'light' | 'dark' | 'auto'
+function loadTheme(): Theme {
+  try {
+    const t = localStorage.getItem(THEME_KEY)
+    return t === 'light' || t === 'dark' ? t : 'auto'
+  } catch {
+    return 'auto'
+  }
+}
+function applyTheme(t: Theme) {
+  const root = document.documentElement
+  if (t === 'auto') root.removeAttribute('data-theme')
+  else root.setAttribute('data-theme', t)
+}
 
 // データセットごとに全企業を評価してキャッシュ。
 const evaluatedByDataset: Record<DatasetKey, Row[]> = datasets.reduce(
@@ -113,6 +129,16 @@ export default function App() {
   const [detailId, setDetailId] = useState<string | null>(null)
   const [showCompare, setShowCompare] = useState(false)
   const [view, setView] = useState<'list' | 'analytics'>('list')
+  const [theme, setTheme] = useState<Theme>(loadTheme)
+
+  useEffect(() => {
+    applyTheme(theme)
+    try {
+      localStorage.setItem(THEME_KEY, theme)
+    } catch {
+      /* ignore */
+    }
+  }, [theme])
 
   const dataset = datasets.find((d) => d.key === datasetKey)!
   const rows = evaluatedByDataset[datasetKey]
@@ -227,9 +253,19 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <div className="brand">
-          <span className="brand__logo">-0</span>
-          <span className="brand__tag">就職者のための企業評価プラットフォーム</span>
+        <div className="header__top">
+          <div className="brand">
+            <span className="brand__logo">-0</span>
+            <span className="brand__tag">就職者のための企業評価プラットフォーム</span>
+          </div>
+          <button
+            className="theme-toggle"
+            onClick={() => setTheme((t) => (t === 'dark' ? 'light' : t === 'light' ? 'auto' : 'dark'))}
+            title={`表示テーマ: ${theme === 'auto' ? '自動' : theme === 'dark' ? 'ダーク' : 'ライト'}（クリックで切替）`}
+            aria-label="表示テーマを切り替え"
+          >
+            {theme === 'dark' ? '🌙 ダーク' : theme === 'light' ? '☀️ ライト' : '🌗 自動'}
+          </button>
         </div>
         <div className="subhead">
           実データと独自ロジックで<b>将来性</b>と<b>ブラック企業リスク</b>を可視化。
