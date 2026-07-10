@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import type {
   Company,
   Evaluation,
@@ -17,12 +18,13 @@ interface Props {
   match?: number | null
   isFavorite: boolean
   inCompare: boolean
-  onOpen: () => void
-  onToggleFavorite: () => void
-  onToggleCompare: () => void
+  // id を受け取る安定コールバック（React.memo を効かせるため）
+  onOpen: (id: string) => void
+  onToggleFavorite: (id: string) => void
+  onToggleCompare: (id: string) => void
 }
 
-export function CompanyCard({
+function CompanyCardBase({
   company,
   growth,
   productivity,
@@ -51,7 +53,11 @@ export function CompanyCard({
             {company.industry}・{company.location}・従業員{company.employees.toLocaleString()}名
           </div>
         </div>
-        {isFavorite && <span style={{ color: 'var(--caution)', fontSize: 18 }}>★</span>}
+        {isFavorite && (
+          <span style={{ color: 'var(--caution)', fontSize: 18 }} aria-hidden="true">
+            ★
+          </span>
+        )}
       </div>
 
       {/* 一目でわかるグレード（データのある軸を最大3つ） */}
@@ -117,28 +123,36 @@ export function CompanyCard({
       )}
 
       <div className="card__actions">
-        <button className="btn btn--primary" onClick={onOpen}>
+        <button
+          className="btn btn--primary"
+          onClick={() => onOpen(company.id)}
+          aria-label={`${company.name} の詳細を見る`}
+        >
           詳細を見る
         </button>
         <button
           className={`btn ${inCompare ? 'btn--on' : ''}`}
-          onClick={onToggleCompare}
+          onClick={() => onToggleCompare(company.id)}
           style={{ flex: '0 0 auto', paddingInline: 14 }}
-          title="比較に追加"
+          aria-pressed={inCompare}
+          aria-label={inCompare ? `${company.name} を比較から外す` : `${company.name} を比較に追加`}
         >
           {inCompare ? '比較中' : '比較'}
         </button>
         <button
           className={`btn btn--ghost ${isFavorite ? 'btn--on' : ''}`}
-          onClick={onToggleFavorite}
-          title="お気に入り"
+          onClick={() => onToggleFavorite(company.id)}
+          aria-pressed={isFavorite}
+          aria-label={isFavorite ? `${company.name} をお気に入りから外す` : `${company.name} をお気に入りに追加`}
         >
-          {isFavorite ? '★' : '☆'}
+          <span aria-hidden="true">{isFavorite ? '★' : '☆'}</span>
         </button>
       </div>
     </div>
   )
 }
+
+export const CompanyCard = memo(CompanyCardBase)
 
 function Stat({ val, label }: { val: string; label: string }) {
   return (

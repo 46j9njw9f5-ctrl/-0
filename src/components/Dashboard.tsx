@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import type { Row } from '../App'
+import type { Row } from '../data/rows'
 import { analytics, type IndustryStat } from '../data'
 import { findHiddenGems } from '../engine/gems'
 import { growthColor } from '../ui'

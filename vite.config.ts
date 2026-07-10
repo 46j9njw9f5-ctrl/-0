@@ -10,6 +10,9 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
+    // 既定は node（エンジンの純粋関数テスト）。コンポーネントテストは
+    // 各ファイル先頭の `// @vitest-environment jsdom` で jsdom を使う。
     environment: 'node',
+    setupFiles: ['./src/test/setup.ts'],
   },
 })

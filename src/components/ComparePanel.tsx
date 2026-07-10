@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import type {
   Company,
   Evaluation,
@@ -6,6 +5,7 @@ import type {
   ProductivityEvaluation,
   WorkabilityEvaluation,
 } from '../types'
+import { useModalA11y } from '../hooks/useModalA11y'
 import { formatYen, growthColor, levelColor } from '../ui'
 import { Avatar } from './Bits'
 import { Radar, CATEGORICAL } from './charts'
@@ -21,22 +21,25 @@ interface Row {
 export function ComparePanel({ rows, onClose }: { rows: Row[]; onClose: () => void }) {
   const anyLabor = rows.some((r) => r.evaluation)
   const anyProductivity = rows.some((r) => r.productivity.score !== null)
+  const modalRef = useModalA11y<HTMLDivElement>(onClose)
 
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
   return (
     <div className="overlay" onClick={onClose}>
-      <div className="modal" style={{ maxWidth: 820 }} onClick={(e) => e.stopPropagation()}>
+      <div
+        className="modal"
+        style={{ maxWidth: 820 }}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cmp-title"
+        ref={modalRef}
+        tabIndex={-1}
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="modal__top">
           <div className="modal__head">
-            <h2 style={{ margin: 0, fontSize: 20 }}>企業比較</h2>
-            <button className="modal__close" onClick={onClose} aria-label="閉じる">
-              ×
+            <h2 id="cmp-title" style={{ margin: 0, fontSize: 20 }}>企業比較</h2>
+            <button className="modal__close" onClick={onClose} aria-label="企業比較を閉じる">
+              <span aria-hidden="true">×</span>
             </button>
           </div>
         </div>
