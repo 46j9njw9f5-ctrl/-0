@@ -36,23 +36,35 @@ describe('評価信頼性', () => {
 describe('隠れ優良企業の認定条件', () => {
   const item = (id: string, employees: number, scores: AxisScores) => ({ id, name: id, employees, scores })
 
-  it('2軸だけ高い企業は認定しない', () => {
+  it('労働環境軸がない2軸企業は認定しない', () => {
     const result = findHiddenGems([
       item('candidate', 100, { growth: 90, productivity: 90, workability: null, safety: null, scale: 60 }),
       item('b', 200, { growth: 50, productivity: 50, workability: 50, safety: null, scale: 60 }),
       item('c', 300, { growth: 50, productivity: 50, workability: 50, safety: null, scale: 60 }),
       item('d', 400, { growth: 50, productivity: 50, workability: 50, safety: null, scale: 60 }),
     ])
-    expect(result.some((g) => g.id === 'candidate')).toBe(false)
+    expect(result.some((gem) => gem.id === 'candidate')).toBe(false)
   })
 
-  it('3軸以上かつ労働環境軸があれば認定対象になる', () => {
+  it('将来性と働きやすさがともに高い2軸企業は労働環境型として認定する', () => {
+    const result = findHiddenGems([
+      item('candidate', 100, { growth: 82, productivity: null, workability: 80, safety: null, scale: 60 }),
+      item('b', 200, { growth: 50, productivity: null, workability: 50, safety: null, scale: 60 }),
+      item('c', 300, { growth: 50, productivity: null, workability: 50, safety: null, scale: 60 }),
+      item('d', 400, { growth: 50, productivity: null, workability: 50, safety: null, scale: 60 }),
+    ])
+    const candidate = result.find((gem) => gem.id === 'candidate')
+    expect(candidate?.kind).toBe('workplace')
+  })
+
+  it('3軸以上かつ労働環境軸があれば総合型として認定する', () => {
     const result = findHiddenGems([
       item('candidate', 100, { growth: 85, productivity: 82, workability: 80, safety: null, scale: 60 }),
       item('b', 200, { growth: 50, productivity: 50, workability: 50, safety: null, scale: 60 }),
       item('c', 300, { growth: 50, productivity: 50, workability: 50, safety: null, scale: 60 }),
       item('d', 400, { growth: 50, productivity: 50, workability: 50, safety: null, scale: 60 }),
     ])
-    expect(result.some((g) => g.id === 'candidate')).toBe(true)
+    const candidate = result.find((gem) => gem.id === 'candidate')
+    expect(candidate?.kind).toBe('overall')
   })
 })
