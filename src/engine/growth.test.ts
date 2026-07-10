@@ -1,9 +1,9 @@
-import { describe, it, expect } from 'vitest'
-import { evaluateGrowth, cagr, growthRateToPotential, ageToPotential } from './growth'
+import { describe, expect, it } from 'vitest'
+import { ageToPotential, cagr, evaluateGrowth, growthRateToPotential } from './growth'
 import { industryOutlook } from './industry'
 import type { Company } from '../types'
 
-function makeCompany(over: Partial<Company> = {}): Company {
+function makeCompany(overrides: Partial<Company> = {}): Company {
   return {
     id: 't',
     name: 'テスト社',
@@ -13,42 +13,39 @@ function makeCompany(over: Partial<Company> = {}): Company {
     founded: 2010,
     listed: true,
     accent: '#888',
-    ...over,
+    ...overrides,
   }
 }
 
 describe('CAGR', () => {
   it('2点以上で年平均成長率を返す', () => {
-    const r = cagr([
+    const result = cagr([
       { year: 2020, value: 100 },
       { year: 2024, value: 200 },
     ])
-    expect(r).not.toBeNull()
-    // 4年で2倍 ≒ 18.9%/年
-    expect(r!).toBeGreaterThan(17)
-    expect(r!).toBeLessThan(20)
+    expect(result).not.toBeNull()
+    expect(result!).toBeGreaterThan(17)
+    expect(result!).toBeLessThan(20)
   })
 
-  it('データ不足なら null', () => {
+  it('データ不足ならnull', () => {
     expect(cagr(undefined)).toBeNull()
     expect(cagr([{ year: 2020, value: 100 }])).toBeNull()
   })
 
   it('単位不整合の外れ値を除外する', () => {
-    // 大半は兆円規模、1点だけ桁違いの外れ値
-    const r = cagr([
+    const result = cagr([
       { year: 2020, value: 1_000_000 },
       { year: 2021, value: 1_100_000 },
       { year: 2022, value: 1_200_000 },
-      { year: 2023, value: 40 }, // 外れ値
+      { year: 2023, value: 40 },
     ])
-    expect(r).not.toBeNull()
-    // 外れ値が除外され、正の緩やかな成長になる
-    expect(r!).toBeGreaterThan(0)
-    expect(r!).toBeLessThan(30)
+    expect(result).not.toBeNull()
+    expect(result!).toBeGreaterThan(0)
+    expect(result!).toBeLessThan(30)
   })
 
-  it('同一年のみで期間が無い場合は null', () => {
+  it('同一年のみで期間がない場合はnull', () => {
     expect(
       cagr([
         { year: 2022, value: 100 },
@@ -71,16 +68,14 @@ describe('個別写像', () => {
   })
 
   it('業種アウトルックは成長業種が高い', () => {
-    expect(industryOutlook('IT・ソフトウェア').score).toBeGreaterThan(
-      industryOutlook('訪問販売').score,
-    )
+    expect(industryOutlook('IT・ソフトウェア').score).toBeGreaterThan(industryOutlook('訪問販売').score)
     expect(industryOutlook('半導体').score).toBeGreaterThan(70)
   })
 })
 
 describe('evaluateGrowth', () => {
-  it('成長業種×売上増は高スコア・成長ステージ', () => {
-    const e = evaluateGrowth(
+  it('成長業種と実績データが揃えば高スコアになる', () => {
+    const evaluation = evaluateGrowth(
       makeCompany({
         industry: '半導体',
         founded: 2012,
@@ -94,34 +89,49 @@ describe('evaluateGrowth', () => {
         ],
       }),
     )
-    expect(e.growthScore).toBeGreaterThan(70)
-    expect(['hypergrowth', 'growth']).toContain(e.stage)
-    expect(e.revenueCagr).not.toBeNull()
-    expect(e.strengths.length).toBeGreaterThan(0)
+    expect(evaluation.growthScore).toBeGreaterThan(70)
+    expect(['hypergrowth', 'growth']).toContain(evaluation.stage)
+    expect(evaluation.revenueCagr).not.toBeNull()
+    expect(evaluation.strengths.length).toBeGreaterThan(0)
+    expect(evaluation.outlook).toContain('信頼度高')
   })
 
-  it('逆風業種は低スコア・要注意ステージ', () => {
-    const e = evaluateGrowth(
-      makeCompany({ industry: '訪問販売', founded: 1960, listed: false }),
+  it('逆風業種は低めのスコアになる', () => {
+    const evaluation = evaluateGrowth(makeCompany({ industry: '訪問販売', founded: 1960, listed: false }))
+    expect(evaluation.growthScore).toBeLessThanOrEqual(50)
+    expect(['declining', 'mature']).toContain(evaluation.stage)
+    expect(evaluation.risks.length).toBeGreaterThan(0)
+  })
+
+  it('欠損データは重みを再正規化し、重みの合計は1になる', () => {
+    const evaluation = evaluateGrowth(
+      makeCompany({ revenueHistory: undefined, employeeHistory: undefined, founded: null }),
     )
-    expect(e.growthScore).toBeLessThan(50)
-    expect(e.stage).toBe('declining')
-    expect(e.risks.length).toBeGreaterThan(0)
+    const weightSum = evaluation.factors.reduce((sum, factor) => sum + factor.weight, 0)
+    expect(weightSum).toBeCloseTo(1, 6)
+
+    const revenue = evaluation.factors.find((factor) => factor.key === 'revenueGrowth')!
+    expect(revenue.available).toBe(false)
+    expect(revenue.contribution).toBe(0)
   })
 
-  it('欠損データは重みを再正規化し、重みの合計は1', () => {
-    const e = evaluateGrowth(makeCompany({ revenueHistory: undefined, employeeHistory: undefined, founded: null }))
-    const sumW = e.factors.reduce((s, f) => s + f.weight, 0)
-    expect(sumW).toBeCloseTo(1, 6)
-    // 未取得の要因は寄与0
-    const rev = e.factors.find((f) => f.key === 'revenueGrowth')!
-    expect(rev.available).toBe(false)
-    expect(rev.contribution).toBe(0)
+  it('少数の良好指標だけでは高評価にしない', () => {
+    const evaluation = evaluateGrowth(
+      makeCompany({
+        industry: '半導体',
+        revenueHistory: undefined,
+        employeeHistory: undefined,
+        founded: null,
+      }),
+    )
+    expect(evaluation.growthScore).toBeLessThan(70)
+    expect(evaluation.risks.join('')).toContain('充足率')
+    expect(evaluation.outlook).toContain('信頼度低')
   })
 
   it('将来性スコアは0–100に収まる', () => {
-    const e = evaluateGrowth(makeCompany({ industry: '訪問販売', employees: 10 }))
-    expect(e.growthScore).toBeGreaterThanOrEqual(0)
-    expect(e.growthScore).toBeLessThanOrEqual(100)
+    const evaluation = evaluateGrowth(makeCompany({ industry: '訪問販売', employees: 10 }))
+    expect(evaluation.growthScore).toBeGreaterThanOrEqual(0)
+    expect(evaluation.growthScore).toBeLessThanOrEqual(100)
   })
 })
