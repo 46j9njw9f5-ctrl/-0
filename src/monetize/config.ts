@@ -75,7 +75,7 @@ export const site = {
   name: '-0（ゼロ）',
   url: 'https://46j9njw9f5-ctrl.github.io/-0/',
   // 運営者名。審査の信頼性のため実名 or ハンドルネームを推奨。あとで自由に変更可。
-  operator: '（運営者名を設定してください）',
+  operator: 'ゆう',
   // お問い合わせ先。既定は GitHub の Issue ページ（公開情報）。
   // メールにしたい場合はここを 'mailto:あなた@example.com' 等に変更。
   contactUrl: 'https://github.com/46j9njw9f5-ctrl/-0/issues',
