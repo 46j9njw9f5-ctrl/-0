@@ -26,7 +26,7 @@ const env = (typeof import.meta !== 'undefined' && import.meta.env) || ({} as Re
 
 const DEFAULTS = {
   // 例: 'ca-pub-1234567890123456'
-  adsenseClient: '',
+  adsenseClient: 'ca-pub-6937804420410845',
   // 例: '1234567890'（AdSense 管理画面で広告ユニットを作ると発行される）
   adsenseSlot: '',
 }
