@@ -1761,3 +1761,124 @@ a {
   border-top: 1px solid var(--border);
   padding-top: 8px;
 }
+
+/* ─────────────────────────────────────────────────────────────
+   収益化（広告・アフィリエイト）
+   広告であることが一目で分かる控えめな見た目。景表法/ステマ規制に配慮。
+   ───────────────────────────────────────────────────────────── */
+
+/* AdSense 枠 */
+.ad {
+  position: relative;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+  padding: 14px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ad__label {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 7px;
+}
+.ad .adsbygoogle {
+  width: 100%;
+}
+/* グリッド内インフィード広告は全幅で差し込む */
+.ad--ingrid {
+  grid-column: 1 / -1;
+}
+
+/* アフィリエイト・ストリップ */
+.promo-strip {
+  margin: 8px 0 4px;
+}
+.promo-strip__head {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin: 0 2px 8px;
+  font-weight: 600;
+}
+.promo-strip__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+/* アフィリエイト・カード */
+.promo {
+  --promo-accent: var(--accent);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 14px 12px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--promo-accent);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.promo:hover {
+  border-color: var(--promo-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 8%));
+}
+.promo__label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+.promo__provider {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--promo-accent);
+  letter-spacing: 0.02em;
+}
+.promo__title {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+  padding-right: 32px;
+}
+.promo__desc {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+.promo__cta {
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--accent-ink);
+  background: var(--promo-accent);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+
+@media (max-width: 640px) {
+  .promo-strip__row {
+    grid-template-columns: 1fr;
+  }
+}

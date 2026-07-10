@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { Fragment, useEffect, useMemo, useState } from 'react'
 import { datasets, type DatasetKey } from './data'
 import { evaluate } from './engine/scoring'
 import { evaluateGrowth, scaleToPotential } from './engine/growth'
@@ -20,6 +20,8 @@ import { CompanyCard } from './components/CompanyCard'
 import { CompanyDetail } from './components/CompanyDetail'
 import { ComparePanel } from './components/ComparePanel'
 import { Dashboard } from './components/Dashboard'
+import { AdSlot, AffiliateStrip } from './monetize/Ad'
+import { activeAffiliates, hasAdsense, hasAnyAds } from './monetize/config'
 
 export interface Row {
   company: Company
@@ -237,6 +239,7 @@ export default function App() {
     })
   }, [rows, query, industry, sort, onlyFavorites, promisingOnly, safeOnly, gemsOnly, gemIds, favorites, priorities])
 
+  const offers = useMemo(() => activeAffiliates(), [])
   const detail = detailId ? rows.find((r) => r.company.id === detailId) : null
   const compareRows = compare
     .map((id) => rows.find((r) => r.company.id === id))
@@ -409,25 +412,33 @@ export default function App() {
 
       <div className="result-meta">{filtered.length} 社を表示中</div>
 
+      {/* スポンサー（アフィリエイト）: 実リンク設定時のみ表示 */}
+      <AffiliateStrip offers={offers} heading="就活・転職に役立つサービス" />
+
       {filtered.length === 0 ? (
         <div className="empty">条件に一致する企業がありません。</div>
       ) : (
         <div className="grid">
-          {filtered.map((r) => (
-            <CompanyCard
-              key={r.company.id}
-              company={r.company}
-              growth={r.growth}
-              productivity={r.productivity}
-              evaluation={r.evaluation}
-              workability={r.workability}
-              match={priorities.length ? matchScore(r.scores, priorities) : null}
-              isFavorite={favorites.includes(r.company.id)}
-              inCompare={compare.includes(r.company.id)}
-              onOpen={() => setDetailId(r.company.id)}
-              onToggleFavorite={() => toggleFavorite(r.company.id)}
-              onToggleCompare={() => toggleCompare(r.company.id)}
-            />
+          {filtered.map((r, i) => (
+            <Fragment key={r.company.id}>
+              <CompanyCard
+                company={r.company}
+                growth={r.growth}
+                productivity={r.productivity}
+                evaluation={r.evaluation}
+                workability={r.workability}
+                match={priorities.length ? matchScore(r.scores, priorities) : null}
+                isFavorite={favorites.includes(r.company.id)}
+                inCompare={compare.includes(r.company.id)}
+                onOpen={() => setDetailId(r.company.id)}
+                onToggleFavorite={() => toggleFavorite(r.company.id)}
+                onToggleCompare={() => toggleCompare(r.company.id)}
+              />
+              {/* 6件ごとにインフィード広告を差し込む（AdSense 設定時のみ） */}
+              {hasAdsense() && (i + 1) % 6 === 0 && i < filtered.length - 1 && (
+                <AdSlot className="ad--ingrid" />
+              )}
+            </Fragment>
           ))}
         </div>
       )}
@@ -438,6 +449,14 @@ export default function App() {
         女性管理職）は厚労省 女性活躍・両立支援DB（公開データ）由来です。将来性スコアは業種見通し等の前提を含む
         <b>参考値</b>で、投資・就職の助言ではありません。ブラック度は離職率・残業代・法令違反などの追加連携時のみ
         算出します（実名企業に推測値は付与しません）。「デモ」データの企業は架空であり、実在の企業とは関係ありません。
+        {hasAnyAds() && (
+          <>
+            {' '}
+            <b>【広告について】</b>当サイトは Google
+            AdSense およびアフィリエイトプログラム（第三者配信）による広告を掲載しています。「広告」「PR」と
+            表示された枠は広告です。掲載は当サイトの評価・順位とは独立しており、企業評価が広告出稿で変わることはありません。
+          </>
+        )}
       </div>
 
       {detail && (
