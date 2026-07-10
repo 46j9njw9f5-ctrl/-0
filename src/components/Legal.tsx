@@ -1,8 +1,9 @@
-import { site, hasAnyAds } from '../monetize/config'
+import { hasAdsenseClient, hasAnyAds, site } from '../monetize/config'
 
 // サイト下部のフッター。プライバシーポリシー・運営者情報・免責事項をまとめて掲載。
-// AdSense / アフィリエイト審査で求められる記載を満たすためのページ。
 export function SiteFooter() {
+  const verificationOnly = hasAdsenseClient() && !hasAnyAds()
+
   return (
     <footer className="site-footer">
       <details className="policy">
@@ -22,21 +23,17 @@ export function SiteFooter() {
 
           <h4>2. Cookie（クッキー）と広告について</h4>
           <p>
-            当サイトは、第三者配信の広告サービス（Google
-            AdSense 等）を利用する場合があります。これらの事業者は、利用者の興味に応じた広告を
-            表示するために Cookie を使用することがあります。Cookie を無効にする方法や、
-            パーソナライズ広告の設定は、
-            {' '}
+            当サイトは、第三者配信の広告サービス（Google AdSense 等）を利用する場合があります。
+            Google AdSense の審査中は、所有権確認用コードのみを設置し、広告枠は表示しません。
+            広告配信開始後は、広告事業者が利用者の興味に応じた広告を表示するため Cookie を使用することがあります。
+            Cookie を無効にする方法やパーソナライズ広告の設定は、{' '}
             <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">
               Google 広告設定
-            </a>
-            {' '}
-            および
-            {' '}
+            </a>{' '}
+            および{' '}
             <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">
               Google のポリシー
-            </a>
-            {' '}
+            </a>{' '}
             をご確認ください。
           </p>
 
@@ -50,8 +47,8 @@ export function SiteFooter() {
 
           <h4>4. アクセス解析について</h4>
           <p>
-            当サイトは現在アクセス解析ツールを設置していません。将来的に Google
-            Analytics 等を導入する場合は、本ポリシーを更新のうえ明記します。
+            当サイトは現在アクセス解析ツールを設置していません。将来的に Google Analytics 等を導入する場合は、
+            本ポリシーを更新のうえ明記します。
           </p>
 
           <h4>5. 免責事項</h4>
@@ -81,8 +78,8 @@ export function SiteFooter() {
             <b>お問い合わせ：</b>
             <a href={site.contactUrl} target="_blank" rel="noopener noreferrer">
               {site.contactLabel}
-            </a>
-            {' '}よりご連絡ください。
+            </a>{' '}
+            よりご連絡ください。
           </p>
         </div>
       </details>
@@ -90,6 +87,9 @@ export function SiteFooter() {
       <div className="site-footer__meta">
         <span>© {site.name}</span>
         {hasAnyAds() && <span className="site-footer__ad">当サイトは広告（PR）を含みます</span>}
+        {verificationOnly && (
+          <span className="site-footer__ad">AdSense審査コード設置中（広告枠は未稼働）</span>
+        )}
       </div>
     </footer>
   )
