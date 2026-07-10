@@ -70,9 +70,10 @@ type Theme = 'light' | 'dark' | 'auto'
 function loadTheme(): Theme {
   try {
     const t = localStorage.getItem(THEME_KEY)
-    return t === 'light' || t === 'dark' ? t : 'auto'
+    if (t === 'light' || t === 'dark' || t === 'auto') return t
+    return 'light' // 参考デザイン（クリーム）を初期表示に
   } catch {
-    return 'auto'
+    return 'light'
   }
 }
 function applyTheme(t: Theme) {

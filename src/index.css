@@ -12,35 +12,37 @@
   font-display: swap;
 }
 
-/* ============ デザイントークン（ダーク＝既定） ============ */
+/* ============ デザイントークン（Concept C: クリーム/ラベンダー） ============
+   既定＝ダーク（暖かいプラム）。ライトはクリーム基調で参考デザインを再現。 */
 :root {
   color-scheme: dark;
 
-  /* パレットはオープンソースの Open Props（Open Color ランプ）に準拠 */
-  --bg: #0a0c11;
-  --bg-elev: #13161d;
-  --bg-elev-2: #1b1f28;
-  --border: #2a303c;
-  --border-strong: #3a4150;
-  --text: var(--gray-1);
-  --text-dim: #aeb4bd;
-  --text-faint: var(--gray-6);
-  --accent: var(--violet-4);
-  --accent-ink: #0a0c11;
-  --accent-dim: #2b2555;
+  --bg: #1b1922;
+  --bg-elev: #242131;
+  --bg-elev-2: #2e2a3b;
+  --border: #383244;
+  --border-strong: #4a4459;
+  --text: #ece9f3;
+  --text-dim: #b4aec2;
+  --text-faint: #857f94;
+  --accent: #a99ae2;
+  --accent-ink: #191722;
+  --accent-dim: #332c4d;
+  --teal: #6bc0b2;
+  --sand: #cbb894;
 
-  --excellent: var(--green-5);
-  --standard: var(--blue-4);
-  --caution: var(--yellow-6);
-  --danger: var(--red-5);
+  --excellent: #6cbe96;
+  --standard: #7cb0d0;
+  --caution: #d4a24e;
+  --danger: #e28a8a;
 
-  --grad-1: #2a1f6633;
-  --grad-2: #10233f33;
+  --grad-1: #2a234f55;
+  --grad-2: #143330aa;
 
-  --radius: 12px;
-  --radius-sm: 9px;
-  /* Open Props の多層シャドウ */
-  --shadow-color: 240 32% 3%;
+  --radius: 16px;
+  --radius-sm: 11px;
+  /* 多層シャドウ（やわらかく暖かい） */
+  --shadow-color: 265 40% 3%;
   --shadow-strength: 20%;
   --shadow: var(--shadow-4);
 
@@ -53,53 +55,57 @@
   font-family: var(--font-body);
 }
 
-/* ============ ライトテーマ ============ */
+/* ============ ライトテーマ（クリーム＝参考デザイン） ============ */
 @media (prefers-color-scheme: light) {
   :root:not([data-theme='dark']) {
     color-scheme: light;
-    --bg: #f6f7f9;
-    --bg-elev: #ffffff;
-    --bg-elev-2: #eef0f4;
-    --border: #e3e6eb;
-    --border-strong: var(--gray-4);
-    --text: #1a1d23;
-    --text-dim: var(--gray-7);
-    --text-faint: var(--gray-6);
-    --accent: var(--violet-7);
+    --bg: #f2efe6;
+    --bg-elev: #fcfbf7;
+    --bg-elev-2: #eae4d8;
+    --border: #e7e1d2;
+    --border-strong: #d5cdb9;
+    --text: #34303f;
+    --text-dim: #6d6678;
+    --text-faint: #9b95a4;
+    --accent: #7c6cb2;
     --accent-ink: #ffffff;
-    --accent-dim: var(--violet-1);
-    --excellent: #2f9e44;
-    --standard: var(--blue-7);
-    --caution: #a5750a;
-    --danger: #e03131;
-    --grad-1: #efe9ff88;
-    --grad-2: #e6f0fb88;
-    --shadow-color: 220 22% 34%;
-    --shadow-strength: 3%;
+    --accent-dim: #ece7f6;
+    --teal: #4f9d94;
+    --sand: #c3ad84;
+    --excellent: #4f9679;
+    --standard: #5688ac;
+    --caution: #ab7d2c;
+    --danger: #bf6a6a;
+    --grad-1: #e9e3f7aa;
+    --grad-2: #e5efe9aa;
+    --shadow-color: 40 24% 42%;
+    --shadow-strength: 4%;
     --shadow: var(--shadow-4);
   }
 }
 :root[data-theme='light'] {
   color-scheme: light;
-  --bg: #f6f7f9;
-  --bg-elev: #ffffff;
-  --bg-elev-2: #eef0f4;
-  --border: #e3e6eb;
-  --border-strong: var(--gray-4);
-  --text: #1a1d23;
-  --text-dim: var(--gray-7);
-  --text-faint: var(--gray-6);
-  --accent: var(--violet-7);
+  --bg: #f2efe6;
+  --bg-elev: #fcfbf7;
+  --bg-elev-2: #eae4d8;
+  --border: #e7e1d2;
+  --border-strong: #d5cdb9;
+  --text: #34303f;
+  --text-dim: #6d6678;
+  --text-faint: #9b95a4;
+  --accent: #7c6cb2;
   --accent-ink: #ffffff;
-  --accent-dim: var(--violet-1);
-  --excellent: #2f9e44;
-  --standard: var(--blue-7);
-  --caution: #a5750a;
-  --danger: #e03131;
-  --grad-1: #efe9ff88;
-  --grad-2: #e6f0fb88;
-  --shadow-color: 220 22% 34%;
-  --shadow-strength: 3%;
+  --accent-dim: #ece7f6;
+  --teal: #4f9d94;
+  --sand: #c3ad84;
+  --excellent: #4f9679;
+  --standard: #5688ac;
+  --caution: #ab7d2c;
+  --danger: #bf6a6a;
+  --grad-1: #e9e3f7aa;
+  --grad-2: #e5efe9aa;
+  --shadow-color: 40 24% 42%;
+  --shadow-strength: 4%;
   --shadow: var(--shadow-4);
 }
 

@@ -136,8 +136,9 @@ export function Scatter({
   )
 }
 
-// 比較用カテゴリカル配色（固定順・CVD検証済み: dark mode 全チェックPASS）。
-export const CATEGORICAL = ['#4f8cff', '#c9821f', '#a855f7', '#0f9488']
+// 比較用カテゴリカル配色（Concept C: ラベンダー/ティール/セージ/ゴールド）。
+// クリーム・ダーク両テーマで判別できる中間トーン。
+export const CATEGORICAL = ['#8b7ed6', '#4fa99d', '#5aa17e', '#c1993f']
 
 export interface RadarSeries {
   label: string
