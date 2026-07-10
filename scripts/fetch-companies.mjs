@@ -44,7 +44,7 @@ WHERE {
   ?company wdt:P17 wd:Q17 ;
            wdt:P1128 ?employees ;
            wdt:P452 ?industry .
-  FILTER(?employees > 800)
+  FILTER(?employees > 30)
   OPTIONAL { ?company wdt:P571 ?inception }
   OPTIONAL { ?company wdt:P159 ?hq . OPTIONAL { ?hq wdt:P131 ?pref } }
   OPTIONAL { ?company wdt:P856 ?website }
@@ -52,7 +52,7 @@ WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "ja,en". }
 }
 GROUP BY ?company ?companyLabel ?inception ?industryLabel ?hqLabel ?prefLabel ?website
-LIMIT 400`
+LIMIT 2000`
 
 // 従業員数の時系列（point-in-time 付き）。
 const QUERY_EMPLOYEES = `
@@ -60,7 +60,7 @@ SELECT ?company ?employees ?time WHERE {
   ?company wdt:P17 wd:Q17 ; p:P1128 ?st .
   ?st ps:P1128 ?employees .
   OPTIONAL { ?st pq:P585 ?time }
-  FILTER(?employees > 800)
+  FILTER(?employees > 30)
 }`
 
 // 売上高の時系列。
@@ -405,15 +405,15 @@ async function main() {
   })
   unique.sort((a, b) => b.employees - a.employees)
 
-  // 産業ごとに最大 6 社までに制限し、多様性を確保（合計は上限 90）
+  // 産業ごとに最大 120 社までに制限し、多様性を確保（合計は上限 1500）
   const perIndustry = new Map()
   const balanced = []
   for (const c of unique) {
     const n = perIndustry.get(c.industry) || 0
-    if (n >= 6) continue
+    if (n >= 120) continue
     perIndustry.set(c.industry, n + 1)
     balanced.push(c)
-    if (balanced.length >= 90) break
+    if (balanced.length >= 1500) break
   }
 
   writeFileSync(OUT, JSON.stringify(balanced, null, 2), 'utf8')

@@ -11,7 +11,7 @@
     "founded": 1937,
     "listed": true,
     "website": "https://global.toyota",
-    "accent": "#22c55e",
+    "accent": "#e11d48",
     "employeeHistory": [
       {
         "year": 2020,
@@ -48,7 +48,7 @@
       "avgOvertimeHours": 20.3,
       "womenManagerRate": 3.9,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 88.4,
       "industryJsic": "E:製造業"
     }
@@ -66,7 +66,7 @@
     "founded": 1870,
     "listed": false,
     "website": "https://www.mitsubishi.com/en/",
-    "accent": "#ec4899",
+    "accent": "#f59e0b",
     "employeeHistory": [
       {
         "year": 2010,
@@ -92,18 +92,19 @@
   {
     "id": "Q53247",
     "name": "パナソニックホールディングス",
-    "industry": "エレクトロニクス",
+    "industry": "半導体",
     "industryRaw": [
       "電子工学",
       "家電機器",
-      "コンピュータゲーム産業"
+      "コンピュータゲーム産業",
+      "半導体産業"
     ],
     "location": "大阪府",
     "employees": 257533,
     "founded": 1918,
     "listed": true,
     "website": "https://holdings.panasonic/",
-    "accent": "#3b82f6",
+    "accent": "#8b5cf6",
     "employeeHistory": [
       {
         "year": 2017,
@@ -166,7 +167,7 @@
     "laborReal": {
       "womenManagerRate": 8.5,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "E:製造業"
     }
   },
@@ -183,7 +184,7 @@
     "founded": 1948,
     "listed": true,
     "website": "https://global.honda",
-    "accent": "#8b5cf6",
+    "accent": "#14b8a6",
     "employeeHistory": [
       {
         "year": 2022,
@@ -211,7 +212,7 @@
       "avgOvertimeHours": 21.8,
       "womenManagerRate": 3.4,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 97.8,
       "industryJsic": "E:製造業"
     }
@@ -229,7 +230,7 @@
     "founded": 1935,
     "listed": true,
     "website": "https://global.fujitsu",
-    "accent": "#8b5cf6",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 0,
@@ -261,8 +262,131 @@
       "avgOvertimeHours": 9.1,
       "womenManagerRate": 11.5,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 72.3,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q62621",
+    "name": "キヤノン",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学",
+      "電気産業"
+    ],
+    "location": "東京都",
+    "employees": 194151,
+    "founded": 1937,
+    "listed": true,
+    "website": "https://global.canon/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2011,
+        "value": 198307
+      },
+      {
+        "year": 2012,
+        "value": 196968
+      },
+      {
+        "year": 2013,
+        "value": 194151
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2016,
+        "value": 3401000000000
+      }
+    ],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "6010801003186",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q62621"
+    },
+    "laborReal": {
+      "womenManagerRate": 4.6,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 94.5,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q6584353",
+    "name": "ヤマト運輸",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "運輸業"
+    ],
+    "location": "日本",
+    "employees": 191172,
+    "founded": 2005,
+    "listed": false,
+    "website": "https://www.kuronekoyamato.co.jp/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 191172
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "1010001092605",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q6584353"
+    },
+    "laborReal": {
+      "womenManagerRate": 6,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 90.7,
+      "industryJsic": "H:運輸業，郵便業"
+    }
+  },
+  {
+    "id": "Q1814247",
+    "name": "住友電気工業",
+    "industry": "鉄鋼・金属",
+    "industryRaw": [
+      "非鉄金属"
+    ],
+    "location": "大阪府",
+    "employees": 182773,
+    "founded": 1897,
+    "listed": true,
+    "website": "https://sumitomoelectric.com",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2011,
+        "value": 182773
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "5120001077450",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1814247"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 15.7,
+      "womenManagerRate": 4.4,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 92,
       "industryJsic": "E:製造業"
     }
   },
@@ -338,7 +462,7 @@
       "avgOvertimeHours": 20.3,
       "womenManagerRate": 11.5,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 94,
       "industryJsic": "E:製造業"
     }
@@ -357,7 +481,7 @@
     "founded": 1946,
     "listed": true,
     "website": "https://www.sony.co.in/",
-    "accent": "#84cc16",
+    "accent": "#f97316",
     "employeeHistory": [
       {
         "year": 2019,
@@ -415,7 +539,7 @@
       "paidLeaveRate": 100,
       "womenManagerRate": 20.5,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "E:製造業"
     }
   },
@@ -431,7 +555,7 @@
     "founded": 2012,
     "listed": true,
     "website": "https://www.nipponsteel.com/",
-    "accent": "#14b8a6",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 2020,
@@ -463,7 +587,7 @@
       "paidLeaveRate": 80,
       "womenManagerRate": 1.8,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "E:製造業"
     }
   },
@@ -480,7 +604,7 @@
     "founded": 2005,
     "listed": true,
     "website": "http://www.mufg.jp/",
-    "accent": "#22c55e",
+    "accent": "#06b6d4",
     "employeeHistory": [
       {
         "year": 2016,
@@ -500,6 +624,82 @@
     }
   },
   {
+    "id": "Q409907",
+    "name": "アイシン",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "愛知県",
+    "employees": 100000,
+    "founded": 1949,
+    "listed": true,
+    "website": "https://www.aisin.com/jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 100000
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "6180301013611",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q409907"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 26.1,
+      "womenManagerRate": 3,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q745099",
+    "name": "京セラ",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "工業",
+      "電子工学"
+    ],
+    "location": "京都市",
+    "employees": 79185,
+    "founded": 1959,
+    "listed": true,
+    "website": "https://global.kyocera.com/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2024,
+        "value": 79185
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "4130001000049",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q745099"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 15.7,
+      "womenManagerRate": 6.3,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 80.7,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
     "id": "Q164740",
     "name": "富士フイルムホールディングス",
     "industry": "精密・光学機器",
@@ -516,7 +716,7 @@
     "founded": 1934,
     "listed": true,
     "website": "https://www.fujifilm.com/",
-    "accent": "#a855f7",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 2006,
@@ -634,7 +834,7 @@
     "laborReal": {
       "womenManagerRate": 7.5,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "E:製造業"
     }
   },
@@ -651,7 +851,7 @@
     "founded": 1881,
     "listed": true,
     "website": "https://corporate.epson/",
-    "accent": "#f59e0b",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 2024,
@@ -671,9 +871,94 @@
     "laborReal": {
       "womenManagerRate": 5.9,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 77.5,
       "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q499071",
+    "name": "東日本旅客鉄道",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "鉄道輸送"
+    ],
+    "location": "日本",
+    "employees": 73063,
+    "founded": 1987,
+    "listed": true,
+    "website": "https://www.jreast.co.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 73063
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2007,
+        "value": 2657346000000
+      },
+      {
+        "year": 2008,
+        "value": 2703564000000
+      },
+      {
+        "year": 2009,
+        "value": 2697000000000
+      },
+      {
+        "year": 2010,
+        "value": 2573724000000
+      },
+      {
+        "year": 2011,
+        "value": 2537353000000
+      },
+      {
+        "year": 2012,
+        "value": 2532174000000
+      },
+      {
+        "year": 2013,
+        "value": 2671823000000
+      },
+      {
+        "year": 2014,
+        "value": 2702917000000
+      },
+      {
+        "year": 2015,
+        "value": 2756165000000
+      },
+      {
+        "year": 2016,
+        "value": 2867200000000
+      },
+      {
+        "year": 2017,
+        "value": 2880802000000
+      }
+    ],
+    "financials": {
+      "netProfit": 279435000000,
+      "operatingIncome": 466310000000,
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "9011001029597",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q499071"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 16.3,
+      "womenManagerRate": 9.1,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 77.1,
+      "industryJsic": "H:運輸業，郵便業"
     }
   },
   {
@@ -688,7 +973,7 @@
     "founded": 1909,
     "listed": true,
     "website": "https://www.globalsuzuki.com/",
-    "accent": "#f97316",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 2020,
@@ -710,8 +995,191 @@
       "paidLeaveRate": 80.7,
       "womenManagerRate": 2.2,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q201653",
+    "name": "ソフトバンクグループ",
+    "industry": "IT・ソフトウェア",
+    "industryRaw": [
+      "電気通信",
+      "情報技術",
+      "国際標準産業分類",
+      "電気通信産業"
+    ],
+    "location": "東京都",
+    "employees": 68402,
+    "founded": 1981,
+    "listed": true,
+    "website": "https://group.softbank/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 68402
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2007,
+        "value": 2544219000000
+      },
+      {
+        "year": 2008,
+        "value": 2776169000000
+      },
+      {
+        "year": 2009,
+        "value": 2673035000000
+      },
+      {
+        "year": 2010,
+        "value": 2763406000000
+      },
+      {
+        "year": 2011,
+        "value": 3004640000000
+      },
+      {
+        "year": 2012,
+        "value": 3202436000000
+      },
+      {
+        "year": 2013,
+        "value": 3202536000000
+      },
+      {
+        "year": 2014,
+        "value": 6666651000000
+      },
+      {
+        "year": 2015,
+        "value": 8504135000000
+      },
+      {
+        "year": 2016,
+        "value": 8881777000000
+      },
+      {
+        "year": 2017,
+        "value": 8901004000000
+      },
+      {
+        "year": 2018,
+        "value": 9158765000000
+      }
+    ],
+    "financials": {
+      "netProfit": 1237812000000,
+      "operatingIncome": 1303801000000,
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "1010401056795",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q201653"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 9.9,
+      "womenManagerRate": 27,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "L:学術研究，専門・技術サービス業"
+    }
+  },
+  {
+    "id": "Q648280",
+    "name": "三菱重工業",
+    "industry": "機械・重工業",
+    "industryRaw": [
+      "重工業"
+    ],
+    "location": "東京都",
+    "employees": 68213,
+    "founded": 1934,
+    "listed": true,
+    "website": "https://www.mhi.com",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 68213
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2018,
+        "value": 3620000000
+      }
+    ],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "8010401050387",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q648280"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 26.4,
+      "womenManagerRate": 2.7,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 77.7,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q4538440",
+    "name": "日本赤十字社",
+    "industry": "emergency and relief",
+    "industryRaw": [
+      "emergency and relief"
+    ],
+    "location": "港区",
+    "employees": 67526,
+    "founded": 1877,
+    "listed": false,
+    "website": "https://www.jrc.or.jp/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2019,
+        "value": 67679
+      },
+      {
+        "year": 2020,
+        "value": 67556
+      },
+      {
+        "year": 2021,
+        "value": 67574
+      },
+      {
+        "year": 2022,
+        "value": 67403
+      },
+      {
+        "year": 2023,
+        "value": 67526
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "6010405002452",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q4538440"
+    },
+    "laborReal": {
+      "womenManagerRate": 36,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "T:分類不能の産業"
     }
   },
   {
@@ -726,7 +1194,7 @@
     "founded": 1985,
     "listed": true,
     "website": "http://www.jt.com/",
-    "accent": "#3b82f6",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 0,
@@ -747,7 +1215,7 @@
       "avgOvertimeHours": 4.9,
       "womenManagerRate": 10.9,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 85.6,
       "industryJsic": "E:製造業"
     }
@@ -765,7 +1233,7 @@
     "founded": 1949,
     "listed": true,
     "website": "https://www.itochu.co.jp",
-    "accent": "#f59e0b",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
         "year": 2010,
@@ -796,7 +1264,7 @@
       "avgOvertimeHours": 10.7,
       "womenManagerRate": 9,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 69.1,
       "industryJsic": "I:卸売業，小売業"
     }
@@ -821,7 +1289,7 @@
     "founded": 1948,
     "listed": false,
     "website": "https://www.lotte.co.jp/",
-    "accent": "#06b6d4",
+    "accent": "#84cc16",
     "employeeHistory": [
       {
         "year": 0,
@@ -847,7 +1315,7 @@
     "founded": 2002,
     "listed": true,
     "website": "https://www.jfe-holdings.co.jp/",
-    "accent": "#ec4899",
+    "accent": "#f97316",
     "employeeHistory": [
       {
         "year": 0,
@@ -877,7 +1345,7 @@
     "founded": 1924,
     "listed": true,
     "website": "https://www.daikin.co.jp",
-    "accent": "#8b5cf6",
+    "accent": "#f59e0b",
     "employeeHistory": [
       {
         "year": 0,
@@ -898,7 +1366,7 @@
       "avgOvertimeHours": 18,
       "womenManagerRate": 9.3,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 95.8,
       "industryJsic": "E:製造業"
     }
@@ -915,7 +1383,7 @@
     "founded": 2005,
     "listed": true,
     "website": "http://www.7andi.com/",
-    "accent": "#e11d48",
+    "accent": "#f59e0b",
     "employeeHistory": [
       {
         "year": 2023,
@@ -941,7 +1409,7 @@
       "avgOvertimeHours": 16.7,
       "womenManagerRate": 19.7,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 80.2,
       "industryJsic": "I:卸売業，小売業"
     }
@@ -958,7 +1426,7 @@
     "founded": 1935,
     "listed": true,
     "website": "https://www.tdk.com/",
-    "accent": "#84cc16",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 0,
@@ -980,7 +1448,7 @@
       "paidLeaveRate": 73.4,
       "womenManagerRate": 5.7,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "E:製造業"
     }
   },
@@ -1024,7 +1492,7 @@
       "avgOvertimeHours": 16,
       "womenManagerRate": 3.7,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "E:製造業"
     }
   },
@@ -1040,7 +1508,7 @@
     "founded": 1949,
     "listed": true,
     "website": "https://www.lixil.co.jp/",
-    "accent": "#f59e0b",
+    "accent": "#8b5cf6",
     "employeeHistory": [
       {
         "year": 2025,
@@ -1066,7 +1534,7 @@
       "avgOvertimeHours": 16.1,
       "womenManagerRate": 7.5,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "E:製造業"
     }
   },
@@ -1082,7 +1550,7 @@
     "founded": 1933,
     "listed": false,
     "website": null,
-    "accent": "#e11d48",
+    "accent": "#84cc16",
     "employeeHistory": [
       {
         "year": 2010,
@@ -1127,7 +1595,7 @@
     "founded": 1912,
     "listed": true,
     "website": "https://global.sharp",
-    "accent": "#3b82f6",
+    "accent": "#84cc16",
     "employeeHistory": [
       {
         "year": 2014,
@@ -1164,7 +1632,292 @@
       "paidLeaveRate": 74.7,
       "womenManagerRate": 4.6,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q35996",
+    "name": "マツダ",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "日本",
+    "employees": 48750,
+    "founded": 1920,
+    "listed": true,
+    "website": "https://www.mazda.com/ja/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2016,
+        "value": 46398
+      },
+      {
+        "year": 2022,
+        "value": 48750
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2023,
+        "value": 3826752000000
+      }
+    ],
+    "financials": {
+      "netProfit": 142814000000,
+      "operatingIncome": 141969000000,
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "3240001036223",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q35996"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 17.4,
+      "womenManagerRate": 5.8,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q7830755",
+    "name": "トヨタ紡織",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車部品メーカー"
+    ],
+    "location": "愛知県",
+    "employees": 46972,
+    "founded": 1918,
+    "listed": true,
+    "website": "http://www.toyota-boshoku.co.jp/en",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 44375
+      },
+      {
+        "year": 2021,
+        "value": 44154
+      },
+      {
+        "year": 2022,
+        "value": 44264
+      },
+      {
+        "year": 2023,
+        "value": 44581
+      },
+      {
+        "year": 2024,
+        "value": 46972
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2020,
+        "value": 1372616000000
+      },
+      {
+        "year": 2021,
+        "value": 1272140000000
+      },
+      {
+        "year": 2022,
+        "value": 1421451000000
+      },
+      {
+        "year": 2023,
+        "value": 1604036000000
+      },
+      {
+        "year": 2024,
+        "value": 1953625000000
+      }
+    ],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "2180301014324",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q7830755"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 23,
+      "womenManagerRate": 3.3,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 88.1,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q36033",
+    "name": "三菱自動車工業",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "東京都",
+    "employees": 42625,
+    "founded": 1970,
+    "listed": true,
+    "website": "https://www.mitsubishi-motors.com/en/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 42625
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "netProfit": 1110000000,
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "7010401029044",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q36033"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 25.5,
+      "womenManagerRate": 6.4,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 91.2,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q204284",
+    "name": "全日本空輸",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "航空"
+    ],
+    "location": "港区",
+    "employees": 42196,
+    "founded": 1952,
+    "listed": true,
+    "website": "https://www.ana.co.jp",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 42196
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "1010401099027",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q204284"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 9.1,
+      "paidLeaveRate": 82.3,
+      "womenManagerRate": 22.6,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "H:運輸業，郵便業"
+    }
+  },
+  {
+    "id": "Q1611033",
+    "name": "アルプスアルパイン",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学"
+    ],
+    "location": "東京都",
+    "employees": 42053,
+    "founded": 1948,
+    "listed": false,
+    "website": "https://www.alpsalpine.com/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2011,
+        "value": 5600
+      },
+      {
+        "year": 2013,
+        "value": 36199
+      },
+      {
+        "year": 2016,
+        "value": 39443
+      },
+      {
+        "year": 2017,
+        "value": 42053
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "3010801000723",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1611033"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 14.6,
+      "womenManagerRate": 3.2,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 74.7,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q1514221",
+    "name": "クボタ",
+    "industry": "機械・重工業",
+    "industryRaw": [
+      "機械産業"
+    ],
+    "location": "大阪府",
+    "employees": 41605,
+    "founded": 1890,
+    "listed": true,
+    "website": "https://www.kubota.com/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 41605
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "1120001037978",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1514221"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 20.1,
+      "paidLeaveRate": 104.9,
+      "womenManagerRate": 5.1,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
       "industryJsic": "E:製造業"
     }
   },
@@ -1180,7 +1933,7 @@
     "founded": 2010,
     "listed": true,
     "website": "https://www.hd.eneos.co.jp/",
-    "accent": "#ec4899",
+    "accent": "#84cc16",
     "employeeHistory": [
       {
         "year": 2019,
@@ -1201,8 +1954,91 @@
       "avgOvertimeHours": 17.2,
       "womenManagerRate": 5.9,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 92.8,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q904240",
+    "name": "三井物産",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "物流",
+      "総合商社"
+    ],
+    "location": "日本",
+    "employees": 40026,
+    "founded": 1947,
+    "listed": true,
+    "website": "https://www.mitsui.com/jp/ja",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2011,
+        "value": 40026
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2011,
+        "value": 9424000000000
+      }
+    ],
+    "financials": {
+      "netProfit": 306700000000,
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "1010001008767",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q904240"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 6.1,
+      "womenManagerRate": 11,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 69,
+      "industryJsic": "I:卸売業，小売業"
+    }
+  },
+  {
+    "id": "Q118911",
+    "name": "コニカミノルタ",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学"
+    ],
+    "location": "東京都",
+    "employees": 36000,
+    "founded": 2003,
+    "listed": true,
+    "website": "https://kmbs.konicaminolta.us/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 36000
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "5010001084367",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q118911"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 17.9,
+      "womenManagerRate": 12,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 60,
       "industryJsic": "E:製造業"
     }
   },
@@ -1222,7 +2058,7 @@
     "founded": 1984,
     "listed": true,
     "website": "https://www.akindo-sushiro.co.jp/",
-    "accent": "#a855f7",
+    "accent": "#e11d48",
     "employeeHistory": [
       {
         "year": 2025,
@@ -1247,7 +2083,7 @@
     "laborReal": {
       "womenManagerRate": 15.5,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "M:宿泊業，飲食サービス業"
     }
   },
@@ -1263,7 +2099,7 @@
     "founded": 1937,
     "listed": true,
     "website": "https://www.nittsu.co.jp/",
-    "accent": "#f59e0b",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 2023,
@@ -1283,7 +2119,7 @@
     "laborReal": {
       "womenManagerRate": 4.4,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 65.2,
       "industryJsic": "H:運輸業，郵便業"
     }
@@ -1301,7 +2137,7 @@
     "founded": 1931,
     "listed": true,
     "website": "http://asahi-kasei.co.jp/",
-    "accent": "#a855f7",
+    "accent": "#14b8a6",
     "employeeHistory": [
       {
         "year": 2018,
@@ -1322,8 +2158,41 @@
       "avgOvertimeHours": 21.9,
       "womenManagerRate": 6,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 84.2,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q368777",
+    "name": "HOYA",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学"
+    ],
+    "location": "東京都",
+    "employees": 34635,
+    "founded": 1941,
+    "listed": false,
+    "website": "https://www.hoya.com/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 34635
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "7011101019599",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q368777"
+    },
+    "laborReal": {
+      "womenManagerRate": 15.6,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
       "industryJsic": "E:製造業"
     }
   },
@@ -1339,7 +2208,7 @@
     "founded": 2006,
     "listed": false,
     "website": "http://www.bk.mufg.jp/",
-    "accent": "#f59e0b",
+    "accent": "#3b82f6",
     "employeeHistory": [
       {
         "year": 0,
@@ -1357,9 +2226,52 @@
       "avgOvertimeHours": 21.3,
       "womenManagerRate": 30,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 86.9,
       "industryJsic": "J:金融業，保険業"
+    }
+  },
+  {
+    "id": "Q688619",
+    "name": "オリンパス",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学"
+    ],
+    "location": "東京都",
+    "employees": 33300,
+    "founded": 1919,
+    "listed": true,
+    "website": "http://www.olympus-global.com/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 2016,
+        "value": 33300
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2016,
+        "value": 847100000000
+      }
+    ],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "5011001005222",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q688619"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 19.6,
+      "womenManagerRate": 11.9,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 69.5,
+      "industryJsic": "E:製造業"
     }
   },
   {
@@ -1372,10 +2284,10 @@
     ],
     "location": "中央区",
     "employees": 32706,
-    "founded": 1878,
+    "founded": 1939,
     "listed": true,
     "website": "http://global.kawasaki.com/",
-    "accent": "#f97316",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 2011,
@@ -1401,8 +2313,46 @@
       "avgOvertimeHours": 21.9,
       "womenManagerRate": 2.6,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 82.3,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q501376",
+    "name": "オムロン",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工業"
+    ],
+    "location": "京都市",
+    "employees": 30000,
+    "founded": 1933,
+    "listed": true,
+    "website": "https://www.omron.co.jp/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 30000
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "1130001016824",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q501376"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 11.6,
+      "womenManagerRate": 13.4,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 69.3,
       "industryJsic": "E:製造業"
     }
   },
@@ -1418,7 +2368,7 @@
     "founded": 1918,
     "listed": true,
     "website": "https://www.nsg.co.jp/",
-    "accent": "#f97316",
+    "accent": "#f59e0b",
     "employeeHistory": [
       {
         "year": 2011,
@@ -1439,7 +2389,7 @@
       "avgOvertimeHours": 9.2,
       "womenManagerRate": 4.9,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 83.5,
       "industryJsic": "E:製造業"
     }
@@ -1456,7 +2406,7 @@
     "founded": 1872,
     "listed": true,
     "website": "https://corp.shiseido.com/",
-    "accent": "#14b8a6",
+    "accent": "#8b5cf6",
     "employeeHistory": [
       {
         "year": 0,
@@ -1477,7 +2427,183 @@
       "paidLeaveRate": 84.5,
       "womenManagerRate": 43.3,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q853958",
+    "name": "NTTドコモ",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電気通信産業",
+      "携帯電話産業"
+    ],
+    "location": "永田町",
+    "employees": 27558,
+    "founded": 1992,
+    "listed": true,
+    "website": "https://www.docomo.ne.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2011,
+        "value": 22954
+      },
+      {
+        "year": 2015,
+        "value": 26129
+      },
+      {
+        "year": 2016,
+        "value": 26734
+      },
+      {
+        "year": 2017,
+        "value": 27464
+      },
+      {
+        "year": 2018,
+        "value": 26564
+      },
+      {
+        "year": 2019,
+        "value": 27558
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2010,
+        "value": 45843000000
+      },
+      {
+        "year": 2023,
+        "value": 6140000000000
+      }
+    ],
+    "financials": {
+      "netProfit": 1144400000000,
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "1010001067912",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q853958"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 24.6,
+      "womenManagerRate": 13.9,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 86.2,
+      "industryJsic": "G:情報通信業"
+    }
+  },
+  {
+    "id": "Q1812086",
+    "name": "東京海上ホールディングス",
+    "industry": "金融・保険",
+    "industryRaw": [
+      "保険業"
+    ],
+    "location": "東京都",
+    "employees": 24959,
+    "founded": 1879,
+    "listed": true,
+    "website": "https://www.tokiomarinehd.com",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2008,
+        "value": 24959
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "7010001078061",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1812086"
+    }
+  },
+  {
+    "id": "Q866991",
+    "name": "大創産業",
+    "industry": "バラエティ・ストア",
+    "industryRaw": [
+      "バラエティ・ストア"
+    ],
+    "location": "東広島市",
+    "employees": 24750,
+    "founded": 1977,
+    "listed": false,
+    "website": "https://www.daiso-sangyo.co.jp/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 24750
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "7240001022681",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q866991"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 23,
+      "womenManagerRate": 16.2,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "I:卸売業，小売業"
+    }
+  },
+  {
+    "id": "Q786947",
+    "name": "沖電気工業",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学"
+    ],
+    "location": "港区",
+    "employees": 22640,
+    "founded": 1881,
+    "listed": true,
+    "website": "http://www.oki.com",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 22640
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2007,
+        "value": 719700000000
+      }
+    ],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "7010401006126",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q786947"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 22.1,
+      "womenManagerRate": 6.4,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 62.2,
       "industryJsic": "E:製造業"
     }
   },
@@ -1493,7 +2619,7 @@
     "founded": 2002,
     "listed": true,
     "website": "https://www.renesas.com/",
-    "accent": "#e11d48",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
         "year": 0,
@@ -1513,7 +2639,7 @@
     "laborReal": {
       "womenManagerRate": 4.8,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 69.6,
       "industryJsic": "E:製造業"
     }
@@ -1531,7 +2657,7 @@
     "founded": 1984,
     "listed": false,
     "website": "https://www.uniqlo.com/",
-    "accent": "#8b5cf6",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
         "year": 2023,
@@ -1555,7 +2681,7 @@
     "laborReal": {
       "womenManagerRate": 33.6,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "I:卸売業，小売業"
     }
   },
@@ -1571,7 +2697,7 @@
     "founded": 1951,
     "listed": true,
     "website": "https://www.kepco.co.jp/",
-    "accent": "#06b6d4",
+    "accent": "#f97316",
     "employeeHistory": [
       {
         "year": 0,
@@ -1592,7 +2718,7 @@
       "avgOvertimeHours": 20.1,
       "womenManagerRate": 4.8,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 93.1,
       "industryJsic": "F:電気・ガス・熱供給・水道業"
     }
@@ -1609,7 +2735,7 @@
     "founded": 1908,
     "listed": true,
     "website": "http://www.dic-global.com",
-    "accent": "#f97316",
+    "accent": "#06b6d4",
     "employeeHistory": [
       {
         "year": 0,
@@ -1631,8 +2757,562 @@
       "paidLeaveRate": 70.1,
       "womenManagerRate": 8.6,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q188454",
+    "name": "ヤマハ",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業",
+      "音楽産業",
+      "機械産業",
+      "電子工業"
+    ],
+    "location": "浜松市",
+    "employees": 19895,
+    "founded": 1987,
+    "listed": true,
+    "website": "https://jp.yamaha.com/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2014,
+        "value": 19851
+      },
+      {
+        "year": 2016,
+        "value": 20348
+      },
+      {
+        "year": 2022,
+        "value": 19895
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 1018,
+        "value": 432967000000
+      },
+      {
+        "year": 2014,
+        "value": 229000000000
+      }
+    ],
+    "financials": {
+      "netProfit": 41578000000,
+      "operatingIncome": 40663000000,
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "3080401005595",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q188454"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 16.3,
+      "paidLeaveRate": 81.3,
+      "womenManagerRate": 10,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q1321914",
+    "name": "東武鉄道",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "公共交通機関",
+      "鉄道輸送"
+    ],
+    "location": "墨田区",
+    "employees": 19621,
+    "founded": 1897,
+    "listed": true,
+    "website": "https://www.tobu-kids.com/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 19621
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "6010601014508",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1321914"
+    },
+    "laborReal": {
+      "womenManagerRate": 2.8,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "H:運輸業，郵便業"
+    }
+  },
+  {
+    "id": "Q904284",
+    "name": "信越化学工業",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業"
+    ],
+    "location": "東京都",
+    "employees": 19206,
+    "founded": 1926,
+    "listed": true,
+    "website": "http://www.shinetsu.co.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2017,
+        "value": 19206
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "5010001008680",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q904284"
+    },
+    "laborReal": {
+      "womenManagerRate": 3.2,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 75.8,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q971946",
+    "name": "KDDI",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電気通信産業",
+      "携帯電話産業"
+    ],
+    "location": "東京都",
+    "employees": 18418,
+    "founded": 1984,
+    "listed": true,
+    "website": "https://www.kddi.com/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2010,
+        "value": 18418
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "9011101031552",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q971946"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 16.2,
+      "womenManagerRate": 10.9,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 83.6,
+      "industryJsic": "G:情報通信業"
+    }
+  },
+  {
+    "id": "Q513679",
+    "name": "東海旅客鉄道",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "鉄道輸送"
+    ],
+    "location": "中村区",
+    "employees": 18148,
+    "founded": 1987,
+    "listed": true,
+    "website": "https://global.jr-central.co.jp/de/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2015,
+        "value": 18231
+      },
+      {
+        "year": 2016,
+        "value": 18164
+      },
+      {
+        "year": 2017,
+        "value": 18054
+      },
+      {
+        "year": 2018,
+        "value": 18116
+      },
+      {
+        "year": 2019,
+        "value": 18148
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2013,
+        "value": 1585300000000
+      },
+      {
+        "year": 2014,
+        "value": 1652500000000
+      },
+      {
+        "year": 2015,
+        "value": 1672295000000
+      },
+      {
+        "year": 2016,
+        "value": 1738409000000
+      },
+      {
+        "year": 2017,
+        "value": 1756980000000
+      }
+    ],
+    "financials": {
+      "netProfit": 391624000000,
+      "operatingIncome": 619564000000,
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "3180001031569",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q513679"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 18.4,
+      "paidLeaveRate": 92.2,
+      "womenManagerRate": 2.8,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "H:運輸業，郵便業"
+    }
+  },
+  {
+    "id": "Q1368019",
+    "name": "シチズン時計",
+    "industry": "精密・光学機器",
+    "industryRaw": [
+      "時計学"
+    ],
+    "location": "日本",
+    "employees": 18000,
+    "founded": 1918,
+    "listed": true,
+    "website": "http://www.citizen.co.jp",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 18000
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "5012701004744",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1368019"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 8.8,
+      "womenManagerRate": 9.8,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 70.9,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q172741",
+    "name": "スバル",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "渋谷区",
+    "employees": 16961,
+    "founded": 1953,
+    "listed": false,
+    "website": "https://www.subaru-global.com/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 16961
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q172741"
+    }
+  },
+  {
+    "id": "Q1111609",
+    "name": "帝人",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業"
+    ],
+    "location": "大阪府",
+    "employees": 16819,
+    "founded": 1918,
+    "listed": false,
+    "website": "https://www.teijin.co.jp",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 16819
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "8120001077489",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1111609"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 13.3,
+      "womenManagerRate": 8.9,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 68.9,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q156034",
+    "name": "パイオニア",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "consumer electronics industry"
+    ],
+    "location": "神奈川県",
+    "employees": 16763,
+    "founded": 1938,
+    "listed": false,
+    "website": "http://pioneer.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2017,
+        "value": 16763
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2018,
+        "value": 365417000000
+      }
+    ],
+    "financials": {
+      "operatingIncome": 1194000000
+    },
+    "corporateNumber": "1020001086473",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q156034"
+    },
+    "laborReal": {
+      "womenManagerRate": 5.1,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 70,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q1676719",
+    "name": "JVCケンウッド",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学"
+    ],
+    "location": "神奈川区",
+    "employees": 16277,
+    "founded": 2008,
+    "listed": true,
+    "website": "https://it.wikipedia.org/wiki/utente:Elwood",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 16277
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2023,
+        "value": 336900000000
+      }
+    ],
+    "financials": {
+      "netProfit": 16844000000,
+      "operatingIncome": 21634000000,
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "8020001059159",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1676719"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 16.6,
+      "womenManagerRate": 8.1,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 65.5,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q1640290",
+    "name": "ENEOS",
+    "industry": "エネルギー・インフラ",
+    "industryRaw": [
+      "石油産業"
+    ],
+    "location": "大手町",
+    "employees": 13290,
+    "founded": 1888,
+    "listed": false,
+    "website": "https://www.eneos.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 14114
+      },
+      {
+        "year": 2007,
+        "value": 13290
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "4010001133876",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1640290"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 27.4,
+      "womenManagerRate": 5,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 97,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q27511",
+    "name": "ダイハツ工業",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "大阪府",
+    "employees": 13033,
+    "founded": 1907,
+    "listed": false,
+    "website": "https://www.daihatsu.com/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 13033
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2005,
+        "value": 11500000000
+      }
+    ],
+    "financials": {
+      "netProfit": 284920052.006
+    },
+    "corporateNumber": "3120901019710",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q27511"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 16.6,
+      "womenManagerRate": 3.2,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 95.4,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q11297236",
+    "name": "キャメル珈琲",
+    "industry": "食品・飲料",
+    "industryRaw": [
+      "外食産業",
+      "小売",
+      "卸売"
+    ],
+    "location": "世田谷区",
+    "employees": 12700,
+    "founded": 1977,
+    "listed": false,
+    "website": "https://camelcoffee.jp/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 12700
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "6010901003292",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11297236"
+    },
+    "laborReal": {
+      "womenManagerRate": 82.2,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 56.9,
+      "industryJsic": "I:卸売業，小売業"
     }
   },
   {
@@ -1647,7 +3327,7 @@
     "founded": 2004,
     "listed": true,
     "website": "https://www.tokyometro.jp/lang_es/",
-    "accent": "#22c55e",
+    "accent": "#06b6d4",
     "employeeHistory": [
       {
         "year": 2022,
@@ -1668,9 +3348,39 @@
       "avgOvertimeHours": 23.9,
       "womenManagerRate": 3.3,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 92.7,
       "industryJsic": "H:運輸業，郵便業"
+    }
+  },
+  {
+    "id": "Q115681659",
+    "name": "クリエイトエス・ディー",
+    "industry": "小売・流通",
+    "industryRaw": [
+      "小売"
+    ],
+    "location": "青葉区",
+    "employees": 11442,
+    "founded": 1975,
+    "listed": true,
+    "website": "https://www.create-sd.co.jp/corpo/tabid/91/Default.aspx",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 11442
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "9020001035423",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q115681659"
     }
   },
   {
@@ -1685,7 +3395,7 @@
     "founded": 1939,
     "listed": true,
     "website": "https://www.resonac.com/jp",
-    "accent": "#22c55e",
+    "accent": "#f59e0b",
     "employeeHistory": [
       {
         "year": 2017,
@@ -1710,6 +3420,109 @@
     }
   },
   {
+    "id": "Q568406",
+    "name": "TOYO TIRE",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "兵庫県",
+    "employees": 10849,
+    "founded": 1945,
+    "listed": true,
+    "website": "https://www.toyo.it/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 10849
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "7120001049019",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q568406"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 28,
+      "womenManagerRate": 3.3,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 71.4,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q1524303",
+    "name": "アルパイン",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学"
+    ],
+    "location": "福島県",
+    "employees": 10835,
+    "founded": 1967,
+    "listed": false,
+    "website": "http://www.alpine.com",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 10835
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "5010701000739",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1524303"
+    }
+  },
+  {
+    "id": "Q6414376",
+    "name": "近鉄エクスプレス",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "物流"
+    ],
+    "location": "東京都",
+    "employees": 10453,
+    "founded": 1970,
+    "listed": true,
+    "website": "http://www.kwe.co.jp",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 10453
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "3010001014251",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q6414376"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 18.4,
+      "paidLeaveRate": 63.1,
+      "womenManagerRate": 14.9,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "H:運輸業，郵便業"
+    }
+  },
+  {
     "id": "Q45700",
     "name": "コナミグループ",
     "industry": "ゲーム・エンタメ",
@@ -1721,7 +3534,7 @@
     "founded": 1969,
     "listed": true,
     "website": "https://www.konami.com/en/",
-    "accent": "#84cc16",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 0,
@@ -1741,7 +3554,7 @@
     "laborReal": {
       "womenManagerRate": 13.6,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "R:サービス業（他に分類されないもの）"
     }
   },
@@ -1757,7 +3570,7 @@
     "founded": 1961,
     "listed": false,
     "website": "http://www.unicharm.co.jp/",
-    "accent": "#0ea5e9",
+    "accent": "#f97316",
     "employeeHistory": [
       {
         "year": 0,
@@ -1775,7 +3588,7 @@
       "avgOvertimeHours": 12.6,
       "womenManagerRate": 16.1,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 73.7,
       "industryJsic": "I:卸売業，小売業"
     }
@@ -1792,7 +3605,7 @@
     "founded": 1973,
     "listed": false,
     "website": "https://www.lexisnexis.com/en-us/home.page",
-    "accent": "#ec4899",
+    "accent": "#84cc16",
     "employeeHistory": [
       {
         "year": 0,
@@ -1818,7 +3631,7 @@
     "founded": 1997,
     "listed": true,
     "website": "https://corp.rakuten.co.jp/",
-    "accent": "#0ea5e9",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
         "year": 0,
@@ -1847,8 +3660,46 @@
     "laborReal": {
       "womenManagerRate": 33.5,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "R:サービス業（他に分類されないもの）"
+    }
+  },
+  {
+    "id": "Q217338",
+    "name": "カシオ計算機",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工業"
+    ],
+    "location": "東京都",
+    "employees": 9732,
+    "founded": 1957,
+    "listed": true,
+    "website": "http://world.casio.com/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 9732
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "4011001030015",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q217338"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 18,
+      "paidLeaveRate": 74.4,
+      "womenManagerRate": 8.3,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "E:製造業"
     }
   },
   {
@@ -1863,7 +3714,7 @@
     "founded": 1949,
     "listed": true,
     "website": "https://www.asics.com/",
-    "accent": "#8b5cf6",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
         "year": 2015,
@@ -1887,7 +3738,41 @@
     "laborReal": {
       "womenManagerRate": 20.4,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q1926489",
+    "name": "日亜化学工業",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学"
+    ],
+    "location": "徳島県",
+    "employees": 8880,
+    "founded": 1956,
+    "listed": false,
+    "website": "https://www.nichia.co.jp/jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 8880
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "5480001006794",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1926489"
+    },
+    "laborReal": {
+      "womenManagerRate": 1.7,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 89.9,
       "industryJsic": "E:製造業"
     }
   },
@@ -1931,7 +3816,7 @@
       "avgOvertimeHours": 24,
       "womenManagerRate": 1.1,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 84.9,
       "industryJsic": "E:製造業"
     }
@@ -1948,7 +3833,7 @@
     "founded": 1973,
     "listed": false,
     "website": "https://www.sej.co.jp/company/",
-    "accent": "#14b8a6",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 2023,
@@ -1967,7 +3852,7 @@
       "paidLeaveRate": 74.8,
       "womenManagerRate": 24.8,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "I:卸売業，小売業"
     }
   },
@@ -1983,7 +3868,7 @@
     "founded": 1840,
     "listed": true,
     "website": "http://www.kajima.co.jp/",
-    "accent": "#a855f7",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 2023,
@@ -2004,8 +3889,106 @@
       "avgOvertimeHours": 6.4,
       "womenManagerRate": 3.5,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "D:建設業"
+    }
+  },
+  {
+    "id": "Q29803",
+    "name": "いすゞ自動車",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "神奈川県",
+    "employees": 8111,
+    "founded": 1934,
+    "listed": true,
+    "website": "https://www.isuzu.co.jp/world/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2003,
+        "value": 7634
+      },
+      {
+        "year": 2004,
+        "value": 7309
+      },
+      {
+        "year": 2005,
+        "value": 7298
+      },
+      {
+        "year": 2006,
+        "value": 7371
+      },
+      {
+        "year": 2007,
+        "value": 7571
+      },
+      {
+        "year": 2008,
+        "value": 7785
+      },
+      {
+        "year": 2009,
+        "value": 8127
+      },
+      {
+        "year": 2010,
+        "value": 8104
+      },
+      {
+        "year": 2011,
+        "value": 7908
+      },
+      {
+        "year": 2012,
+        "value": 7867
+      },
+      {
+        "year": 2013,
+        "value": 7837
+      },
+      {
+        "year": 2014,
+        "value": 7769
+      },
+      {
+        "year": 2015,
+        "value": 7780
+      },
+      {
+        "year": 2016,
+        "value": 7928
+      },
+      {
+        "year": 2017,
+        "value": 8111
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2005,
+        "value": 13880000000
+      }
+    ],
+    "financials": {
+      "netProfit": 558000000,
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "5010701000904",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q29803"
+    },
+    "laborReal": {
+      "womenManagerRate": 5.3,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "E:製造業"
     }
   },
   {
@@ -2020,7 +4003,7 @@
     "founded": 1963,
     "listed": true,
     "website": "https://www.fastretailing.com/",
-    "accent": "#84cc16",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 0,
@@ -2040,7 +4023,7 @@
     "laborReal": {
       "womenManagerRate": 21.6,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "I:卸売業，小売業"
     }
   },
@@ -2061,7 +4044,7 @@
     "founded": 1937,
     "listed": true,
     "website": "http://www.dowa.co.jp/",
-    "accent": "#f59e0b",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
         "year": 0,
@@ -2082,7 +4065,7 @@
       "avgOvertimeHours": 18.6,
       "womenManagerRate": 3.7,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 82.5,
       "industryJsic": "E:製造業"
     }
@@ -2099,7 +4082,7 @@
     "founded": 1958,
     "listed": false,
     "website": "https://www.nissin.com/",
-    "accent": "#ec4899",
+    "accent": "#06b6d4",
     "employeeHistory": [
       {
         "year": 0,
@@ -2122,7 +4105,7 @@
       "avgOvertimeHours": 10.3,
       "womenManagerRate": 10.4,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 73.3,
       "industryJsic": "E:製造業"
     }
@@ -2139,7 +4122,7 @@
     "founded": 1889,
     "listed": true,
     "website": "https://www.nintendo.com/jp/index.html",
-    "accent": "#14b8a6",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 2020,
@@ -2167,9 +4150,209 @@
     "laborReal": {
       "womenManagerRate": 5.8,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 85.8,
       "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q2214105",
+    "name": "ソフトバンク株式会社",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電気通信産業",
+      "携帯電話産業"
+    ],
+    "location": "日本",
+    "employees": 6700,
+    "founded": 1984,
+    "listed": true,
+    "website": "https://www.softbank.jp/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 6700
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "9010401052465",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2214105"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 22.3,
+      "paidLeaveRate": 78.3,
+      "womenManagerRate": 10.9,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "G:情報通信業"
+    }
+  },
+  {
+    "id": "Q7499501",
+    "name": "静岡銀行",
+    "industry": "金融・保険",
+    "industryRaw": [
+      "金融業"
+    ],
+    "location": "静岡県",
+    "employees": 6541,
+    "founded": 1943,
+    "listed": true,
+    "website": "https://www.shizuokabank.co.jp",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2021,
+        "value": 6541
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2021,
+        "value": 222592000000
+      }
+    ],
+    "financials": {
+      "netProfit": 43722000000,
+      "operatingIncome": 62024000000,
+      "marketCap": 536200000000,
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "5080001002669",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q7499501"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 4,
+      "womenManagerRate": 19.7,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 71.5,
+      "industryJsic": "J:金融業，保険業"
+    }
+  },
+  {
+    "id": "Q89826762",
+    "name": "日本トイザらス",
+    "industry": "商社",
+    "industryRaw": [
+      "取引"
+    ],
+    "location": "日本",
+    "employees": 6500,
+    "founded": 1989,
+    "listed": false,
+    "website": "https://www.toysrus.co.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 6500
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "6020001071355",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q89826762"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 8.4,
+      "womenManagerRate": 24.6,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 64.1,
+      "industryJsic": "I:卸売業，小売業"
+    }
+  },
+  {
+    "id": "Q7039614",
+    "name": "日本ケミコン",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学"
+    ],
+    "location": "東京都",
+    "employees": 6339,
+    "founded": 1931,
+    "listed": true,
+    "website": "https://www.chemi-con.co.jp/cn/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 6478
+      },
+      {
+        "year": 2023,
+        "value": 6339
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2022,
+        "value": 140316000000
+      }
+    ],
+    "financials": {
+      "operatingIncome": 8798000000,
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "7010701015586",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q7039614"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 8.7,
+      "womenManagerRate": 3.7,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 80.4,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q119197575",
+    "name": "夢真",
+    "industry": "サービス",
+    "industryRaw": [
+      "第三次産業"
+    ],
+    "location": "港区",
+    "employees": 6043,
+    "founded": 2019,
+    "listed": false,
+    "website": "https://www.yumeshin.co.jp/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 6043
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "6010001201994",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q119197575"
+    },
+    "laborReal": {
+      "source": "しょくばらぼ（厚労省）",
+      "asOf": "",
+      "industryJsic": "R:サービス業（他に分類されないもの）"
     }
   },
   {
@@ -2222,7 +4405,7 @@
     "founded": 1894,
     "listed": false,
     "website": "http://www.kowa.co.jp/",
-    "accent": "#ec4899",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 0,
@@ -2240,7 +4423,7 @@
       "avgOvertimeHours": 6.3,
       "womenManagerRate": 3.6,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "I:卸売業，小売業"
     }
   },
@@ -2256,7 +4439,7 @@
     "founded": 1906,
     "listed": false,
     "website": "https://corp.mizuno.com/en",
-    "accent": "#f97316",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 0,
@@ -2274,7 +4457,7 @@
       "avgOvertimeHours": 6.7,
       "womenManagerRate": 11.3,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 56.2,
       "industryJsic": "E:製造業"
     }
@@ -2313,7 +4496,7 @@
       "paidLeaveRate": 87.8,
       "womenManagerRate": 28.7,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "E:製造業"
     }
   },
@@ -2331,7 +4514,7 @@
     "founded": 1975,
     "listed": true,
     "website": "https://www.jp.square-enix.com/",
-    "accent": "#f59e0b",
+    "accent": "#8b5cf6",
     "employeeHistory": [
       {
         "year": 2020,
@@ -2359,8 +4542,87 @@
     "laborReal": {
       "womenManagerRate": 9.3,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "G:情報通信業"
+    }
+  },
+  {
+    "id": "Q2744340",
+    "name": "横浜銀行",
+    "industry": "金融・保険",
+    "industryRaw": [
+      "銀行業",
+      "金融業"
+    ],
+    "location": "日本",
+    "employees": 4733,
+    "founded": 1920,
+    "listed": true,
+    "website": "https://www.boy.co.jp/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 4733
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2021,
+        "value": 291732000000
+      }
+    ],
+    "financials": {
+      "operatingIncome": 41405000000,
+      "marketCap": 518900000000,
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "7020001008645",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2744340"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 11.6,
+      "paidLeaveRate": 76.7,
+      "womenManagerRate": 24.7,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "J:金融業，保険業"
+    }
+  },
+  {
+    "id": "Q123319566",
+    "name": "シーエックスカーゴ",
+    "industry": "運送",
+    "industryRaw": [
+      "運送"
+    ],
+    "location": "埼玉県",
+    "employees": 4694,
+    "founded": 1991,
+    "listed": false,
+    "website": "https://www.cx-cargo.co.jp/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 4694
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "4030001042118",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q123319566"
+    },
+    "laborReal": {
+      "source": "しょくばらぼ（厚労省）",
+      "asOf": "",
+      "paidLeaveRate": 87.8,
+      "industryJsic": "H:運輸業，郵便業"
     }
   },
   {
@@ -2375,7 +4637,7 @@
     "founded": 1997,
     "listed": false,
     "website": "https://www.willof-work.co.jp/",
-    "accent": "#84cc16",
+    "accent": "#3b82f6",
     "employeeHistory": [
       {
         "year": 2025,
@@ -2390,6 +4652,38 @@
     }
   },
   {
+    "id": "Q17180",
+    "name": "ケンウッド",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学",
+      "電気産業"
+    ],
+    "location": "東京都",
+    "employees": 4424,
+    "founded": 1946,
+    "listed": false,
+    "website": "https://www.kenwood.com/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2006,
+        "value": 4424
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2006,
+        "value": 1680000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q17180"
+    }
+  },
+  {
     "id": "Q777141",
     "name": "三井化学",
     "industry": "化学・素材",
@@ -2401,7 +4695,7 @@
     "founded": 1997,
     "listed": true,
     "website": "https://www.mitsuichemicals.com/",
-    "accent": "#84cc16",
+    "accent": "#3b82f6",
     "employeeHistory": [
       {
         "year": 2018,
@@ -2422,7 +4716,7 @@
       "avgOvertimeHours": 20,
       "womenManagerRate": 7.8,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 86.3,
       "industryJsic": "E:製造業"
     }
@@ -2439,7 +4733,7 @@
     "founded": 1941,
     "listed": true,
     "website": "https://www.shokubai.co.jp/ja/",
-    "accent": "#0ea5e9",
+    "accent": "#e11d48",
     "employeeHistory": [
       {
         "year": 2018,
@@ -2460,7 +4754,7 @@
       "avgOvertimeHours": 15.1,
       "womenManagerRate": 6.3,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 84.7,
       "industryJsic": "E:製造業"
     }
@@ -2499,9 +4793,47 @@
       "avgOvertimeHours": 49.2,
       "womenManagerRate": 4.6,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 50.6,
       "industryJsic": "M:宿泊業，飲食サービス業"
+    }
+  },
+  {
+    "id": "Q11299598",
+    "name": "クレハ",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業"
+    ],
+    "location": "中央区",
+    "employees": 4080,
+    "founded": 1944,
+    "listed": true,
+    "website": "http://www.kureha.co.jp/en/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 4080
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "7010001034766",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11299598"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 10.8,
+      "womenManagerRate": 8.3,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 86.9,
+      "industryJsic": "E:製造業"
     }
   },
   {
@@ -2516,7 +4848,7 @@
     "founded": 1958,
     "listed": false,
     "website": "https://www.molten.co.jp/",
-    "accent": "#3b82f6",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 0,
@@ -2532,6 +4864,44 @@
     }
   },
   {
+    "id": "Q2852426",
+    "name": "アンリツ",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電気通信"
+    ],
+    "location": "神奈川県",
+    "employees": 3778,
+    "founded": 1931,
+    "listed": true,
+    "website": "https://www.anritsu.com/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2019,
+        "value": 3778
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "OTCマーケッツグループ"
+    },
+    "corporateNumber": "2021001021865",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2852426"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 9.6,
+      "womenManagerRate": 6.4,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 78.9,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
     "id": "Q83584",
     "name": "小田急電鉄",
     "industry": "物流・運輸",
@@ -2544,7 +4914,7 @@
     "founded": 1923,
     "listed": true,
     "website": "https://www.odakyu.jp/",
-    "accent": "#0ea5e9",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 2021,
@@ -2571,8 +4941,107 @@
       "paidLeaveRate": 90.8,
       "womenManagerRate": 7.3,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "H:運輸業，郵便業"
+    }
+  },
+  {
+    "id": "Q3077305",
+    "name": "日本無線",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工学"
+    ],
+    "location": "東京都",
+    "employees": 3760,
+    "founded": 1915,
+    "listed": false,
+    "website": "https://www.jrc.co.jp/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 3760
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "3012401012867",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q3077305"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 4.4,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 82,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q1185060",
+    "name": "UCC上島珈琲",
+    "industry": "食品・飲料",
+    "industryRaw": [
+      "食産業"
+    ],
+    "location": "中央区",
+    "employees": 3668,
+    "founded": 1933,
+    "listed": false,
+    "website": "https://www.ucc.co.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 3668
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "7140001012362",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1185060"
+    }
+  },
+  {
+    "id": "Q1153275",
+    "name": "国立研究開発法人理化学研究所",
+    "industry": "研究・サービス",
+    "industryRaw": [
+      "研究"
+    ],
+    "location": "埼玉県",
+    "employees": 3451,
+    "founded": 1917,
+    "listed": false,
+    "website": "https://www.riken.jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 3572
+      },
+      {
+        "year": 2021,
+        "value": 3451
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "1030005007111",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1153275"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 7.8,
+      "womenManagerRate": 14.3,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "L:学術研究，専門・技術サービス業"
     }
   },
   {
@@ -2587,7 +5056,7 @@
     "founded": 1987,
     "listed": false,
     "website": "https://www.palline.co.jp/",
-    "accent": "#e11d48",
+    "accent": "#84cc16",
     "employeeHistory": [
       {
         "year": 2022,
@@ -2604,7 +5073,7 @@
     "laborReal": {
       "womenManagerRate": 0,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 48.7,
       "industryJsic": "H:運輸業，郵便業"
     }
@@ -2624,7 +5093,7 @@
     "founded": 1848,
     "listed": true,
     "website": "https://lazard.com/",
-    "accent": "#8b5cf6",
+    "accent": "#e11d48",
     "employeeHistory": [
       {
         "year": 2014,
@@ -2657,15 +5126,15 @@
     "founded": 1960,
     "listed": false,
     "website": "https://www.sega.com",
-    "accent": "#22c55e",
+    "accent": "#0ea5e9",
     "employeeHistory": [
-      {
-        "year": null,
-        "value": 5349
-      },
       {
         "year": 2020,
         "value": 3238
+      },
+      {
+        "year": null,
+        "value": 5349
       }
     ],
     "revenueHistory": [],
@@ -2712,7 +5181,7 @@
       "avgOvertimeHours": 16.7,
       "womenManagerRate": 8.5,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 76.8,
       "industryJsic": "E:製造業"
     }
@@ -2730,7 +5199,7 @@
     "founded": 2006,
     "listed": true,
     "website": "https://www.japanpost.jp",
-    "accent": "#84cc16",
+    "accent": "#8b5cf6",
     "employeeHistory": [
       {
         "year": 2016,
@@ -2761,7 +5230,7 @@
       "avgOvertimeHours": 15,
       "womenManagerRate": 17.3,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 82.8,
       "industryJsic": "R:サービス業（他に分類されないもの）"
     }
@@ -2807,8 +5276,78 @@
       "paidLeaveRate": 86,
       "womenManagerRate": 12.2,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "R:サービス業（他に分類されないもの）"
+    }
+  },
+  {
+    "id": "Q1058127",
+    "name": "西日本高速道路",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "道路運送固定施設業"
+    ],
+    "location": "日本",
+    "employees": 2744,
+    "founded": 2005,
+    "listed": false,
+    "website": "https://www.w-nexco.co.jp/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 2744
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "3120001112341",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1058127"
+    },
+    "laborReal": {
+      "womenManagerRate": 2.7,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 56.4,
+      "industryJsic": "H:運輸業，郵便業"
+    }
+  },
+  {
+    "id": "Q7711979",
+    "name": "七十七銀行",
+    "industry": "金融・保険",
+    "industryRaw": [
+      "銀行業",
+      "金融業"
+    ],
+    "location": "宮城県",
+    "employees": 2724,
+    "founded": 1878,
+    "listed": false,
+    "website": "https://www.77bank.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 2724
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "1370001003352",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q7711979"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 16.6,
+      "paidLeaveRate": 75,
+      "womenManagerRate": 21.3,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "J:金融業，保険業"
     }
   },
   {
@@ -2823,7 +5362,7 @@
     "founded": 1980,
     "listed": true,
     "website": "https://www.cawachi.co.jp/",
-    "accent": "#8b5cf6",
+    "accent": "#0ea5e9",
     "employeeHistory": [
       {
         "year": 2020,
@@ -2843,8 +5382,46 @@
     "laborReal": {
       "womenManagerRate": 6.7,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "I:卸売業，小売業"
+    }
+  },
+  {
+    "id": "Q7040930",
+    "name": "日産化学",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業"
+    ],
+    "location": "東京都",
+    "employees": 2511,
+    "founded": 1921,
+    "listed": true,
+    "website": "https://www.nissanchem.co.jp/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 2511
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "1010001008734",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q7040930"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 16.9,
+      "womenManagerRate": 4.7,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 82.2,
+      "industryJsic": "E:製造業"
     }
   },
   {
@@ -2876,7 +5453,7 @@
     "laborReal": {
       "womenManagerRate": 1.7,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 64.2,
       "industryJsic": "H:運輸業，郵便業"
     }
@@ -2895,7 +5472,7 @@
     "founded": 1910,
     "listed": true,
     "website": null,
-    "accent": "#22c55e",
+    "accent": "#f97316",
     "employeeHistory": [
       {
         "year": 2001,
@@ -2917,15 +5494,15 @@
     "name": "京王電鉄",
     "industry": "物流・運輸",
     "industryRaw": [
-      "鉄道輸送",
-      "公共交通機関"
+      "公共交通機関",
+      "鉄道輸送"
     ],
     "location": "多摩市",
     "employees": 2276,
     "founded": 1948,
     "listed": true,
-    "website": "https://www.keio.co.jp/thai/",
-    "accent": "#06b6d4",
+    "website": "https://www.keio.co.jp/",
+    "accent": "#3b82f6",
     "employeeHistory": [
       {
         "year": 2007,
@@ -2951,7 +5528,7 @@
       "avgOvertimeHours": 26.8,
       "womenManagerRate": 10,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 86.5,
       "industryJsic": "H:運輸業，郵便業"
     }
@@ -2966,7 +5543,7 @@
     "founded": 2002,
     "listed": false,
     "website": "https://www.mcdonalds.co.jp/",
-    "accent": "#ec4899",
+    "accent": "#8b5cf6",
     "employeeHistory": [
       {
         "year": 2013,
@@ -3016,7 +5593,7 @@
       "avgOvertimeHours": 18.7,
       "womenManagerRate": 27.8,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 59.3,
       "industryJsic": "M:宿泊業，飲食サービス業"
     }
@@ -3050,8 +5627,42 @@
     "laborReal": {
       "womenManagerRate": 2.1,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "R:サービス業（他に分類されないもの）"
+    }
+  },
+  {
+    "id": "Q10846996",
+    "name": "エルナー",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "電子工業"
+    ],
+    "location": "日本",
+    "employees": 1737,
+    "founded": 1937,
+    "listed": false,
+    "website": "http://www.elna.co.jp/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 1737
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "3020001038480",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q10846996"
+    },
+    "laborReal": {
+      "womenManagerRate": 11.1,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 69.6,
+      "industryJsic": "E:製造業"
     }
   },
   {
@@ -3087,9 +5698,36 @@
       "avgOvertimeHours": 17.8,
       "womenManagerRate": 8.7,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 64,
       "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q105222013",
+    "name": "南日本運輸倉庫",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "物流"
+    ],
+    "location": "東京都",
+    "employees": 1687,
+    "founded": 1975,
+    "listed": false,
+    "website": "https://mtls.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 1687
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "6011201005310",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q105222013"
     }
   },
   {
@@ -3104,7 +5742,7 @@
     "founded": 1945,
     "listed": false,
     "website": "https://www.kyodonews.jp/",
-    "accent": "#3b82f6",
+    "accent": "#22c55e",
     "employeeHistory": [
       {
         "year": 2018,
@@ -3121,7 +5759,7 @@
     "laborReal": {
       "womenManagerRate": 11.5,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "G:情報通信業"
     }
   },
@@ -3137,7 +5775,7 @@
     "founded": 1919,
     "listed": false,
     "website": "https://www.ricoh-imaging.co.jp/",
-    "accent": "#14b8a6",
+    "accent": "#f97316",
     "employeeHistory": [
       {
         "year": 2005,
@@ -3154,7 +5792,7 @@
     "laborReal": {
       "womenManagerRate": 3.5,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "E:製造業"
     }
   },
@@ -3170,7 +5808,7 @@
     "founded": 1971,
     "listed": false,
     "website": "https://www.nidek.co.jp/",
-    "accent": "#06b6d4",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 0,
@@ -3188,9 +5826,72 @@
       "avgOvertimeHours": 11.6,
       "womenManagerRate": 6.4,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 83.5,
       "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q411186",
+    "name": "アイワ",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "consumer electronics industry"
+    ],
+    "location": "東京都",
+    "employees": 1114,
+    "founded": 1951,
+    "listed": false,
+    "website": "https://www.int-aiwa.com/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 1114
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "3010701034037",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q411186"
+    }
+  },
+  {
+    "id": "Q16962428",
+    "name": "エイチームホールディングス",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "MMORPG"
+    ],
+    "location": "愛知県",
+    "employees": 1106,
+    "founded": 1997,
+    "listed": true,
+    "website": "https://www.a-tm.co.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 1106
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "6180001055771",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q16962428"
+    },
+    "laborReal": {
+      "womenManagerRate": 46.7,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "G:情報通信業"
     }
   },
   {
@@ -3206,7 +5907,7 @@
     "founded": 1960,
     "listed": false,
     "website": "https://www.roche-bobois.com",
-    "accent": "#0ea5e9",
+    "accent": "#14b8a6",
     "employeeHistory": [
       {
         "year": 0,
@@ -3233,7 +5934,7 @@
     "founded": 1992,
     "listed": false,
     "website": "https://www.globis.co.jp",
-    "accent": "#8b5cf6",
+    "accent": "#f59e0b",
     "employeeHistory": [
       {
         "year": 2025,
@@ -3251,9 +5952,46 @@
       "avgOvertimeHours": 13.4,
       "womenManagerRate": 33.8,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 76.1,
       "industryJsic": "O:教育，学習支援業"
+    }
+  },
+  {
+    "id": "Q11223969",
+    "name": "IHIエアロスペース",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "航空産業",
+      "宇宙空間工業",
+      "防衛産業"
+    ],
+    "location": "群馬県",
+    "employees": 1000,
+    "founded": 2000,
+    "listed": false,
+    "website": "https://www.ihi.co.jp/ia/en/index.html",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 1000
+      }
+    ],
+    "revenueHistory": [],
+    "corporateNumber": "4010601031653",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11223969"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 20.5,
+      "womenManagerRate": 8.8,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 81.1,
+      "industryJsic": "E:製造業"
     }
   },
   {
@@ -3268,7 +6006,7 @@
     "founded": 1999,
     "listed": false,
     "website": "https://www.cmic-hci.com/",
-    "accent": "#06b6d4",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 2025,
@@ -3285,7 +6023,7 @@
     "laborReal": {
       "womenManagerRate": 34.3,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 69.1,
       "industryJsic": "R:サービス業（他に分類されないもの）"
     }
@@ -3304,7 +6042,7 @@
     "founded": 1986,
     "listed": false,
     "website": "https://www.zaiho.jp/",
-    "accent": "#f59e0b",
+    "accent": "#06b6d4",
     "employeeHistory": [
       {
         "year": 2017,
@@ -3322,8 +6060,46 @@
       "avgOvertimeHours": 12.2,
       "womenManagerRate": 23,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 60.4,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q11308895",
+    "name": "シーボン",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業"
+    ],
+    "location": "東京都",
+    "employees": 971,
+    "founded": 1966,
+    "listed": true,
+    "website": "http://www.cbon.co.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2021,
+        "value": 971
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "4010401012787",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11308895"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 14.9,
+      "womenManagerRate": 85.9,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 73.7,
       "industryJsic": "E:製造業"
     }
   },
@@ -3339,7 +6115,7 @@
     "founded": 1909,
     "listed": false,
     "website": "https://www.kodansha.co.jp/",
-    "accent": "#06b6d4",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
         "year": 2022,
@@ -3361,7 +6137,7 @@
     "laborReal": {
       "womenManagerRate": 22.3,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "industryJsic": "R:サービス業（他に分類されないもの）"
     }
   },
@@ -3377,7 +6153,7 @@
     "founded": 1976,
     "listed": false,
     "website": "https://ad-nagata.com/",
-    "accent": "#14b8a6",
+    "accent": "#ec4899",
     "employeeHistory": [
       {
         "year": 0,
@@ -3410,7 +6186,7 @@
     "founded": 1948,
     "listed": true,
     "website": "https://www.calpis.co.jp/",
-    "accent": "#a855f7",
+    "accent": "#e11d48",
     "employeeHistory": [
       {
         "year": 0,
@@ -3434,6 +6210,42 @@
     }
   },
   {
+    "id": "Q1054844",
+    "name": "タイトー",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 848,
+    "founded": 1953,
+    "listed": true,
+    "website": "https://www.taito.co.jp",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 848
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "exchange": "東京証券取引所"
+    },
+    "corporateNumber": "1011001060972",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1054844"
+    },
+    "laborReal": {
+      "womenManagerRate": 12.9,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "industryJsic": "N:生活関連サービス業，娯楽業"
+    }
+  },
+  {
     "id": "Q11361587",
     "name": "不動テトラ",
     "industry": "建設・不動産",
@@ -3445,7 +6257,7 @@
     "founded": 1947,
     "listed": true,
     "website": "http://www.fudotetra.co.jp/",
-    "accent": "#3b82f6",
+    "accent": "#a855f7",
     "employeeHistory": [
       {
         "year": 2025,
@@ -3466,7 +6278,7 @@
       "avgOvertimeHours": 23,
       "womenManagerRate": 4.4,
       "source": "厚労省 女性活躍・両立支援DB",
-      "asOf": "2026-07-09",
+      "asOf": "2026-07-10",
       "paidLeaveRate": 56.2,
       "industryJsic": "D:建設業"
     }
@@ -3483,7 +6295,7 @@
     "founded": 1925,
     "listed": false,
     "website": "https://www.shueisha.co.jp/",
-    "accent": "#22c55e",
+    "accent": "#f97316",
     "employeeHistory": [
       {
         "year": 0,
@@ -3496,6 +6308,4025 @@
       "name": "Wikidata",
       "license": "CC0",
       "url": "https://www.wikidata.org/wiki/Q844822"
+    }
+  },
+  {
+    "id": "Q507269",
+    "name": "バンダイ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 810,
+    "founded": 1950,
+    "listed": false,
+    "website": "https://www.bandai.co.jp/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 810
+      }
+    ],
+    "revenueHistory": [],
+    "financials": {
+      "netProfit": 242.8,
+      "operatingIncome": 21.7
+    },
+    "corporateNumber": "5010501016209",
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q507269"
+    },
+    "laborReal": {
+      "avgOvertimeHours": 4.4,
+      "womenManagerRate": 25.8,
+      "source": "厚労省 女性活躍・両立支援DB",
+      "asOf": "2026-07-10",
+      "paidLeaveRate": 77.9,
+      "industryJsic": "E:製造業"
+    }
+  },
+  {
+    "id": "Q180419",
+    "name": "ネイチャー出版グループ",
+    "industry": "メディア企業",
+    "industryRaw": [
+      "メディア企業"
+    ],
+    "location": "日本",
+    "employees": 800,
+    "founded": 1999,
+    "listed": false,
+    "website": "https://www.nature.com/nature-portfolio",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 800
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q180419"
+    }
+  },
+  {
+    "id": "Q11316010",
+    "name": "タキイ種苗",
+    "industry": "生物工学",
+    "industryRaw": [
+      "生物工学",
+      "農業"
+    ],
+    "location": "京都市",
+    "employees": 781,
+    "founded": 1835,
+    "listed": false,
+    "website": "http://www.takii.co.jp/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 781
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2020,
+        "value": 49628000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11316010"
+    }
+  },
+  {
+    "id": "Q139829940",
+    "name": "Luvina Software Joint Stock Company",
+    "industry": "IT・ソフトウェア",
+    "industryRaw": [
+      "情報技術"
+    ],
+    "location": "カウザイ区",
+    "employees": 750,
+    "founded": 2004,
+    "listed": false,
+    "website": "https://luvina.net",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2026,
+        "value": 750
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q139829940"
+    }
+  },
+  {
+    "id": "Q69352476",
+    "name": "カバー株式会社",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "娯楽産業"
+    ],
+    "location": "千代田区",
+    "employees": 743,
+    "founded": 2016,
+    "listed": false,
+    "website": "https://cover-corp.com",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2019,
+        "value": 48
+      },
+      {
+        "year": 2020,
+        "value": 110
+      },
+      {
+        "year": 2021,
+        "value": 262
+      },
+      {
+        "year": 2022,
+        "value": 392
+      },
+      {
+        "year": 2023,
+        "value": 492
+      },
+      {
+        "year": 2024,
+        "value": 679
+      },
+      {
+        "year": 2025,
+        "value": 743
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q69352476"
+    }
+  },
+  {
+    "id": "Q11385713",
+    "name": "保土谷化学工業",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業"
+    ],
+    "location": "日本",
+    "employees": 719,
+    "founded": 1916,
+    "listed": true,
+    "website": "http://www.hodogaya.co.jp/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 719
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11385713"
+    }
+  },
+  {
+    "id": "Q120641695",
+    "name": "スポーツニッポン新聞社",
+    "industry": "メディア・出版",
+    "industryRaw": [
+      "出版"
+    ],
+    "location": "江東区",
+    "employees": 713,
+    "founded": null,
+    "listed": false,
+    "website": "https://sponichi.jp/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2021,
+        "value": 713
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q120641695"
+    }
+  },
+  {
+    "id": "Q785697",
+    "name": "小学館",
+    "industry": "メディア・出版",
+    "industryRaw": [
+      "出版産業"
+    ],
+    "location": "千代田区",
+    "employees": 707,
+    "founded": 1922,
+    "listed": false,
+    "website": "https://www.shogakukan.co.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2024,
+        "value": 707
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2023,
+        "value": 108471000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q785697"
+    }
+  },
+  {
+    "id": "Q30264135",
+    "name": "泉工医科工業",
+    "industry": "製薬・医療",
+    "industryRaw": [
+      "医療機器"
+    ],
+    "location": "日本",
+    "employees": 706,
+    "founded": 1950,
+    "listed": false,
+    "website": "http://www.mera.co.jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 706
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q30264135"
+    }
+  },
+  {
+    "id": "Q115931272",
+    "name": "HOS",
+    "industry": "サービス",
+    "industryRaw": [
+      "第三次産業"
+    ],
+    "location": "大阪府",
+    "employees": 670,
+    "founded": 1976,
+    "listed": false,
+    "website": null,
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 670
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q115931272"
+    }
+  },
+  {
+    "id": "Q1335998",
+    "name": "タカラトミー",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業",
+      "ゲーム産業"
+    ],
+    "location": "葛飾区",
+    "employees": 667,
+    "founded": 1924,
+    "listed": true,
+    "website": "https://www.takaratomy.co.jp/english/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2011,
+        "value": 667
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1335998"
+    }
+  },
+  {
+    "id": "Q11394144",
+    "name": "内海造船",
+    "industry": "機械・重工業",
+    "industryRaw": [
+      "造船"
+    ],
+    "location": "広島県",
+    "employees": 611,
+    "founded": 1944,
+    "listed": true,
+    "website": "https://www.naikaizosen.co.jp/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 611
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11394144"
+    }
+  },
+  {
+    "id": "Q116150253",
+    "name": "つるや",
+    "industry": "小売・流通",
+    "industryRaw": [
+      "小売"
+    ],
+    "location": "大阪市",
+    "employees": 600,
+    "founded": 1966,
+    "listed": false,
+    "website": "https://www.tsuruyagolf.co.jp",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 600
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q116150253"
+    }
+  },
+  {
+    "id": "Q96313585",
+    "name": "サーバーワークス",
+    "industry": "通信",
+    "industryRaw": [
+      "情報通信業"
+    ],
+    "location": "東京都",
+    "employees": 550,
+    "founded": 2000,
+    "listed": true,
+    "website": "https://www.serverworks.co.jp/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2006,
+        "value": 550
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2025,
+        "value": 35797000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q96313585"
+    }
+  },
+  {
+    "id": "Q1771114",
+    "name": "オリエント時計",
+    "industry": "精密・光学機器",
+    "industryRaw": [
+      "時計学"
+    ],
+    "location": "東京都",
+    "employees": 530,
+    "founded": 1950,
+    "listed": false,
+    "website": "http://www.orient-watch.com/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2016,
+        "value": 530
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1771114"
+    }
+  },
+  {
+    "id": "Q1049502",
+    "name": "ハドソン",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 500,
+    "founded": 1973,
+    "listed": false,
+    "website": "http://www.hudson.co.jp",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 500
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1049502"
+    }
+  },
+  {
+    "id": "Q1282955",
+    "name": "トキナー",
+    "industry": "optics industry",
+    "industryRaw": [
+      "optics industry"
+    ],
+    "location": "東京都",
+    "employees": 500,
+    "founded": 1950,
+    "listed": false,
+    "website": "http://www.tokina.co.jp/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 500
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1282955"
+    }
+  },
+  {
+    "id": "Q11234650",
+    "name": "NECスペーステクノロジー",
+    "industry": "宇宙空間工業",
+    "industryRaw": [
+      "宇宙空間工業"
+    ],
+    "location": "東京都",
+    "employees": 424,
+    "founded": 2001,
+    "listed": false,
+    "website": "https://www.necspace.co.jp/en/index.html",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 424
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2022,
+        "value": 15900000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11234650"
+    }
+  },
+  {
+    "id": "Q2414469",
+    "name": "フロム・ソフトウェア",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 423,
+    "founded": 1986,
+    "listed": false,
+    "website": "https://www.fromsoftware.jp/jp/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 349
+      },
+      {
+        "year": 2024,
+        "value": 423
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2414469"
+    }
+  },
+  {
+    "id": "Q51817590",
+    "name": "ホンダカーズ静岡",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "静岡市",
+    "employees": 415,
+    "founded": 2007,
+    "listed": false,
+    "website": "http://www.hondacars-shizuoka.co.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 415
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q51817590"
+    }
+  },
+  {
+    "id": "Q217475",
+    "name": "東京証券取引所",
+    "industry": "金融・保険",
+    "industryRaw": [
+      "金融サービス",
+      "金融商品取引所"
+    ],
+    "location": "中央区",
+    "employees": 411,
+    "founded": 1949,
+    "listed": false,
+    "website": "https://www.jpx.co.jp",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 411
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q217475"
+    }
+  },
+  {
+    "id": "Q1202628",
+    "name": "ビクターエンタテインメント",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "音楽産業"
+    ],
+    "location": "渋谷区",
+    "employees": 400,
+    "founded": 1972,
+    "listed": false,
+    "website": "https://www.jvcmusic.co.jp/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 400
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1202628"
+    }
+  },
+  {
+    "id": "Q2134033",
+    "name": "本州四国連絡高速道路",
+    "industry": "サービス",
+    "industryRaw": [
+      "第三次産業"
+    ],
+    "location": "中央区",
+    "employees": 380,
+    "founded": 2005,
+    "listed": false,
+    "website": "https://www.jb-honshi.co.jp/corp_index/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2024,
+        "value": 380
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2134033"
+    }
+  },
+  {
+    "id": "Q124546872",
+    "name": "ブルーハイウェイライン",
+    "industry": "水運",
+    "industryRaw": [
+      "水運"
+    ],
+    "location": "東京都",
+    "employees": 375,
+    "founded": 1969,
+    "listed": false,
+    "website": "https://www.sunflower.co.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 375
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q124546872"
+    }
+  },
+  {
+    "id": "Q121600162",
+    "name": "良品買館",
+    "industry": "小売・流通",
+    "industryRaw": [
+      "小売"
+    ],
+    "location": "大阪府",
+    "employees": 370,
+    "founded": 2003,
+    "listed": false,
+    "website": "https://www.ryouhin-kaikan.com/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 370
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q121600162"
+    }
+  },
+  {
+    "id": "Q121600336",
+    "name": "キングラム",
+    "industry": "小売・流通",
+    "industryRaw": [
+      "小売"
+    ],
+    "location": "大阪府",
+    "employees": 370,
+    "founded": 2003,
+    "listed": false,
+    "website": "https://kingram.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 370
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q121600336"
+    }
+  },
+  {
+    "id": "Q11382579",
+    "name": "佐世保重工業",
+    "industry": "機械・重工業",
+    "industryRaw": [
+      "造船"
+    ],
+    "location": "長崎県",
+    "employees": 366,
+    "founded": 1946,
+    "listed": false,
+    "website": "http://www.ssk-sasebo.co.jp",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 366
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11382579"
+    }
+  },
+  {
+    "id": "Q11231001",
+    "name": "MAPPA",
+    "industry": "アニメーション産業",
+    "industryRaw": [
+      "アニメーション産業"
+    ],
+    "location": "東京都",
+    "employees": 360,
+    "founded": 2011,
+    "listed": false,
+    "website": "https://www.mappa.co.jp/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2021,
+        "value": 250
+      },
+      {
+        "year": 2022,
+        "value": 310
+      },
+      {
+        "year": 2023,
+        "value": 360
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11231001"
+    }
+  },
+  {
+    "id": "Q10158345",
+    "name": "日本工機",
+    "industry": "機械・重工業",
+    "industryRaw": [
+      "化学工業",
+      "軍需産業"
+    ],
+    "location": "日本",
+    "employees": 359,
+    "founded": 1933,
+    "listed": false,
+    "website": "https://www.nippon-koki.co.jp",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 359
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q10158345"
+    }
+  },
+  {
+    "id": "Q135187635",
+    "name": "CTW株式会社",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "アニメーション産業",
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 350,
+    "founded": 2013,
+    "listed": true,
+    "website": "https://ctw.inc/?lang=en",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2026,
+        "value": 350
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q135187635"
+    }
+  },
+  {
+    "id": "Q297315",
+    "name": "アスキー・メディアワークス",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業",
+      "メディア産業"
+    ],
+    "location": "東京都",
+    "employees": 349,
+    "founded": 2008,
+    "listed": false,
+    "website": "https://asciimw.kadokawa.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 349
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q297315"
+    }
+  },
+  {
+    "id": "Q5618753",
+    "name": "ガンホー・オンライン・エンターテイメント",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 333,
+    "founded": 1998,
+    "listed": true,
+    "website": "https://www.gungho.co.jp/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2014,
+        "value": 333
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q5618753"
+    }
+  },
+  {
+    "id": "Q1365614",
+    "name": "EMIミュージック・ジャパン",
+    "industry": "フォノグラフィック業界",
+    "industryRaw": [
+      "フォノグラフィック業界"
+    ],
+    "location": "日本",
+    "employees": 327,
+    "founded": 2007,
+    "listed": false,
+    "website": "http://www.emimusic.jp/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 327
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1365614"
+    }
+  },
+  {
+    "id": "Q115648432",
+    "name": "三ツ矢",
+    "industry": "鉄鋼・金属",
+    "industryRaw": [
+      "金属産業"
+    ],
+    "location": "品川区",
+    "employees": 315,
+    "founded": 1959,
+    "listed": false,
+    "website": "https://www.mitsuyanet.co.jp/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 315
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q115648432"
+    }
+  },
+  {
+    "id": "Q1066018",
+    "name": "東映",
+    "industry": "映画産業",
+    "industryRaw": [
+      "映画産業"
+    ],
+    "location": "東京都",
+    "employees": 311,
+    "founded": 1950,
+    "listed": true,
+    "website": "https://www.toei.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 311
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1066018"
+    }
+  },
+  {
+    "id": "Q11314402",
+    "name": "セブン&アイ・ネットメディア",
+    "industry": "IT・ソフトウェア",
+    "industryRaw": [
+      "情報技術産業"
+    ],
+    "location": "千代田区",
+    "employees": 307,
+    "founded": 2008,
+    "listed": false,
+    "website": "https://www.7andinm.co.jp/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2024,
+        "value": 307
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11314402"
+    }
+  },
+  {
+    "id": "Q1576758",
+    "name": "プラチナゲームズ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "大阪府",
+    "employees": 305,
+    "founded": 2006,
+    "listed": false,
+    "website": "http://platinumgames.com/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 305
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1576758"
+    }
+  },
+  {
+    "id": "Q770328",
+    "name": "アニプレックス",
+    "industry": "映画産業",
+    "industryRaw": [
+      "映画産業"
+    ],
+    "location": "千代田区",
+    "employees": 300,
+    "founded": 1995,
+    "listed": false,
+    "website": "https://www.aniplex.co.jp/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": null,
+        "value": 150
+      },
+      {
+        "year": 2024,
+        "value": 300
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q770328"
+    }
+  },
+  {
+    "id": "Q119659534",
+    "name": "タメニー",
+    "industry": "結婚式",
+    "industryRaw": [
+      "結婚式",
+      "マッチメイキング",
+      "regional revitalization"
+    ],
+    "location": "東京都",
+    "employees": 298,
+    "founded": 2004,
+    "listed": true,
+    "website": "https://tameny.jp/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 298
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 0,
+        "value": 5909030000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q119659534"
+    }
+  },
+  {
+    "id": "Q137922267",
+    "name": "株式会社MyVision",
+    "industry": "求人",
+    "industryRaw": [
+      "求人"
+    ],
+    "location": "東京都",
+    "employees": 294,
+    "founded": 2022,
+    "listed": false,
+    "website": "https://corporate.my-vision.co.jp/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 294
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q137922267"
+    }
+  },
+  {
+    "id": "Q386773",
+    "name": "コルグ",
+    "industry": "楽器製作者",
+    "industryRaw": [
+      "楽器製作者"
+    ],
+    "location": "日本",
+    "employees": 288,
+    "founded": 1963,
+    "listed": false,
+    "website": "http://www.korg.com",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 288
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q386773"
+    }
+  },
+  {
+    "id": "Q11199031",
+    "name": "FDKエナジー",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "consumer electronics industry"
+    ],
+    "location": "静岡県",
+    "employees": 288,
+    "founded": 2002,
+    "listed": false,
+    "website": "http://www.fdk.co.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2015,
+        "value": 288
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11199031"
+    }
+  },
+  {
+    "id": "Q24862548",
+    "name": "ispace",
+    "industry": "宇宙空間工業",
+    "industryRaw": [
+      "宇宙空間工業"
+    ],
+    "location": "日本",
+    "employees": 282,
+    "founded": 2010,
+    "listed": true,
+    "website": "https://ispace-inc.com/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 66
+      },
+      {
+        "year": 2020,
+        "value": 127
+      },
+      {
+        "year": 2024,
+        "value": 282
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q24862548"
+    }
+  },
+  {
+    "id": "Q105222327",
+    "name": "丸和油脂",
+    "industry": "食物",
+    "industryRaw": [
+      "食物"
+    ],
+    "location": "東京都",
+    "employees": 278,
+    "founded": 1923,
+    "listed": false,
+    "website": "http://www.maruwayushi.com/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 278
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q105222327"
+    }
+  },
+  {
+    "id": "Q1239326",
+    "name": "モノリスソフト",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "日本",
+    "employees": 272,
+    "founded": 1999,
+    "listed": false,
+    "website": "https://www.monolithsoft.co.jp/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2021,
+        "value": 272
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1239326"
+    }
+  },
+  {
+    "id": "Q10852718",
+    "name": "ジョリーパスタ",
+    "industry": "食品・飲料",
+    "industryRaw": [
+      "外食産業"
+    ],
+    "location": "港区",
+    "employees": 263,
+    "founded": 1971,
+    "listed": false,
+    "website": "https://www.jolly-pasta.co.jp/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2019,
+        "value": 263
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q10852718"
+    }
+  },
+  {
+    "id": "Q36148308",
+    "name": "ビーズインターナショナル",
+    "industry": "繊維・アパレル",
+    "industryRaw": [
+      "映画配給会社",
+      "アパレル産業"
+    ],
+    "location": "目黒区",
+    "employees": 258,
+    "founded": 1990,
+    "listed": false,
+    "website": "https://www.bs-intl.jp/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2017,
+        "value": 258
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q36148308"
+    }
+  },
+  {
+    "id": "Q5361952",
+    "name": "SBクリエイティブ",
+    "industry": "メディア・出版",
+    "industryRaw": [
+      "出版",
+      "デジタル技術"
+    ],
+    "location": "港区",
+    "employees": 246,
+    "founded": 1999,
+    "listed": false,
+    "website": "https://www.softbankcr.co.jp/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 246
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q5361952"
+    }
+  },
+  {
+    "id": "Q139827111",
+    "name": "株式会社大日光・エンジニアリング",
+    "industry": "製造業",
+    "industryRaw": [
+      "製造業"
+    ],
+    "location": "栃木県",
+    "employees": 246,
+    "founded": 1979,
+    "listed": false,
+    "website": "https://www.dne.co.jp/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 246
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q139827111"
+    }
+  },
+  {
+    "id": "Q55541022",
+    "name": "NTTドコモビジネスX",
+    "industry": "通信",
+    "industryRaw": [
+      "情報通信業"
+    ],
+    "location": "東京都",
+    "employees": 244,
+    "founded": null,
+    "listed": false,
+    "website": "https://www.nttcoms.com/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2026,
+        "value": 244
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q55541022"
+    }
+  },
+  {
+    "id": "Q11356269",
+    "name": "LIMNO",
+    "industry": "エレクトロニクス",
+    "industryRaw": [
+      "consumer electronics industry"
+    ],
+    "location": "日本",
+    "employees": 237,
+    "founded": 1996,
+    "listed": false,
+    "website": "https://www.limno.co.jp/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 237
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11356269"
+    }
+  },
+  {
+    "id": "Q1054807",
+    "name": "トムス・エンタテインメント",
+    "industry": "映画産業",
+    "industryRaw": [
+      "映画産業",
+      "アニメーション産業"
+    ],
+    "location": "中野区",
+    "employees": 235,
+    "founded": 1964,
+    "listed": false,
+    "website": "https://www.tms-e.co.jp/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 2017,
+        "value": 204
+      },
+      {
+        "year": 2019,
+        "value": 231
+      },
+      {
+        "year": 2020,
+        "value": 235
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1054807"
+    }
+  },
+  {
+    "id": "Q1065717",
+    "name": "ジェー・シー・スタッフ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業",
+      "アニメーション産業"
+    ],
+    "location": "東京都",
+    "employees": 235,
+    "founded": 1986,
+    "listed": false,
+    "website": "http://www.jcstaff.co.jp/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 235
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1065717"
+    }
+  },
+  {
+    "id": "Q86738112",
+    "name": "埼英スクール",
+    "industry": "学習塾",
+    "industryRaw": [
+      "学習塾"
+    ],
+    "location": "埼玉県",
+    "employees": 232,
+    "founded": 1978,
+    "listed": false,
+    "website": "https://saiei-school.com/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 232
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q86738112"
+    }
+  },
+  {
+    "id": "Q65643394",
+    "name": "ジーン",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "大阪市",
+    "employees": 227,
+    "founded": 2006,
+    "listed": false,
+    "website": "https://www.xeen.co.jp/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2019,
+        "value": 189
+      },
+      {
+        "year": 2023,
+        "value": 227
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q65643394"
+    }
+  },
+  {
+    "id": "Q955604",
+    "name": "新潟トランシス",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "鉄道車両メーカー",
+      "機関車製造業"
+    ],
+    "location": "東京都",
+    "employees": 223,
+    "founded": 2003,
+    "listed": false,
+    "website": "http://www.niigata-transys.com/english/index.html",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 223
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q955604"
+    }
+  },
+  {
+    "id": "Q11452544",
+    "name": "宝島社",
+    "industry": "メディア・出版",
+    "industryRaw": [
+      "出版産業"
+    ],
+    "location": "千代田区",
+    "employees": 222,
+    "founded": 1971,
+    "listed": false,
+    "website": "https://tkj.jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2017,
+        "value": 222
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11452544"
+    }
+  },
+  {
+    "id": "Q18289590",
+    "name": "フィンテックグローバル",
+    "industry": "金融・保険",
+    "industryRaw": [
+      "投資銀行",
+      "ブティック型投資銀行"
+    ],
+    "location": "東京都",
+    "employees": 220,
+    "founded": 1994,
+    "listed": true,
+    "website": "http://www.fgi.co.jp/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 220
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2025,
+        "value": 14432830000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q18289590"
+    }
+  },
+  {
+    "id": "Q11509263",
+    "name": "日本郵政インフォメーションテクノロジー",
+    "industry": "通信",
+    "industryRaw": [
+      "情報コミュニケーション技術",
+      "情報通信業"
+    ],
+    "location": "新宿区",
+    "employees": 219,
+    "founded": 1987,
+    "listed": false,
+    "website": "https://www.jp-it.jp",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 219
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11509263"
+    }
+  },
+  {
+    "id": "Q742390",
+    "name": "ディンプス",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "大阪府",
+    "employees": 218,
+    "founded": 2000,
+    "listed": false,
+    "website": "http://www.dimps.co.jp/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 218
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q742390"
+    }
+  },
+  {
+    "id": "Q11728013",
+    "name": "ジャニーズ事務所",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "娯楽産業"
+    ],
+    "location": "港区",
+    "employees": 210,
+    "founded": 1962,
+    "listed": false,
+    "website": "https://www.smile-up.inc/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 210
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11728013"
+    }
+  },
+  {
+    "id": "Q69961146",
+    "name": "ＪＯＥ",
+    "industry": "IT・ソフトウェア",
+    "industryRaw": [
+      "情報技術"
+    ],
+    "location": "東京都",
+    "employees": 210,
+    "founded": 1980,
+    "listed": false,
+    "website": "https://www.joe-hr.com/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 210
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2019,
+        "value": 2336000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q69961146"
+    }
+  },
+  {
+    "id": "Q1068734",
+    "name": "ハル研究所",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 205,
+    "founded": 1980,
+    "listed": false,
+    "website": "https://www.hallab.co.jp/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2019,
+        "value": 169
+      },
+      {
+        "year": 2021,
+        "value": 205
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1068734"
+    }
+  },
+  {
+    "id": "Q138841336",
+    "name": "Josys",
+    "industry": "IT・ソフトウェア",
+    "industryRaw": [
+      "アイデンティティ管理",
+      "Software as a Service"
+    ],
+    "location": "東京都",
+    "employees": 204,
+    "founded": 2022,
+    "listed": false,
+    "website": "https://josys.com",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2024,
+        "value": 204
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q138841336"
+    }
+  },
+  {
+    "id": "Q476215",
+    "name": "オリコン",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "音楽産業"
+    ],
+    "location": "港区",
+    "employees": 203,
+    "founded": 1999,
+    "listed": true,
+    "website": "https://www.oricon.co.jp",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2015,
+        "value": 203
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q476215"
+    }
+  },
+  {
+    "id": "Q11276024",
+    "name": "ばんどう太郎",
+    "industry": "飲食店",
+    "industryRaw": [
+      "飲食店"
+    ],
+    "location": "日本",
+    "employees": 200,
+    "founded": 1986,
+    "listed": false,
+    "website": "http://www.bandotaro.co.jp/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 200
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11276024"
+    }
+  },
+  {
+    "id": "Q116181621",
+    "name": "ハッピーハウス",
+    "industry": "real estate industry",
+    "industryRaw": [
+      "real estate industry"
+    ],
+    "location": "福岡市",
+    "employees": 198,
+    "founded": 1996,
+    "listed": false,
+    "website": "https://www.happy-house.co.jp/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 198
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q116181621"
+    }
+  },
+  {
+    "id": "Q138859887",
+    "name": "フドー株式会社",
+    "industry": "製造業",
+    "industryRaw": [
+      "plastics industry",
+      "製造業"
+    ],
+    "location": "横浜市",
+    "employees": 198,
+    "founded": 1935,
+    "listed": false,
+    "website": "https://fudow.co.jp",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 198
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q138859887"
+    }
+  },
+  {
+    "id": "Q150001",
+    "name": "インテリジェントシステムズ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "京都府",
+    "employees": 197,
+    "founded": 1986,
+    "listed": false,
+    "website": "http://www.intsys.co.jp/english",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2024,
+        "value": 197
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q150001"
+    }
+  },
+  {
+    "id": "Q182950",
+    "name": "スタジオジブリ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業",
+      "映画産業"
+    ],
+    "location": "小金井市",
+    "employees": 190,
+    "founded": 1985,
+    "listed": false,
+    "website": "https://www.ghibli.jp/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 190
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q182950"
+    }
+  },
+  {
+    "id": "Q7280334",
+    "name": "放射線影響研究所",
+    "industry": "研究・サービス",
+    "industryRaw": [
+      "研究"
+    ],
+    "location": "広島県",
+    "employees": 187,
+    "founded": 1975,
+    "listed": false,
+    "website": "https://www.rerf.or.jp/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 2023,
+        "value": 187
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q7280334"
+    }
+  },
+  {
+    "id": "Q3337438",
+    "name": "ニンテンドーキューブ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 180,
+    "founded": 2000,
+    "listed": false,
+    "website": "https://www.nintendo-cube.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 180
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q3337438"
+    }
+  },
+  {
+    "id": "Q520454",
+    "name": "メディアファクトリー",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業",
+      "フォノグラフィック業界"
+    ],
+    "location": "東京都",
+    "employees": 169,
+    "founded": 1986,
+    "listed": false,
+    "website": "http://www.mediafactory.co.jp/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 169
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q520454"
+    }
+  },
+  {
+    "id": "Q130517459",
+    "name": "神戸六甲鉄道",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "運輸産業"
+    ],
+    "location": "灘区",
+    "employees": 165,
+    "founded": 1923,
+    "listed": false,
+    "website": "https://www.rokkosan.com/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 165
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q130517459"
+    }
+  },
+  {
+    "id": "Q2723301",
+    "name": "バップ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "千代田区",
+    "employees": 161,
+    "founded": 1981,
+    "listed": false,
+    "website": "https://www.vap.co.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 161
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2723301"
+    }
+  },
+  {
+    "id": "Q1054765",
+    "name": "角川書店",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業",
+      "出版産業"
+    ],
+    "location": "東京都",
+    "employees": 160,
+    "founded": 1945,
+    "listed": true,
+    "website": "http://shoten.kadokawa.co.jp/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 160
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1054765"
+    }
+  },
+  {
+    "id": "Q277763",
+    "name": "A-1 Pictures",
+    "industry": "アニメーション産業",
+    "industryRaw": [
+      "アニメーション産業"
+    ],
+    "location": "東京都",
+    "employees": 157,
+    "founded": 2005,
+    "listed": false,
+    "website": "https://a1p.jp/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 56
+      },
+      {
+        "year": 2022,
+        "value": 157
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q277763"
+    }
+  },
+  {
+    "id": "Q1246399",
+    "name": "メディアワークス",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業",
+      "メディア産業"
+    ],
+    "location": "東京都",
+    "employees": 157,
+    "founded": 1992,
+    "listed": false,
+    "website": "http://www.mediaworks.co.jp",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 157
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1246399"
+    }
+  },
+  {
+    "id": "Q1058813",
+    "name": "三省堂",
+    "industry": "メディア・出版",
+    "industryRaw": [
+      "出版社"
+    ],
+    "location": "千代田区",
+    "employees": 151,
+    "founded": 1915,
+    "listed": false,
+    "website": "http://www.sanseido.co.jp/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 151
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1058813"
+    }
+  },
+  {
+    "id": "Q114797188",
+    "name": "味源",
+    "industry": "卸売",
+    "industryRaw": [
+      "卸売"
+    ],
+    "location": "日本",
+    "employees": 150,
+    "founded": 1994,
+    "listed": false,
+    "website": "https://ajigen.com/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 150
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q114797188"
+    }
+  },
+  {
+    "id": "Q11288175",
+    "name": "ウィルゲート",
+    "industry": "IT・インターネット",
+    "industryRaw": [
+      "インターネット・マーケティング"
+    ],
+    "location": "日本",
+    "employees": 149,
+    "founded": 2006,
+    "listed": false,
+    "website": "http://www.willgate.co.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 149
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11288175"
+    }
+  },
+  {
+    "id": "Q2579061",
+    "name": "双葉社",
+    "industry": "メディア・出版",
+    "industryRaw": [
+      "出版"
+    ],
+    "location": "新宿区",
+    "employees": 147,
+    "founded": 1948,
+    "listed": false,
+    "website": "http://www.futabasha.co.jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 147
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2579061"
+    }
+  },
+  {
+    "id": "Q106603608",
+    "name": "ONE COMPATH",
+    "industry": "通信",
+    "industryRaw": [
+      "情報通信業"
+    ],
+    "location": "港区",
+    "employees": 143,
+    "founded": 1997,
+    "listed": false,
+    "website": "https://onecompath.com/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2024,
+        "value": 143
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q106603608"
+    }
+  },
+  {
+    "id": "Q877325",
+    "name": "京都アニメーション",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業",
+      "アニメーション産業"
+    ],
+    "location": "京都府",
+    "employees": 137,
+    "founded": 1981,
+    "listed": false,
+    "website": "https://www.kyotoanimation.co.jp",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2019,
+        "value": 137
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q877325"
+    }
+  },
+  {
+    "id": "Q947930",
+    "name": "オー・エル・エム",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業",
+      "映画産業",
+      "アニメーション産業"
+    ],
+    "location": "東京都",
+    "employees": 137,
+    "founded": 1990,
+    "listed": false,
+    "website": "https://www.olm.co.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 137
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q947930"
+    }
+  },
+  {
+    "id": "Q11368023",
+    "name": "丸井今井",
+    "industry": "小売・流通",
+    "industryRaw": [
+      "小売"
+    ],
+    "location": "日本",
+    "employees": 137,
+    "founded": 2009,
+    "listed": false,
+    "website": "https://www.maruiimai.mistore.jp/hakodate.html",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 137
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11368023"
+    }
+  },
+  {
+    "id": "Q115035752",
+    "name": "Retty",
+    "industry": "サービス",
+    "industryRaw": [
+      "第三次産業"
+    ],
+    "location": "東京都",
+    "employees": 132,
+    "founded": 2010,
+    "listed": true,
+    "website": "https://corp.retty.me/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 132
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q115035752"
+    }
+  },
+  {
+    "id": "Q11506487",
+    "name": "日本サルヴェージ",
+    "industry": "水運",
+    "industryRaw": [
+      "水運"
+    ],
+    "location": "大田区",
+    "employees": 130,
+    "founded": 1934,
+    "listed": false,
+    "website": "https://www.nipponsalvage.co.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 130
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11506487"
+    }
+  },
+  {
+    "id": "Q55571137",
+    "name": "日本アルコール販売",
+    "industry": "卸売",
+    "industryRaw": [
+      "卸売"
+    ],
+    "location": "中央区",
+    "employees": 126,
+    "founded": 1947,
+    "listed": false,
+    "website": "http://www.aruhan.gr.jp/aruhan/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 126
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q55571137"
+    }
+  },
+  {
+    "id": "Q96312597",
+    "name": "エコモット",
+    "industry": "IT・ソフトウェア",
+    "industryRaw": [
+      "情報技術"
+    ],
+    "location": "札幌市",
+    "employees": 120,
+    "founded": null,
+    "listed": true,
+    "website": "https://www.ecomott.co.jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2020,
+        "value": 120
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q96312597"
+    }
+  },
+  {
+    "id": "Q133883406",
+    "name": "CINC",
+    "industry": "通信",
+    "industryRaw": [
+      "情報通信業"
+    ],
+    "location": "東京都",
+    "employees": 114,
+    "founded": 2014,
+    "listed": true,
+    "website": "https://cinc-j.co.jp/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 114
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q133883406"
+    }
+  },
+  {
+    "id": "Q123465598",
+    "name": "東京湾横断道路株式会社",
+    "industry": "建設・不動産",
+    "industryRaw": [
+      "第三次産業",
+      "建設業"
+    ],
+    "location": "東京都",
+    "employees": 111,
+    "founded": 1986,
+    "listed": false,
+    "website": "https://www.aqua-line.co.jp/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 111
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q123465598"
+    }
+  },
+  {
+    "id": "Q2070538",
+    "name": "ガンバリオン",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "日本",
+    "employees": 105,
+    "founded": 1999,
+    "listed": false,
+    "website": "https://www.ganbarion.co.jp/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2021,
+        "value": 105
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2070538"
+    }
+  },
+  {
+    "id": "Q11404124",
+    "name": "北辰図書",
+    "industry": "メディア・出版",
+    "industryRaw": [
+      "出版者"
+    ],
+    "location": "さいたま市",
+    "employees": 97,
+    "founded": 1952,
+    "listed": false,
+    "website": "http://www.hokushin-t.jp/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": null,
+        "value": 97
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11404124"
+    }
+  },
+  {
+    "id": "Q136701350",
+    "name": "テラ・ルネッサンス",
+    "industry": "非営利",
+    "industryRaw": [
+      "非営利"
+    ],
+    "location": "京都府",
+    "employees": 93,
+    "founded": 2005,
+    "listed": false,
+    "website": "https://www.terra-r.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2024,
+        "value": 93
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 2020,
+        "value": 244043000
+      },
+      {
+        "year": 2021,
+        "value": 320653000
+      },
+      {
+        "year": 2022,
+        "value": 350053000
+      },
+      {
+        "year": 2023,
+        "value": 488460000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q136701350"
+    }
+  },
+  {
+    "id": "Q1155260",
+    "name": "白泉社",
+    "industry": "メディア・出版",
+    "industryRaw": [
+      "出版社"
+    ],
+    "location": "東京都",
+    "employees": 91,
+    "founded": 1973,
+    "listed": false,
+    "website": "http://www.hakusensha.co.jp",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 91
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1155260"
+    }
+  },
+  {
+    "id": "Q2985996",
+    "name": "マトリックス",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 86,
+    "founded": 1994,
+    "listed": false,
+    "website": "http://www.matrixsoft.co.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 86
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2985996"
+    }
+  },
+  {
+    "id": "Q2865851",
+    "name": "アートゥーン",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "神奈川県",
+    "employees": 85,
+    "founded": 1999,
+    "listed": false,
+    "website": null,
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 85
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2865851"
+    }
+  },
+  {
+    "id": "Q3772556",
+    "name": "Winning Entertainment Group",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "大阪市",
+    "employees": 82,
+    "founded": 1987,
+    "listed": false,
+    "website": "https://www.winning-ent.co.jp/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 82
+      }
+    ],
+    "revenueHistory": [
+      {
+        "year": 0,
+        "value": 719000000
+      }
+    ],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q3772556"
+    }
+  },
+  {
+    "id": "Q55262281",
+    "name": "燐化学工業",
+    "industry": "化学・素材",
+    "industryRaw": [
+      "化学工業"
+    ],
+    "location": "富山県",
+    "employees": 81,
+    "founded": 1926,
+    "listed": false,
+    "website": "http://www.rinka.co.jp/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 81
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q55262281"
+    }
+  },
+  {
+    "id": "Q1255529",
+    "name": "グレッゾ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 80,
+    "founded": 2006,
+    "listed": false,
+    "website": "http://www.grezzo.co.jp/en/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2021,
+        "value": 80
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1255529"
+    }
+  },
+  {
+    "id": "Q9290601",
+    "name": "インティ・クリエイツ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "千葉県",
+    "employees": 80,
+    "founded": 1996,
+    "listed": false,
+    "website": "http://www.inti.co.jp/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 80
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q9290601"
+    }
+  },
+  {
+    "id": "Q1150494",
+    "name": "新日本プロレス",
+    "industry": "プロレス",
+    "industryRaw": [
+      "プロレス"
+    ],
+    "location": "世田谷区",
+    "employees": 78,
+    "founded": 1972,
+    "listed": false,
+    "website": "https://sp.njpw.jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 78
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1150494"
+    }
+  },
+  {
+    "id": "Q2295795",
+    "name": "ディオメディア",
+    "industry": "アニメーション産業",
+    "industryRaw": [
+      "アニメーション産業"
+    ],
+    "location": "東京都",
+    "employees": 76,
+    "founded": 2005,
+    "listed": false,
+    "website": "http://www.diomedea.co.jp/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 2016,
+        "value": 76
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2295795"
+    }
+  },
+  {
+    "id": "Q105900699",
+    "name": "Plott",
+    "industry": "アニメーション制作会社",
+    "industryRaw": [
+      "アニメーション制作会社"
+    ],
+    "location": "東京都",
+    "employees": 76,
+    "founded": 2017,
+    "listed": false,
+    "website": "https://plott.tokyo/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2021,
+        "value": 76
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q105900699"
+    }
+  },
+  {
+    "id": "Q115136876",
+    "name": "コミット",
+    "industry": "通信",
+    "industryRaw": [
+      "情報通信業"
+    ],
+    "location": "港区",
+    "employees": 72,
+    "founded": 2003,
+    "listed": false,
+    "website": "https://www.comit.co.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 72
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q115136876"
+    }
+  },
+  {
+    "id": "Q650867",
+    "name": "マッドハウス",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業",
+      "アニメーション産業"
+    ],
+    "location": "東京都",
+    "employees": 70,
+    "founded": 1972,
+    "listed": false,
+    "website": "http://www.madhouse.co.jp",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 70
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q650867"
+    }
+  },
+  {
+    "id": "Q2822685",
+    "name": "アクセスゲームズ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "大阪府",
+    "employees": 70,
+    "founded": 1996,
+    "listed": false,
+    "website": "http://www.accessgames.co.jp",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 70
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2822685"
+    }
+  },
+  {
+    "id": "Q991149",
+    "name": "1-UPスタジオ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "日本",
+    "employees": 66,
+    "founded": 2000,
+    "listed": false,
+    "website": "https://1-up-studio.jp",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 44
+      },
+      {
+        "year": 2021,
+        "value": 66
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q991149"
+    }
+  },
+  {
+    "id": "Q7480253",
+    "name": "Tango Gameworks",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "港区",
+    "employees": 65,
+    "founded": 2010,
+    "listed": false,
+    "website": "https://tangogameworks.com/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 65
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q7480253"
+    }
+  },
+  {
+    "id": "Q1102774",
+    "name": "クローバースタジオ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "日本",
+    "employees": 64,
+    "founded": 2004,
+    "listed": false,
+    "website": "http://www.cloverstudio.co.jp",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 64
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1102774"
+    }
+  },
+  {
+    "id": "Q2735962",
+    "name": "メディア・ビジョン",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 64,
+    "founded": 1993,
+    "listed": false,
+    "website": "http://www.media-vision.co.jp/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 64
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2735962"
+    }
+  },
+  {
+    "id": "Q3049567",
+    "name": "グッド・フィール",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "兵庫県",
+    "employees": 64,
+    "founded": 2005,
+    "listed": false,
+    "website": "https://www.good-feel.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 64
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q3049567"
+    }
+  },
+  {
+    "id": "Q4597604",
+    "name": "GoHands",
+    "industry": "アニメーション産業",
+    "industryRaw": [
+      "アニメーション産業"
+    ],
+    "location": "大阪府",
+    "employees": 63,
+    "founded": 2008,
+    "listed": false,
+    "website": null,
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 63
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q4597604"
+    }
+  },
+  {
+    "id": "Q421414",
+    "name": "SILVER LINK.",
+    "industry": "アニメーション産業",
+    "industryRaw": [
+      "アニメーション産業"
+    ],
+    "location": "東京都",
+    "employees": 60,
+    "founded": 2007,
+    "listed": false,
+    "website": "http://www.silverlink.co.jp/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 60
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q421414"
+    }
+  },
+  {
+    "id": "Q1140960",
+    "name": "ソニックチーム",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "日本",
+    "employees": 60,
+    "founded": 2000,
+    "listed": false,
+    "website": "http://www.sonicteam.com",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 60
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1140960"
+    }
+  },
+  {
+    "id": "Q1192030",
+    "name": "芳文社",
+    "industry": "メディア・出版",
+    "industryRaw": [
+      "出版社"
+    ],
+    "location": "日本",
+    "employees": 60,
+    "founded": 1950,
+    "listed": false,
+    "website": "https://houbunsha.com",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 60
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1192030"
+    }
+  },
+  {
+    "id": "Q11235747",
+    "name": "NMKV",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "神奈川県",
+    "employees": 54,
+    "founded": 2011,
+    "listed": false,
+    "website": "http://nmkv.com/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 54
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11235747"
+    }
+  },
+  {
+    "id": "Q135273081",
+    "name": "リスキル",
+    "industry": "企業内教育",
+    "industryRaw": [
+      "企業内教育"
+    ],
+    "location": "新宿区",
+    "employees": 52,
+    "founded": 2022,
+    "listed": true,
+    "website": "https://www.recurrent.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 2025,
+        "value": 52
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q135273081"
+    }
+  },
+  {
+    "id": "Q850608",
+    "name": "ライジングプロダクション",
+    "industry": "エンターテインメント",
+    "industryRaw": [
+      "エンターテインメント"
+    ],
+    "location": "港区",
+    "employees": 50,
+    "founded": 1984,
+    "listed": false,
+    "website": "http://www.visionfactory.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 50
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q850608"
+    }
+  },
+  {
+    "id": "Q11319271",
+    "name": "テックアーツ",
+    "industry": "IT・ソフトウェア",
+    "industryRaw": [
+      "ソフトウェア産業",
+      "コンピュータゲーム産業"
+    ],
+    "location": "日本",
+    "employees": 50,
+    "founded": 1996,
+    "listed": false,
+    "website": "http://www.teck.co.jp/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 2009,
+        "value": 50
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11319271"
+    }
+  },
+  {
+    "id": "Q17210103",
+    "name": "らーめん山頭火",
+    "industry": "食品・飲料",
+    "industryRaw": [
+      "外食産業"
+    ],
+    "location": "日本",
+    "employees": 50,
+    "founded": 1999,
+    "listed": false,
+    "website": "https://www.santouka.co.jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 50
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q17210103"
+    }
+  },
+  {
+    "id": "Q120055212",
+    "name": "大和屋時計店",
+    "industry": "小売・流通",
+    "industryRaw": [
+      "小売"
+    ],
+    "location": "静岡県",
+    "employees": 50,
+    "founded": 1957,
+    "listed": false,
+    "website": "https://www.yamatoya-co.com/",
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 50
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q120055212"
+    }
+  },
+  {
+    "id": "Q138516646",
+    "name": "株式会社bloom",
+    "industry": "精密・光学機器",
+    "industryRaw": [
+      "写真編集"
+    ],
+    "location": "群馬県",
+    "employees": 50,
+    "founded": 2014,
+    "listed": false,
+    "website": "https://bloom-vn.com/",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": 2026,
+        "value": 50
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q138516646"
+    }
+  },
+  {
+    "id": "Q47151190",
+    "name": "はれのひ",
+    "industry": "サービス",
+    "industryRaw": [
+      "第三次産業"
+    ],
+    "location": "西区",
+    "employees": 49,
+    "founded": 2011,
+    "listed": false,
+    "website": "http://harenohi-ir.co",
+    "accent": "#22c55e",
+    "employeeHistory": [
+      {
+        "year": null,
+        "value": 49
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q47151190"
+    }
+  },
+  {
+    "id": "Q197069",
+    "name": "ゼクシズ",
+    "industry": "アニメーション産業",
+    "industryRaw": [
+      "アニメーション産業"
+    ],
+    "location": "東京都",
+    "employees": 48,
+    "founded": 1998,
+    "listed": false,
+    "website": "http://www.zexcs.co.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 48
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q197069"
+    }
+  },
+  {
+    "id": "Q1191897",
+    "name": "グラスホッパー・マニファクチュア",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 48,
+    "founded": 1998,
+    "listed": false,
+    "website": "https://www.grasshopper.co.jp/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 48
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1191897"
+    }
+  },
+  {
+    "id": "Q11595259",
+    "name": "秋田内陸縦貫鉄道",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "鉄道輸送"
+    ],
+    "location": "秋田県",
+    "employees": 48,
+    "founded": 1984,
+    "listed": false,
+    "website": "https://www.akita-nairiku.com/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 2018,
+        "value": 48
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11595259"
+    }
+  },
+  {
+    "id": "Q22127721",
+    "name": "北雪酒造",
+    "industry": "酒造所",
+    "industryRaw": [
+      "酒造所"
+    ],
+    "location": "新潟県",
+    "employees": 48,
+    "founded": 1948,
+    "listed": false,
+    "website": "https://sake-hokusetsu.com/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": null,
+        "value": 48
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q22127721"
+    }
+  },
+  {
+    "id": "Q115015854",
+    "name": "粉室製作所",
+    "industry": "鉄鋼・金属",
+    "industryRaw": [
+      "金属産業"
+    ],
+    "location": "大阪府",
+    "employees": 48,
+    "founded": 1970,
+    "listed": false,
+    "website": "https://www.komuro-ss.jp/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 48
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q115015854"
+    }
+  },
+  {
+    "id": "Q124759415",
+    "name": "株式会社ビープラウド",
+    "industry": "テクノロジー",
+    "industryRaw": [
+      "テクノロジー"
+    ],
+    "location": "豊島区",
+    "employees": 47,
+    "founded": 2006,
+    "listed": false,
+    "website": "https://www.beproud.jp/",
+    "accent": "#06b6d4",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 47
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q124759415"
+    }
+  },
+  {
+    "id": "Q83562393",
+    "name": "Studio A-CAT",
+    "industry": "アニメーション産業",
+    "industryRaw": [
+      "アニメーション産業"
+    ],
+    "location": "東京都",
+    "employees": 46,
+    "founded": 1996,
+    "listed": false,
+    "website": "http://a-cat.co.jp/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 2019,
+        "value": 46
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q83562393"
+    }
+  },
+  {
+    "id": "Q778453",
+    "name": "チュンソフト",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "日本",
+    "employees": 43,
+    "founded": 1984,
+    "listed": false,
+    "website": "http://www.chunsoft.co.jp/",
+    "accent": "#a855f7",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 43
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q778453"
+    }
+  },
+  {
+    "id": "Q139718782",
+    "name": "ジェムスクール",
+    "industry": "英語教育",
+    "industryRaw": [
+      "英語教育"
+    ],
+    "location": "香川県",
+    "employees": 43,
+    "founded": 1981,
+    "listed": false,
+    "website": "https://www.gemschool.com",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 43
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q139718782"
+    }
+  },
+  {
+    "id": "Q11510095",
+    "name": "日立電鉄",
+    "industry": "物流・運輸",
+    "industryRaw": [
+      "鉄道輸送"
+    ],
+    "location": "日本",
+    "employees": 40,
+    "founded": 1927,
+    "listed": false,
+    "website": null,
+    "accent": "#8b5cf6",
+    "employeeHistory": [
+      {
+        "year": 2004,
+        "value": 40
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q11510095"
+    }
+  },
+  {
+    "id": "Q116149211",
+    "name": "マツウラ",
+    "industry": "卸売",
+    "industryRaw": [
+      "卸売"
+    ],
+    "location": "福井県",
+    "employees": 40,
+    "founded": null,
+    "listed": false,
+    "website": null,
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 40
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q116149211"
+    }
+  },
+  {
+    "id": "Q1750843",
+    "name": "モリワキエンジニアリング",
+    "industry": "自動車・輸送機器",
+    "industryRaw": [
+      "自動車産業"
+    ],
+    "location": "三重県",
+    "employees": 37,
+    "founded": 1973,
+    "listed": false,
+    "website": "http://www.moriwaki.co.jp/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 37
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1750843"
+    }
+  },
+  {
+    "id": "Q2546072",
+    "name": "ノーマッド",
+    "industry": "アニメーション産業",
+    "industryRaw": [
+      "アニメーション産業"
+    ],
+    "location": "東京都",
+    "employees": 36,
+    "founded": 2003,
+    "listed": false,
+    "website": "http://www.nomad-inc.co.jp/",
+    "accent": "#14b8a6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 36
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2546072"
+    }
+  },
+  {
+    "id": "Q124394520",
+    "name": "株式会社サイクロンゼロ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "日本",
+    "employees": 36,
+    "founded": 2007,
+    "listed": false,
+    "website": "https://www.cyclone-zero.jp/",
+    "accent": "#e11d48",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 36
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q124394520"
+    }
+  },
+  {
+    "id": "Q1938783",
+    "name": "スタジオ・ファンタジア",
+    "industry": "アニメーション産業",
+    "industryRaw": [
+      "アニメーション産業"
+    ],
+    "location": "東京都",
+    "employees": 35,
+    "founded": 1983,
+    "listed": false,
+    "website": "http://www.studiofantasia.co.jp",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 35
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1938783"
+    }
+  },
+  {
+    "id": "Q28086592",
+    "name": "ゼロジー",
+    "industry": "アニメーション産業",
+    "industryRaw": [
+      "アニメーション産業"
+    ],
+    "location": "日本",
+    "employees": 35,
+    "founded": 2011,
+    "listed": false,
+    "website": "https://zerog2.jp/",
+    "accent": "#3b82f6",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 35
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q28086592"
+    }
+  },
+  {
+    "id": "Q2561594",
+    "name": "スキップ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 34,
+    "founded": 2000,
+    "listed": false,
+    "website": "http://www.skiptokyo.com/",
+    "accent": "#f97316",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 34
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q2561594"
+    }
+  },
+  {
+    "id": "Q139890007",
+    "name": "株式会社フォーカス",
+    "industry": "小売・流通",
+    "industryRaw": [
+      "小売"
+    ],
+    "location": "山梨県",
+    "employees": 34,
+    "founded": 2009,
+    "listed": false,
+    "website": "https://corp.forcus.co.jp/",
+    "accent": "#0ea5e9",
+    "employeeHistory": [
+      {
+        "year": 2026,
+        "value": 34
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q139890007"
+    }
+  },
+  {
+    "id": "Q684780",
+    "name": "キャメロット",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 33,
+    "founded": 1994,
+    "listed": false,
+    "website": "https://www.camelot.co.jp/wp/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 33
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q684780"
+    }
+  },
+  {
+    "id": "Q1493042",
+    "name": "ゲームアーツ",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "東京都",
+    "employees": 33,
+    "founded": 1985,
+    "listed": false,
+    "website": "https://www.gamearts.co.jp/en/",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 33
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q1493042"
+    }
+  },
+  {
+    "id": "Q131381843",
+    "name": "オンチップ・バイオテクノロジーズ",
+    "industry": "生物工学",
+    "industryRaw": [
+      "生物工学"
+    ],
+    "location": "東京都",
+    "employees": 33,
+    "founded": 2005,
+    "listed": false,
+    "website": "https://on-chipbio.com/",
+    "accent": "#84cc16",
+    "employeeHistory": [
+      {
+        "year": 2024,
+        "value": 33
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q131381843"
+    }
+  },
+  {
+    "id": "Q4048789",
+    "name": "シムス",
+    "industry": "ゲーム・エンタメ",
+    "industryRaw": [
+      "コンピュータゲーム産業"
+    ],
+    "location": "日本",
+    "employees": 32,
+    "founded": 1991,
+    "listed": false,
+    "website": "http://www.sims.co.jp",
+    "accent": "#ec4899",
+    "employeeHistory": [
+      {
+        "year": 0,
+        "value": 32
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q4048789"
+    }
+  },
+  {
+    "id": "Q114725102",
+    "name": "瑞起",
+    "industry": "半導体",
+    "industryRaw": [
+      "コンピュータゲーム産業",
+      "半導体産業",
+      "電気機器"
+    ],
+    "location": "横浜市",
+    "employees": 32,
+    "founded": 2012,
+    "listed": false,
+    "website": "https://www.zuiki.co.jp/",
+    "accent": "#f59e0b",
+    "employeeHistory": [
+      {
+        "year": 2022,
+        "value": 32
+      }
+    ],
+    "revenueHistory": [],
+    "source": {
+      "name": "Wikidata",
+      "license": "CC0",
+      "url": "https://www.wikidata.org/wiki/Q114725102"
     }
   }
 ]

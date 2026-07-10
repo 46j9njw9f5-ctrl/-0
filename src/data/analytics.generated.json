@@ -1,16 +1,16 @@
 {
   "source": "しょくばらぼ（厚労省 職場情報総合サイト）公開オープンデータ",
-  "total": 148228,
+  "total": 148232,
   "national": {
     "avgOvertime": 12.6,
     "avgPaidLeave": 67.2,
     "avgWomenManager": 20.2,
     "avgAge": 43.2,
     "counts": {
-      "overtime": 14158,
+      "overtime": 14159,
       "paidLeave": 11277,
       "women": 29129,
-      "age": 2636
+      "age": 2637
     }
   },
   "byIndustry": [
@@ -63,7 +63,7 @@
     },
     {
       "key": "P:医療，福祉",
-      "count": 21704,
+      "count": 21705,
       "avgOvertime": 5.3,
       "avgPaidLeave": 68.8,
       "avgWomenManager": 49.5,
@@ -204,7 +204,7 @@
     },
     {
       "key": "R:サービス業（他に分類されないもの）",
-      "count": 18844,
+      "count": 18845,
       "avgOvertime": 12.5,
       "avgPaidLeave": 69.1,
       "avgWomenManager": 22.2,
@@ -838,7 +838,7 @@
   "byPrefecture": [
     {
       "key": "13:東京都",
-      "count": 28055,
+      "count": 28056,
       "avgOvertime": 13.3,
       "avgPaidLeave": 69.5,
       "avgWomenManager": 19.9,
@@ -846,7 +846,7 @@
     },
     {
       "key": "27:大阪府",
-      "count": 13461,
+      "count": 13462,
       "avgOvertime": 12.3,
       "avgPaidLeave": 67.5,
       "avgWomenManager": 18.5,
@@ -854,10 +854,10 @@
     },
     {
       "key": "23:愛知県",
-      "count": 8993,
+      "count": 8992,
       "avgOvertime": 14.5,
       "avgPaidLeave": 69.5,
-      "avgWomenManager": 16.6,
+      "avgWomenManager": 16.5,
       "avgAge": 41.6
     },
     {
@@ -878,7 +878,7 @@
     },
     {
       "key": "14:神奈川県",
-      "count": 5764,
+      "count": 5765,
       "avgOvertime": 13.3,
       "avgPaidLeave": 68.5,
       "avgWomenManager": 19.1,
@@ -942,7 +942,7 @@
     },
     {
       "key": "15:新潟県",
-      "count": 2759,
+      "count": 2760,
       "avgOvertime": 10.2,
       "avgPaidLeave": 64.8,
       "avgWomenManager": 19.2,
@@ -982,7 +982,7 @@
     },
     {
       "key": "17:石川県",
-      "count": 2173,
+      "count": 2174,
       "avgOvertime": 12.1,
       "avgPaidLeave": 62.4,
       "avgWomenManager": 21.4,
@@ -1220,7 +1220,7 @@
     },
     {
       "bucket": "10-20h",
-      "count": 5200
+      "count": 5201
     },
     {
       "bucket": "20-30h",

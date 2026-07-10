@@ -2028,3 +2028,27 @@ a {
   line-height: 1.5;
   color: var(--text-faint);
 }
+
+/* 「もっと見る」ボタン（大量データの段階表示） */
+.more-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 22px 0 4px;
+}
+.more-btn {
+  background: var(--bg-elev);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+}
+.more-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+.more-btn:active {
+  transform: translateY(1px);
+}

@@ -133,6 +133,7 @@ export default function App() {
   const [detailId, setDetailId] = useState<string | null>(null)
   const [showCompare, setShowCompare] = useState(false)
   const [view, setView] = useState<'list' | 'analytics'>('list')
+  const [visibleCount, setVisibleCount] = useState(60)
   const [theme, setTheme] = useState<Theme>(loadTheme)
 
   useEffect(() => {
@@ -150,6 +151,11 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem(FAV_KEY, JSON.stringify(favorites))
   }, [favorites])
+
+  // 絞り込み・並び替え・データセットが変わったら表示件数をリセット
+  useEffect(() => {
+    setVisibleCount(60)
+  }, [query, industry, sort, onlyFavorites, promisingOnly, safeOnly, gemsOnly, priorities, datasetKey])
 
   // データセット切替時は選択状態をリセット
   useEffect(() => {
@@ -412,7 +418,9 @@ export default function App() {
         </button>
       </div>
 
-      <div className="result-meta">{filtered.length} 社を表示中</div>
+      <div className="result-meta">
+        {filtered.length} 社中 {Math.min(visibleCount, filtered.length)} 社を表示中
+      </div>
 
       {/* スポンサー（アフィリエイト）: 実リンク設定時のみ表示 */}
       <AffiliateStrip offers={offers} heading="就活・転職に役立つサービス" />
@@ -420,8 +428,9 @@ export default function App() {
       {filtered.length === 0 ? (
         <div className="empty">条件に一致する企業がありません。</div>
       ) : (
+        <>
         <div className="grid">
-          {filtered.map((r, i) => (
+          {filtered.slice(0, visibleCount).map((r, i) => (
             <Fragment key={r.company.id}>
               <CompanyCard
                 company={r.company}
@@ -437,12 +446,20 @@ export default function App() {
                 onToggleCompare={() => toggleCompare(r.company.id)}
               />
               {/* 6件ごとにインフィード広告を差し込む（AdSense 設定時のみ） */}
-              {hasAdsense() && (i + 1) % 6 === 0 && i < filtered.length - 1 && (
+              {hasAdsense() && (i + 1) % 6 === 0 && i < Math.min(visibleCount, filtered.length) - 1 && (
                 <AdSlot className="ad--ingrid" />
               )}
             </Fragment>
           ))}
         </div>
+        {filtered.length > visibleCount && (
+          <div className="more-wrap">
+            <button className="more-btn" onClick={() => setVisibleCount((n) => n + 60)}>
+              もっと見る（残り {filtered.length - visibleCount} 社）
+            </button>
+          </div>
+        )}
+        </>
       )}
 
       <div className="disclaimer">
