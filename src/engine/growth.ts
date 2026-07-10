@@ -6,11 +6,11 @@ import { industryOutlook } from './industry'
  *
  * 実データ（従業員数・売上高の推移、設立年、上場、業種）から
  * 「将来性スコア 0–100（高いほど有望）」を算出する。
- * データが欠損する要因は重みを動的に再正規化して除外し、
- * 各要因の寄与を透明に開示する。
+ * 利用可能な要因で生スコアを計算した後、データ欠損が多い企業は
+ * 中立値50へ縮約し、少数の良好指標だけによる過大評価を防ぐ。
  */
 
-const clamp = (v: number, min = 0, max = 100): number => Math.max(min, Math.min(max, v))
+const clamp = (value: number, min = 0, max = 100): number => Math.max(min, Math.min(max, value))
 
 function piecewise(x: number, points: [number, number][]): number {
   if (x <= points[0][0]) return points[0][1]
@@ -31,39 +31,40 @@ const CURRENT_YEAR = new Date().getFullYear()
 
 /**
  * 時系列から年平均成長率(CAGR, %)を算出。単位不整合の外れ値を除外し、
- * 2 点以上・1 年以上の期間があるときのみ返す。
+ * 2点以上・1年以上の期間があるときのみ返す。
  */
 export function cagr(series: SeriesPoint[] | undefined): number | null {
   if (!series || series.length < 2) return null
-  const pts = series.filter((p) => p.year > 0 && Number.isFinite(p.value) && p.value > 0)
-  if (pts.length < 2) return null
-  // 中央値から大きく外れた値（単位違い等）を除去
-  const sorted = [...pts].map((p) => p.value).sort((a, b) => a - b)
-  const median = sorted[Math.floor(sorted.length / 2)]
-  const clean = pts
-    .filter((p) => p.value >= median * 0.25 && p.value <= median * 4)
+  const points = series.filter((point) => point.year > 0 && Number.isFinite(point.value) && point.value > 0)
+  if (points.length < 2) return null
+
+  const sortedValues = [...points].map((point) => point.value).sort((a, b) => a - b)
+  const median = sortedValues[Math.floor(sortedValues.length / 2)]
+  const clean = points
+    .filter((point) => point.value >= median * 0.25 && point.value <= median * 4)
     .sort((a, b) => a.year - b.year)
   if (clean.length < 2) return null
+
   const first = clean[0]
   const last = clean[clean.length - 1]
   const years = last.year - first.year
   if (years < 1) return null
-  const ratio = last.value / first.value
-  return (Math.pow(ratio, 1 / years) - 1) * 100
+
+  return (Math.pow(last.value / first.value, 1 / years) - 1) * 100
 }
 
 /** 時系列から単位不整合の外れ値を除いた最新値を返す。 */
 export function cleanLatest(series: SeriesPoint[] | undefined): number | null {
   if (!series || !series.length) return null
-  const pts = series.filter((p) => Number.isFinite(p.value) && p.value > 0)
-  if (!pts.length) return null
-  const vals = pts.map((p) => p.value).sort((a, b) => a - b)
-  const median = vals[Math.floor(vals.length / 2)]
-  const clean = pts.filter((p) => p.value >= median * 0.25 && p.value <= median * 4)
-  const src = (clean.length ? clean : pts).filter((p) => p.year > 0)
-  const use = src.length ? src : clean.length ? clean : pts
-  const sorted = [...use].sort((a, b) => a.year - b.year)
-  return sorted[sorted.length - 1].value
+  const points = series.filter((point) => Number.isFinite(point.value) && point.value > 0)
+  if (!points.length) return null
+
+  const values = points.map((point) => point.value).sort((a, b) => a - b)
+  const median = values[Math.floor(values.length / 2)]
+  const clean = points.filter((point) => point.value >= median * 0.25 && point.value <= median * 4)
+  const withYear = (clean.length ? clean : points).filter((point) => point.year > 0)
+  const use = withYear.length ? withYear : clean.length ? clean : points
+  return [...use].sort((a, b) => a.year - b.year)[use.length - 1].value
 }
 
 /** CAGR(%) → ポテンシャルポイント(0–100)。 */
@@ -114,43 +115,49 @@ const STAGES: Record<GrowthStage, string> = {
   declining: '転換期・要注意',
 }
 
-function classify(score: number, revCagr: number | null): GrowthStage {
-  let s: GrowthStage
-  if (score >= 74) s = 'hypergrowth'
-  else if (score >= 60) s = 'growth'
-  else if (score >= 46) s = 'mature'
-  else s = 'declining'
-  // 明確な売上減少は一段引き下げ
-  if (revCagr !== null && revCagr <= -5 && s === 'growth') s = 'mature'
-  return s
+function classify(score: number, revenueCagr: number | null): GrowthStage {
+  let stage: GrowthStage
+  if (score >= 74) stage = 'hypergrowth'
+  else if (score >= 60) stage = 'growth'
+  else if (score >= 46) stage = 'mature'
+  else stage = 'declining'
+
+  if (revenueCagr !== null && revenueCagr <= -5 && stage === 'growth') stage = 'mature'
+  return stage
 }
 
-function outlookText(stage: GrowthStage, c: Company, note: string): string {
-  const n = c.name
+function confidenceLabel(coverage: number): string {
+  if (coverage >= 0.85) return '高'
+  if (coverage >= 0.65) return '中'
+  return '低'
+}
+
+function outlookText(stage: GrowthStage, company: Company, note: string, coverage: number): string {
+  const evidence = `データ充足率${Math.round(coverage * 100)}%（信頼度${confidenceLabel(coverage)}）`
   switch (stage) {
     case 'hypergrowth':
-      return `${n} は将来性が高い水準。${note}。伸びる市場でキャリアの選択肢が広がりやすい環境です。`
+      return `${company.name} は将来性が高い水準。${note}。伸びる市場でキャリアの選択肢が広がりやすい環境です。${evidence}。`
     case 'growth':
-      return `${n} は成長が見込める水準。${note}。安定と成長のバランスが取りやすいでしょう。`
+      return `${company.name} は成長が見込める水準。${note}。安定と成長のバランスが取りやすいでしょう。${evidence}。`
     case 'mature':
-      return `${n} は成熟・安定の水準。${note}。大きな成長より安定を重視する人に向きます。`
+      return `${company.name} は成熟・安定の水準。${note}。大きな成長より安定を重視する人に向きます。${evidence}。`
     case 'declining':
-      return `${n} は構造的な逆風がある水準。${note}。事業転換の動向とスキルの汎用性を意識したい局面です。`
+      return `${company.name} は構造的な逆風がある水準。${note}。事業転換の動向とスキルの汎用性を意識したい局面です。${evidence}。`
   }
 }
 
 /** 企業の将来性を評価。純粋関数。 */
-export function evaluateGrowth(c: Company): GrowthEvaluation {
-  const outlook = industryOutlook(c.industry)
-  const revCagr = cagr(c.revenueHistory)
-  const empCagr = cagr(c.employeeHistory)
-  const age = c.founded ? Math.max(0, CURRENT_YEAR - c.founded) : null
+export function evaluateGrowth(company: Company): GrowthEvaluation {
+  const outlook = industryOutlook(company.industry)
+  const revenueCagr = cagr(company.revenueHistory)
+  const headcountCagr = cagr(company.employeeHistory)
+  const age = company.founded ? Math.max(0, CURRENT_YEAR - company.founded) : null
 
   const raw: (GrowthFactor & { base: number })[] = [
     {
       key: 'industry',
       label: '業種の将来性',
-      valueLabel: `${c.industry}｜${outlook.note}`,
+      valueLabel: `${company.industry}｜${outlook.note}`,
       potential: outlook.score,
       available: true,
       base: BASE_WEIGHTS.industry,
@@ -160,9 +167,9 @@ export function evaluateGrowth(c: Company): GrowthEvaluation {
     {
       key: 'revenueGrowth',
       label: '売上成長率',
-      valueLabel: revCagr !== null ? `年率 ${revCagr.toFixed(1)}%` : 'データ未取得',
-      potential: revCagr !== null ? growthRateToPotential(revCagr) : 50,
-      available: revCagr !== null,
+      valueLabel: revenueCagr !== null ? `年率 ${revenueCagr.toFixed(1)}%` : 'データ未取得',
+      potential: revenueCagr !== null ? growthRateToPotential(revenueCagr) : 50,
+      available: revenueCagr !== null,
       base: BASE_WEIGHTS.revenueGrowth,
       weight: 0,
       contribution: 0,
@@ -170,9 +177,9 @@ export function evaluateGrowth(c: Company): GrowthEvaluation {
     {
       key: 'headcountGrowth',
       label: '従業員数の成長',
-      valueLabel: empCagr !== null ? `年率 ${empCagr.toFixed(1)}%` : 'データ未取得',
-      potential: empCagr !== null ? growthRateToPotential(empCagr) : 50,
-      available: empCagr !== null,
+      valueLabel: headcountCagr !== null ? `年率 ${headcountCagr.toFixed(1)}%` : 'データ未取得',
+      potential: headcountCagr !== null ? growthRateToPotential(headcountCagr) : 50,
+      available: headcountCagr !== null,
       base: BASE_WEIGHTS.headcountGrowth,
       weight: 0,
       contribution: 0,
@@ -180,7 +187,7 @@ export function evaluateGrowth(c: Company): GrowthEvaluation {
     {
       key: 'age',
       label: '成長ステージ（企業年齢）',
-      valueLabel: age !== null ? `設立${c.founded}年・${age}年目` : 'データ未取得',
+      valueLabel: age !== null ? `設立${company.founded}年・${age}年目` : 'データ未取得',
       potential: age !== null ? ageToPotential(age) : 55,
       available: age !== null,
       base: BASE_WEIGHTS.age,
@@ -190,8 +197,8 @@ export function evaluateGrowth(c: Company): GrowthEvaluation {
     {
       key: 'scale',
       label: '事業規模の安定性',
-      valueLabel: `従業員 ${c.employees.toLocaleString()}名`,
-      potential: scaleToPotential(c.employees),
+      valueLabel: `従業員 ${company.employees.toLocaleString()}名`,
+      potential: scaleToPotential(company.employees),
       available: true,
       base: BASE_WEIGHTS.scale,
       weight: 0,
@@ -200,8 +207,8 @@ export function evaluateGrowth(c: Company): GrowthEvaluation {
     {
       key: 'capital',
       label: '資本アクセス（上場）',
-      valueLabel: c.listed ? '上場' : '非上場',
-      potential: c.listed ? 66 : 54,
+      valueLabel: company.listed ? '上場' : '非上場',
+      potential: company.listed ? 66 : 54,
       available: true,
       base: BASE_WEIGHTS.capital,
       weight: 0,
@@ -209,35 +216,37 @@ export function evaluateGrowth(c: Company): GrowthEvaluation {
     },
   ]
 
-  // 利用可能な要因のみで重みを再正規化
-  const availSum = raw.filter((f) => f.available).reduce((s, f) => s + f.base, 0)
-  const factors: GrowthFactor[] = raw.map((f) => {
-    const weight = f.available ? f.base / availSum : 0
+  const coverage = clamp(raw.filter((factor) => factor.available).reduce((sum, factor) => sum + factor.base, 0), 0, 1)
+  const normalization = coverage || 1
+  const factors: GrowthFactor[] = raw.map((factor) => {
+    const weight = factor.available ? factor.base / normalization : 0
     return {
-      key: f.key,
-      label: f.label,
-      valueLabel: f.valueLabel,
-      potential: Math.round(f.potential),
-      available: f.available,
+      key: factor.key,
+      label: factor.label,
+      valueLabel: factor.valueLabel,
+      potential: Math.round(factor.potential),
+      available: factor.available,
       weight,
-      contribution: f.available ? f.potential * weight : 0,
+      contribution: factor.available ? factor.potential * weight : 0,
     }
   })
 
-  const growthScore = Math.round(clamp(factors.reduce((s, f) => s + f.contribution, 0)))
-  const stage = classify(growthScore, revCagr)
+  const rawScore = clamp(factors.reduce((sum, factor) => sum + factor.contribution, 0))
+  const growthScore = Math.round(clamp(50 + (rawScore - 50) * coverage))
+  const stage = classify(growthScore, revenueCagr)
 
   const strengths: string[] = []
   const risks: string[] = []
-  if (outlook.score >= 70) strengths.push(`成長市場（${c.industry}）に位置する`)
-  if (outlook.score < 45) risks.push(`構造的な逆風のある業種（${c.industry}）`)
-  if (revCagr !== null && revCagr >= 7) strengths.push(`売上が年率 ${revCagr.toFixed(1)}% で伸長`)
-  if (revCagr !== null && revCagr <= -3) risks.push(`売上が年率 ${revCagr.toFixed(1)}% で減少`)
-  if (empCagr !== null && empCagr >= 5) strengths.push(`従業員数が年率 ${empCagr.toFixed(1)}% で増加（採用拡大）`)
-  if (empCagr !== null && empCagr <= -3) risks.push(`従業員数が年率 ${empCagr.toFixed(1)}% で減少`)
+  if (outlook.score >= 70) strengths.push(`成長市場（${company.industry}）に位置する`)
+  if (outlook.score < 45) risks.push(`構造的な逆風のある業種（${company.industry}）`)
+  if (revenueCagr !== null && revenueCagr >= 7) strengths.push(`売上が年率 ${revenueCagr.toFixed(1)}% で伸長`)
+  if (revenueCagr !== null && revenueCagr <= -3) risks.push(`売上が年率 ${revenueCagr.toFixed(1)}% で減少`)
+  if (headcountCagr !== null && headcountCagr >= 5) strengths.push(`従業員数が年率 ${headcountCagr.toFixed(1)}% で増加（採用拡大）`)
+  if (headcountCagr !== null && headcountCagr <= -3) risks.push(`従業員数が年率 ${headcountCagr.toFixed(1)}% で減少`)
   if (age !== null && age <= 20 && age >= 3) strengths.push('若く成長余地のあるステージ')
   if (age !== null && age >= 80) risks.push('歴史が長く、変革スピードが課題になりやすい')
-  if (c.listed) strengths.push('上場企業で資金調達・ガバナンス面が安定')
+  if (company.listed) strengths.push('上場企業で資金調達・ガバナンス面が安定')
+  if (coverage < 0.65) risks.push(`将来性データの充足率が${Math.round(coverage * 100)}%のため、スコアを中立値へ補正`)
 
   return {
     growthScore,
@@ -246,8 +255,8 @@ export function evaluateGrowth(c: Company): GrowthEvaluation {
     factors,
     strengths,
     risks,
-    outlook: outlookText(stage, c, outlook.note),
-    revenueCagr: revCagr,
-    headcountCagr: empCagr,
+    outlook: outlookText(stage, company, outlook.note, coverage),
+    revenueCagr,
+    headcountCagr,
   }
 }
