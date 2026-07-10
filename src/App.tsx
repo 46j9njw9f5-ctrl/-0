@@ -20,6 +20,7 @@ import { CompanyCard } from './components/CompanyCard'
 import { CompanyDetail } from './components/CompanyDetail'
 import { ComparePanel } from './components/ComparePanel'
 import { Dashboard } from './components/Dashboard'
+import { SiteFooter } from './components/Legal'
 import { AdSlot, AffiliateStrip } from './monetize/Ad'
 import { activeAffiliates, hasAdsense, hasAnyAds } from './monetize/config'
 
@@ -502,6 +503,8 @@ export default function App() {
       )}
       </>
       )}
+
+      <SiteFooter />
     </div>
   )
 }

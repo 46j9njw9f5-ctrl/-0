@@ -69,6 +69,21 @@ export const monetize = {
   ] as AffiliateOffer[],
 }
 
+// サイト情報・法令ページ用（プライバシーポリシー等の表示に使用）。
+// AdSense / アフィリエイト審査ではこれらの記載が実質必須。
+export const site = {
+  name: '-0（ゼロ）',
+  url: 'https://46j9njw9f5-ctrl.github.io/-0/',
+  // 運営者名。審査の信頼性のため実名 or ハンドルネームを推奨。あとで自由に変更可。
+  operator: '（運営者名を設定してください）',
+  // お問い合わせ先。既定は GitHub の Issue ページ（公開情報）。
+  // メールにしたい場合はここを 'mailto:あなた@example.com' 等に変更。
+  contactUrl: 'https://github.com/46j9njw9f5-ctrl/-0/issues',
+  contactLabel: 'GitHub の Issue ページ',
+  // ポリシー最終更新日（表示用の固定文字列）。
+  policyUpdated: '2026年7月',
+}
+
 /** AdSense が有効に設定されているか（pub-ID とスロットの両方が必要） */
 export function hasAdsense(): boolean {
   return monetize.adsenseClient.startsWith('ca-pub-') && monetize.adsenseSlot.length > 0
