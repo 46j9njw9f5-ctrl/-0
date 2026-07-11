@@ -1,5 +1,32 @@
-import type { GrowthFactor, Tier, WorkabilityEvaluation } from '../types'
+import type { DataConfidence, GrowthFactor, Tier, WorkabilityEvaluation } from '../types'
 import { overtimeRisk, turnoverRisk, tenureRisk } from './scoring'
+
+// 信頼度の判定対象＝働きやすさの主要5項目（順序も表示に使う）。
+const CONFIDENCE_ITEMS: { key: keyof WorkabilityInput; label: string }[] = [
+  { key: 'avgOvertimeHours', label: '平均残業時間' },
+  { key: 'paidLeaveRate', label: '有給取得率' },
+  { key: 'turnover3yrRate', label: '3年以内離職率' },
+  { key: 'avgTenureYears', label: '平均勤続年数' },
+  { key: 'womenManagerRate', label: '女性管理職比率' },
+]
+
+/** 主要5項目の充足からデータ信頼度を求める（スコアとは独立）。 */
+function computeConfidence(m: WorkabilityInput) {
+  const present = CONFIDENCE_ITEMS.filter((it) => m[it.key] !== undefined)
+  const availableCount = present.length
+  const totalCount = CONFIDENCE_ITEMS.length
+  const coverage = availableCount / totalCount
+  const confidence: DataConfidence = coverage >= 0.8 ? 'high' : coverage >= 0.5 ? 'medium' : 'low'
+  return {
+    availableCount,
+    totalCount,
+    coverage,
+    confidence,
+    presentItems: present.map((it) => it.label),
+    missingItems: CONFIDENCE_ITEMS.filter((it) => m[it.key] === undefined).map((it) => it.label),
+    isReference: confidence === 'low',
+  }
+}
 
 /**
  * 働きやすさ評価エンジン。
@@ -67,5 +94,5 @@ export function evaluateWorkability(m: WorkabilityInput): WorkabilityEvaluation 
   if (m.avgTenureYears !== undefined && m.avgTenureYears >= 12) highlights.push('平均勤続が長く安定している')
   if (coverage < 0.6) highlights.push(`公開データの充足率が${Math.round(coverage * 100)}%のため、評価を中立値へ補正`)
 
-  return { score, tier, tierLabel: label, factors, highlights }
+  return { score, tier, tierLabel: label, factors, highlights, ...computeConfidence(m) }
 }

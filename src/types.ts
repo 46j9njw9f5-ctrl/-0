@@ -228,6 +228,9 @@ export interface StockSnapshot {
 
 // ---------- 働きやすさ評価 ----------
 
+/** データ信頼度（充足率に基づく）。 */
+export type DataConfidence = 'high' | 'medium' | 'low'
+
 export interface WorkabilityEvaluation {
   /** 働きやすさスコア 0–100（高いほど働きやすい） */
   score: number
@@ -235,4 +238,19 @@ export interface WorkabilityEvaluation {
   tierLabel: string
   factors: GrowthFactor[]
   highlights: string[]
+  // ── データ充足度（主要5項目のうち存在する数。スコアとは分けて提示） ──
+  /** 揃っている主要項目数（0–5） */
+  availableCount: number
+  /** 主要項目の総数（=5） */
+  totalCount: number
+  /** 充足率 = availableCount / totalCount（0–1） */
+  coverage: number
+  /** 高(≥80%) / 中(50–80%) / 低(<50%) */
+  confidence: DataConfidence
+  /** 取得できている主要項目のラベル */
+  presentItems: string[]
+  /** 未取得の主要項目のラベル */
+  missingItems: string[]
+  /** 参考値として扱うべきか（低信頼度＝充足率50%未満） */
+  isReference: boolean
 }

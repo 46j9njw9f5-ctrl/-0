@@ -1,13 +1,4 @@
-import {
-  Fragment,
-  Suspense,
-  lazy,
-  useCallback,
-  useDeferredValue,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react'
+import { Fragment, Suspense, lazy, useCallback, useEffect, useMemo, useState } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { getRows, type Row } from '../data/rows'
 import { datasets, type DatasetKey } from '../data'
@@ -18,6 +9,7 @@ import { SiteFooter } from '../components/Legal'
 import { AdSlot, AffiliateStrip } from '../monetize/Ad'
 import { activeAffiliates, hasAdsense, hasAnyAds } from '../monetize/config'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useDebouncedSearch } from '../hooks/useDebouncedValue'
 
 // 重いUIは初期バンドルから分離（React.lazy）。チャートもこの分割に含まれる。
 const Dashboard = lazy(() => import('../components/Dashboard').then((m) => ({ default: m.Dashboard })))
@@ -87,8 +79,8 @@ export default function HomePage() {
   const [visibleCount, setVisibleCount] = useState(60)
   const [theme, setTheme] = useState<Theme>(loadTheme)
 
-  // 検索入力は即時反映、フィルタ計算は遅延（大量データでも入力が引っかからない）
-  const deferredQuery = useDeferredValue(query)
+  // 検索入力は即時反映、絞り込み計算だけ 200ms debounce（クリアは即時）
+  const debouncedQuery = useDebouncedSearch(query, 200)
 
   useEffect(() => {
     applyTheme(theme)
@@ -108,7 +100,7 @@ export default function HomePage() {
 
   useEffect(() => {
     setVisibleCount(60)
-  }, [deferredQuery, industry, sort, onlyFavorites, promisingOnly, safeOnly, gemsOnly, priorities, datasetKey])
+  }, [debouncedQuery, industry, sort, onlyFavorites, promisingOnly, safeOnly, gemsOnly, priorities, datasetKey])
 
   useEffect(() => {
     setIndustry('すべて')
@@ -144,6 +136,17 @@ export default function HomePage() {
     [dataset],
   )
 
+  // includes の O(n) 走査を避ける（一覧の各カードで毎回参照するため Set 化）。
+  const favoritesSet = useMemo(() => new Set(favorites), [favorites])
+  const compareSet = useMemo(() => new Set(compare), [compare])
+  // マッチ度は絞り込み・並び替え・カード表示で同じ行に対し何度も計算されるため事前計算。
+  const matchScores = useMemo(() => {
+    if (!priorities.length) return null
+    const m = new Map<string, number | null>()
+    for (const r of rows) m.set(r.company.id, matchScore(r.scores, priorities))
+    return m
+  }, [rows, priorities])
+
   const fitAxes = useMemo(() => availableAxes(rows.map((r) => r.scores)), [rows])
   const gemIds = useMemo(
     () =>
@@ -165,10 +168,10 @@ export default function HomePage() {
   }
 
   const filtered = useMemo(() => {
-    const q = deferredQuery.trim().toLowerCase()
+    const q = debouncedQuery.trim().toLowerCase()
     const list = rows.filter((r) => {
       if (industry !== 'すべて' && r.company.industry !== industry) return false
-      if (onlyFavorites && !favorites.includes(r.company.id)) return false
+      if (onlyFavorites && !favoritesSet.has(r.company.id)) return false
       if (promisingOnly && r.growth.growthScore < 60) return false
       if (gemsOnly && !gemIds.has(r.company.id)) return false
       if (safeOnly && r.evaluation && (r.evaluation.level === 'danger' || r.evaluation.level === 'caution'))
@@ -182,7 +185,7 @@ export default function HomePage() {
     return [...list].sort((a, b) => {
       switch (sort) {
         case 'match':
-          return (matchScore(b.scores, priorities) ?? -1) - (matchScore(a.scores, priorities) ?? -1)
+          return (matchScores?.get(b.company.id) ?? -1) - (matchScores?.get(a.company.id) ?? -1)
         case 'growth':
           return b.growth.growthScore - a.growth.growthScore
         case 'growthLow':
@@ -201,7 +204,7 @@ export default function HomePage() {
           return (b.evaluation?.blackScore ?? -1) - (a.evaluation?.blackScore ?? -1)
       }
     })
-  }, [rows, deferredQuery, industry, sort, onlyFavorites, promisingOnly, safeOnly, gemsOnly, gemIds, favorites, priorities])
+  }, [rows, debouncedQuery, industry, sort, onlyFavorites, promisingOnly, safeOnly, gemsOnly, gemIds, favoritesSet, matchScores])
 
   const offers = useMemo(() => activeAffiliates(), [])
   const compareRows = compare
@@ -429,9 +432,9 @@ export default function HomePage() {
                       productivity={r.productivity}
                       evaluation={r.evaluation}
                       workability={r.workability}
-                      match={priorities.length ? matchScore(r.scores, priorities) : null}
-                      isFavorite={favorites.includes(r.company.id)}
-                      inCompare={compare.includes(r.company.id)}
+                      match={matchScores ? (matchScores.get(r.company.id) ?? null) : null}
+                      isFavorite={favoritesSet.has(r.company.id)}
+                      inCompare={compareSet.has(r.company.id)}
                       onOpen={openCompany}
                       onToggleFavorite={toggleFavorite}
                       onToggleCompare={toggleCompare}

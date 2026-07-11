@@ -302,6 +302,9 @@ export function CompanyDetail({
                 ))}
               </div>
             </div>
+
+            <WorkabilityConfidence w={workability} />
+
             <FactorBars
               factors={workability.factors.map((f) => ({
                 key: f.key,
@@ -411,6 +414,36 @@ export function CompanyDetail({
           </div>
         )}
       </div>
+    </div>
+  )
+}
+
+function WorkabilityConfidence({ w }: { w: WorkabilityEvaluation }) {
+  const cls = w.confidence === 'high' ? 'lv-excellent' : w.confidence === 'medium' ? 'lv-caution' : 'lv-danger'
+  const label = w.confidence === 'high' ? '高' : w.confidence === 'medium' ? '中' : '低'
+  return (
+    <div className="confidence" role="note" aria-label="働きやすさデータの充足度">
+      <div className="confidence__row">
+        <span className={`badge ${cls}`}>
+          <span className="badge__dot" aria-hidden="true" />
+          データ充足度：{label}（{w.availableCount}/{w.totalCount}項目{w.isReference ? '・参考値' : ''}）
+        </span>
+      </div>
+      <div className="confidence__items">
+        <span>
+          <b>取得できている項目:</b> {w.presentItems.length ? w.presentItems.join('・') : 'なし'}
+        </span>
+        {w.missingItems.length > 0 && (
+          <span className="confidence__missing">
+            <b>未取得:</b> {w.missingItems.join('・')}
+          </span>
+        )}
+      </div>
+      {w.confidence === 'low' && (
+        <p className="confidence__note">
+          公開データが限定的なため、このスコアは<b>参考値</b>です。応募前に求人票や面接で実態を確認してください。
+        </p>
+      )}
     </div>
   )
 }
