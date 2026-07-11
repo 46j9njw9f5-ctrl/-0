@@ -2184,3 +2184,36 @@ a {
 @media (prefers-reduced-motion: reduce) {
   .app-loading__logo::after { animation: none; opacity: 0.8; }
 }
+
+/* 働きやすさ データ充足度の項目リスト */
+.confidence__items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+.confidence__items b { color: var(--text); font-weight: 700; }
+.confidence__missing { color: var(--text-faint); }
+
+/* エラー時のフォールバック（真っ白防止） */
+.app-error {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  padding: 24px;
+}
+.app-error p {
+  color: var(--text-dim);
+  max-width: 34ch;
+  line-height: 1.7;
+}
+.app-error .btn {
+  flex: 0 0 auto;
+  padding-inline: 24px;
+}
