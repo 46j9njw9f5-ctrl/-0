@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState, type KeyboardEvent } from 'react'
 import type {
   Company,
   Evaluation,
@@ -10,6 +10,7 @@ import type {
 import { buildOverview } from '../engine/overview'
 import { buildBenchmark } from '../engine/benchmark'
 import { describeFit, type AxisScores } from '../engine/fit'
+import { useModalA11y } from '../hooks/useModalA11y'
 import { formatYen, growthColor, potentialColor, riskColor } from '../ui'
 import { Avatar, Donut, GradeBadge, GrowthBadge, GrowthDonut, RiskBadge, ScoreDonut, Sparkline } from './Bits'
 import { Radar } from './charts'
@@ -49,42 +50,59 @@ export function CompanyDetail({
   if (evaluation) tabs.push({ key: 'risk', label: '🛡 リスク' })
 
   const [tab, setTab] = useState('overview')
+  const modalRef = useModalA11y<HTMLDivElement>(onClose)
 
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
+  // 左右キーでタブ移動（tablist の標準操作）
+  const onTabKey = (e: KeyboardEvent, i: number) => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return
+    e.preventDefault()
+    const next = e.key === 'ArrowRight' ? (i + 1) % tabs.length : (i - 1 + tabs.length) % tabs.length
+    setTab(tabs[next].key)
+    document.getElementById(`cd-tab-${tabs[next].key}`)?.focus()
+  }
 
   return (
     <div className="overlay" onClick={onClose}>
-      <div className="modal" role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cd-title"
+        aria-describedby="cd-desc"
+        ref={modalRef}
+        tabIndex={-1}
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="modal__top">
         <div className="modal__head">
           <Avatar company={company} size={52} />
           <div style={{ minWidth: 0 }}>
-            <h2 style={{ margin: 0, fontSize: 22 }}>{company.name}</h2>
-            <div className="card__meta">
+            <h2 id="cd-title" style={{ margin: 0, fontSize: 22 }}>{company.name}</h2>
+            <div className="card__meta" id="cd-desc">
               {company.industry}・{company.location}・
               {company.listed ? '上場' : '非上場'}
               {company.founded ? `・設立${company.founded}年` : ''}・従業員
               {company.employees.toLocaleString()}名
             </div>
           </div>
-          <button className="modal__close" onClick={onClose} aria-label="閉じる">
-            ×
+          <button className="modal__close" onClick={onClose} aria-label="企業詳細を閉じる">
+            <span aria-hidden="true">×</span>
           </button>
         </div>
 
         {/* タブ */}
-        <div className="tabs">
-          {tabs.map((t) => (
+        <div className="tabs" role="tablist" aria-label="企業評価の詳細">
+          {tabs.map((t, i) => (
             <button
               key={t.key}
+              id={`cd-tab-${t.key}`}
+              role="tab"
+              aria-selected={tab === t.key}
+              aria-controls={`cd-panel-${t.key}`}
+              tabIndex={tab === t.key ? 0 : -1}
               className={`tab ${tab === t.key ? 'tab--active' : ''}`}
               onClick={() => setTab(t.key)}
+              onKeyDown={(e) => onTabKey(e, i)}
             >
               {t.label}
             </button>
@@ -93,7 +111,7 @@ export function CompanyDetail({
         </div>
 
         {tab === 'overview' && (
-          <div className="tab-body">
+          <div className="tab-body" role="tabpanel" id="cd-panel-overview" aria-labelledby="cd-tab-overview" tabIndex={0}>
             <div className="grade-row">
               {overview.axes.map((a) => (
                 <div className="grade-cell" key={a.key}>
@@ -186,7 +204,7 @@ export function CompanyDetail({
         )}
 
         {tab === 'growth' && (
-          <div className="tab-body">
+          <div className="tab-body" role="tabpanel" id="cd-panel-growth" aria-labelledby="cd-tab-growth" tabIndex={0}>
             <div className="score-wrap">
               <GrowthDonut growth={growth} size={76} />
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -231,7 +249,7 @@ export function CompanyDetail({
         )}
 
         {tab === 'money' && (
-          <div className="tab-body">
+          <div className="tab-body" role="tabpanel" id="cd-panel-money" aria-labelledby="cd-tab-money" tabIndex={0}>
             {productivity.score !== null && (
               <>
                 <div className="section-title">📈 生産性</div>
@@ -269,7 +287,7 @@ export function CompanyDetail({
         )}
 
         {tab === 'work' && workability && (
-          <div className="tab-body">
+          <div className="tab-body" role="tabpanel" id="cd-panel-work" aria-labelledby="cd-tab-work" tabIndex={0}>
             <div className="score-wrap">
               <Donut value={workability.score} color={growthColor(workability.score)} caption="働きやすさ" size={76} />
               <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -339,7 +357,7 @@ export function CompanyDetail({
         )}
 
         {tab === 'risk' && evaluation && m && (
-          <div className="tab-body">
+          <div className="tab-body" role="tabpanel" id="cd-panel-risk" aria-labelledby="cd-tab-risk" tabIndex={0}>
             <div className="score-wrap">
               <ScoreDonut evaluation={evaluation} size={76} />
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
