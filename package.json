@@ -6,7 +6,7 @@
   "description": "就職者のための企業評価・ブラック企業可視化アプリ",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
