@@ -1889,6 +1889,149 @@ a {
   }
 }
 
+/* 掲載パートナー募集枠（広告・アフィリ未設定時のフォールバック） */
+.partner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.partner:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.partner__label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+.partner__title {
+  font-size: 15px;
+  font-weight: 700;
+  padding-right: 88px;
+}
+.partner__desc {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+.partner__cta {
+  margin-top: 2px;
+  align-self: flex-start;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--accent);
+}
+.partner--compact {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.partner--compact .partner__title {
+  padding-right: 0;
+  font-size: 13.5px;
+}
+
+/* 企業詳細「次の行動」CTA（外部求人・採用ページへの導線） */
+.cta {
+  margin: 16px 0 4px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+}
+.cta__title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+}
+.cta__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cta__btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  background: var(--bg);
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+.cta__btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+}
+.cta__btn--primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+.cta__btn--sponsored {
+  border-style: dashed;
+}
+.cta__btn--muted {
+  color: var(--text-dim);
+  border-style: dashed;
+}
+.cta__ad {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 0 5px;
+  line-height: 1.5;
+}
+.cta__note {
+  margin: 10px 0 0;
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--text-faint);
+}
+.contact-kinds {
+  margin: 6px 0 12px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+.assert-note {
+  margin: 12px 0 0;
+  padding: 8px 10px;
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--text-dim);
+  background: var(--bg-elev);
+  border-left: 3px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+}
+
 /* ─────────────────────────────────────────────────────────────
    サイトフッター（プライバシーポリシー・運営者情報）
    審査対応の法令ページ。控えめで読みやすく。

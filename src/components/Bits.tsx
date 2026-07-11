@@ -68,7 +68,7 @@ export function GrowthBadge({ growth }: { growth: GrowthEvaluation }) {
 /** ブラック度ドーナツ（高いほど危険＝赤）。 */
 export function ScoreDonut({ evaluation, size }: { evaluation: Evaluation; size?: number }) {
   return (
-    <Donut value={evaluation.blackScore} color={levelColor[evaluation.level]} caption="ブラック度" size={size} />
+    <Donut value={evaluation.blackScore} color={levelColor[evaluation.level]} caption="リスク度" size={size} />
   )
 }
 

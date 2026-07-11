@@ -10,6 +10,7 @@ import { AdSlot, AffiliateStrip } from '../monetize/Ad'
 import { activeAffiliates, hasAdsense, hasAnyAds } from '../monetize/config'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useDebouncedSearch } from '../hooks/useDebouncedValue'
+import { track } from '../analytics/track'
 
 // 重いUIは初期バンドルから分離（React.lazy）。チャートもこの分割に含まれる。
 const Dashboard = lazy(() => import('../components/Dashboard').then((m) => ({ default: m.Dashboard })))
@@ -25,7 +26,7 @@ const SORTS: { key: SortKey; label: string; need?: 'work' | 'eval' }[] = [
   { key: 'young', label: '設立が新しい順' },
   { key: 'work', label: '働きやすい順', need: 'work' },
   { key: 'white', label: 'ホワイト度が高い順', need: 'eval' },
-  { key: 'black', label: 'ブラック度が高い順', need: 'eval' },
+  { key: 'black', label: '労働環境リスクが高い順', need: 'eval' },
 ]
 
 const FAV_KEY = 'zero.favorites.v2'
@@ -56,9 +57,9 @@ function loadFavorites(): string[] {
 
 export default function HomePage() {
   useDocumentMeta({
-    title: '-0（ゼロ）| 就職者のための企業評価・ブラック企業リスク可視化',
+    title: '-0（ゼロ）| 就職者のための企業評価・労働環境リスク可視化',
     description:
-      '実データと独自ロジックで、企業の将来性・生産性・働きやすさ・ブラック企業リスクを可視化。公開データに基づく参考指標です。',
+      '実データと独自ロジックで、企業の将来性・生産性・働きやすさ・労働環境リスクを可視化。公開データに基づく参考指標です。',
     path: '/',
   })
 
@@ -81,6 +82,12 @@ export default function HomePage() {
 
   // 検索入力は即時反映、絞り込み計算だけ 200ms debounce（クリアは即時）
   const debouncedQuery = useDebouncedSearch(query, 200)
+
+  // 検索実行を匿名計測（本文は送らず件数目安のみ）。
+  useEffect(() => {
+    const q = debouncedQuery.trim()
+    if (q) track('search', { len: q.length })
+  }, [debouncedQuery])
 
   useEffect(() => {
     applyTheme(theme)
@@ -120,7 +127,13 @@ export default function HomePage() {
     [],
   )
   const toggleCompare = useCallback(
-    (id: string) => setCompare((c) => (c.includes(id) ? c.filter((x) => x !== id) : c.length >= 4 ? c : [...c, id])),
+    (id: string) =>
+      setCompare((c) => {
+        if (c.includes(id)) return c.filter((x) => x !== id)
+        if (c.length >= 4) return c
+        track('compare_add', { company: id })
+        return [...c, id]
+      }),
     [],
   )
 
@@ -128,8 +141,13 @@ export default function HomePage() {
     setPriorities((p) => {
       const next = p.includes(key) ? p.filter((x) => x !== key) : [...p, key]
       setSort(next.length ? 'match' : 'growth')
+      track('filter', { kind: 'priority', count: next.length })
       return next
     })
+  const selectIndustry = (ind: string) => {
+    setIndustry(ind)
+    if (ind !== 'すべて') track('filter', { kind: 'industry' })
+  }
 
   const industries = useMemo(
     () => ['すべて', ...Array.from(new Set(dataset.companies.map((c) => c.industry)))],
@@ -236,7 +254,7 @@ export default function HomePage() {
           </button>
         </div>
         <div className="subhead">
-          実データと独自ロジックで<b>将来性</b>と<b>ブラック企業リスク</b>を可視化。
+          実データと独自ロジックで<b>将来性</b>と<b>労働環境リスク</b>を可視化。
           現在 <b>{dataset.label}</b> の {dataset.companies.length} 社を分析中
           （うち急成長期 <b style={{ color: 'var(--excellent)' }}>{promisingCount}社</b>）。
         </div>
@@ -296,7 +314,7 @@ export default function HomePage() {
                 <span className="legend__g" style={{ color: 'var(--danger)' }}>D 要注意</span>
               </div>
               <p>
-                各スコアは 0〜100 で、<b>高いほど良い向き</b>に揃えています（安全度＝ブラック度の裏返し）。
+                各スコアは 0〜100 で、<b>高いほど良い向き</b>に揃えています（安全度＝労働環境リスクの裏返し）。
                 <b>将来性</b>＝成長の見込み／<b>生産性</b>＝一人当たり売上／<b>働きやすさ</b>＝残業・有給・定着など／
                 <b>安全度</b>＝労働環境の健全性。グレードは根拠つきで、詳細画面のタブから確認できます。
                 算出方法は <a href="/methodology">スコアの算出方法</a> をご覧ください。
@@ -371,7 +389,7 @@ export default function HomePage() {
                 key={ind}
                 className={`chip ${industry === ind ? 'chip--active' : ''}`}
                 aria-pressed={industry === ind}
-                onClick={() => setIndustry(ind)}
+                onClick={() => selectIndustry(ind)}
               >
                 {ind}
               </button>
@@ -458,7 +476,7 @@ export default function HomePage() {
           <div className="disclaimer">
             「実データ（Wikidata）」の事実データ（従業員数・設立年・売上・業種）は Wikidata（CC0）由来です。
             働きやすさ（残業・有給・女性管理職）は厚労省 女性活躍・両立支援DB（公開データ）由来です。将来性スコアは業種見通し等の前提を含む
-            <b>参考値</b>で、投資・就職の助言ではありません。ブラック度は離職率・残業代・法令違反などの追加連携時のみ
+            <b>参考値</b>で、投資・就職の助言ではありません。労働環境リスクは離職率・残業代・法令違反などの追加連携時のみ
             算出します（実名企業に推測値は付与しません）。「デモ」データの企業は架空であり、実在の企業とは関係ありません。
             {hasAnyAds() && (
               <>
@@ -495,7 +513,10 @@ export default function HomePage() {
                 className="btn btn--primary"
                 style={{ flex: '0 0 auto' }}
                 disabled={compareRows.length < 2}
-                onClick={() => setShowCompare(true)}
+                onClick={() => {
+                  track('compare_done', { count: compareRows.length })
+                  setShowCompare(true)
+                }}
               >
                 {compareRows.length}社を比較
               </button>
