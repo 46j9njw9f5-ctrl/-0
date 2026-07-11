@@ -1,5 +1,5 @@
 import { Fragment, Suspense, lazy, useCallback, useEffect, useMemo, useState } from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Link, Outlet, useNavigate } from 'react-router-dom'
 import { getRows, type Row } from '../data/rows'
 import { datasets, type DatasetKey } from '../data'
 import { availableAxes, matchScore, PERSONAS } from '../engine/fit'
@@ -29,6 +29,7 @@ const SORTS: { key: SortKey; label: string; need?: 'work' | 'eval' }[] = [
   { key: 'black', label: '労働環境リスクが高い順', need: 'eval' },
 ]
 
+const DATA_UPDATED = '2026年7月'
 const FAV_KEY = 'zero.favorites.v2'
 const THEME_KEY = 'zero.theme'
 type Theme = 'light' | 'dark' | 'auto'
@@ -120,6 +121,18 @@ export default function HomePage() {
     if (!dataset.hasLabor) setSafeOnly(false)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [datasetKey])
+
+  const scrollToId = (id: string) => {
+    setView('list')
+    // レイアウト確定後にスクロール
+    requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
+  }
+  const findGems = () => {
+    setView('list')
+    setGemsOnly(true)
+    track('filter', { kind: 'hidden_gems' })
+    requestAnimationFrame(() => document.getElementById('results')?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
+  }
 
   const openCompany = useCallback((id: string) => navigate(`/company/${encodeURIComponent(id)}`), [navigate])
   const toggleFavorite = useCallback(
@@ -229,7 +242,6 @@ export default function HomePage() {
     .map((id) => rows.find((r) => r.company.id === id))
     .filter((x): x is Row => Boolean(x))
 
-  const promisingCount = rows.filter((r) => r.growth.growthScore >= 74).length
   const hasWork = rows.some((r) => r.workability)
   const hasEval = rows.some((r) => r.evaluation)
   const baseSorts = SORTS.filter((s) => !s.need || (s.need === 'work' ? hasWork : hasEval))
@@ -254,10 +266,32 @@ export default function HomePage() {
           </button>
         </div>
         <div className="subhead">
-          実データと独自ロジックで<b>将来性</b>と<b>労働環境リスク</b>を可視化。
-          現在 <b>{dataset.label}</b> の {dataset.companies.length} 社を分析中
-          （うち急成長期 <b style={{ color: 'var(--excellent)' }}>{promisingCount}社</b>）。
+          就職・転職の会社選びを、<b>公開データ</b>で比較して失敗を防ぐ。<b>将来性</b>と<b>労働環境リスク</b>を可視化し、
+          気になる会社の「次の行動」まで進めます。現在 <b>{dataset.label}</b> の {dataset.companies.length} 社を分析中。
         </div>
+        <div className="datasrc" aria-label="データ出典と更新日">
+          出典：Wikidata・厚労省 しょくばらぼ（公開オープンデータ） ／ データ更新：{DATA_UPDATED}
+        </div>
+        {view === 'list' && (
+          <nav className="quickstart" aria-label="はじめかた">
+            <button className="quickstart__btn" onClick={() => scrollToId('company-search')}>
+              <span className="quickstart__icon" aria-hidden="true">🔍</span>
+              <span className="quickstart__label">会社名で検索</span>
+            </button>
+            <button className="quickstart__btn" onClick={() => scrollToId('fit')}>
+              <span className="quickstart__icon" aria-hidden="true">🎯</span>
+              <span className="quickstart__label">条件から探す</span>
+            </button>
+            <button className="quickstart__btn" onClick={findGems}>
+              <span className="quickstart__icon" aria-hidden="true">💎</span>
+              <span className="quickstart__label">隠れ優良企業</span>
+            </button>
+            <Link className="quickstart__btn" to="/area">
+              <span className="quickstart__icon" aria-hidden="true">📍</span>
+              <span className="quickstart__label">地域から探す</span>
+            </Link>
+          </nav>
+        )}
       </header>
 
       <div className="dataset-tabs" role="tablist" aria-label="データセット">
@@ -322,7 +356,7 @@ export default function HomePage() {
             </div>
           </details>
 
-          <div className="fit">
+          <div className="fit" id="fit">
             <div className="fit__head">
               <span className="fit__title">🎯 あなたに合う会社を探す</span>
               <span className="fit__hint">重視することを選ぶと「マッチ度」で並び替えます</span>
@@ -431,7 +465,7 @@ export default function HomePage() {
             </button>
           </div>
 
-          <div className="result-meta" aria-live="polite">
+          <div className="result-meta" id="results" aria-live="polite">
             {filtered.length} 社中 {Math.min(visibleCount, filtered.length)} 社を表示中
           </div>
 
