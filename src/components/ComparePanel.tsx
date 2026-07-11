@@ -148,7 +148,7 @@ export function ComparePanel({ rows, onClose }: { rows: Row[]; onClose: () => vo
                     ))}
                   </tr>
                   <tr>
-                    <td>ブラック度</td>
+                    <td>労働環境リスク</td>
                     {rows.map((r) => (
                       <td
                         key={r.company.id}

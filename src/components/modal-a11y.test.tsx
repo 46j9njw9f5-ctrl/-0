@@ -1,6 +1,7 @@
 // @vitest-environment jsdom
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen, fireEvent, within } from '@testing-library/react'
+import { MemoryRouter } from 'react-router-dom'
 import { CompanyDetail } from './CompanyDetail'
 import { evaluateCompany } from '../data/rows'
 import type { Company } from '../types'
@@ -21,16 +22,18 @@ const bare = {
 function renderDetail(onClose = () => {}) {
   const row = evaluateCompany(bare)
   return render(
-    <CompanyDetail
-      company={row.company}
-      growth={row.growth}
-      productivity={row.productivity}
-      stock={row.stock}
-      evaluation={row.evaluation}
-      workability={row.workability}
-      scores={row.scores}
-      onClose={onClose}
-    />,
+    <MemoryRouter>
+      <CompanyDetail
+        company={row.company}
+        growth={row.growth}
+        productivity={row.productivity}
+        stock={row.stock}
+        evaluation={row.evaluation}
+        workability={row.workability}
+        scores={row.scores}
+        onClose={onClose}
+      />
+    </MemoryRouter>,
   )
 }
 

@@ -1,4 +1,4 @@
-import { useState, type KeyboardEvent } from 'react'
+import { useEffect, useState, type KeyboardEvent } from 'react'
 import type {
   Company,
   Evaluation,
@@ -14,6 +14,8 @@ import { useModalA11y } from '../hooks/useModalA11y'
 import { formatYen, growthColor, potentialColor, riskColor } from '../ui'
 import { Avatar, Donut, GradeBadge, GrowthBadge, GrowthDonut, RiskBadge, ScoreDonut, Sparkline } from './Bits'
 import { Radar } from './charts'
+import { CompanyCTA } from '../monetize/Ad'
+import { track } from '../analytics/track'
 
 interface Props {
   company: Company
@@ -51,6 +53,11 @@ export function CompanyDetail({
 
   const [tab, setTab] = useState('overview')
   const modalRef = useModalA11y<HTMLDivElement>(onClose)
+
+  // 企業詳細の表示を匿名計測（企業ID・業種のみ。個人情報は送らない）。
+  useEffect(() => {
+    track('company_view', { company: company.id, industry: company.industry })
+  }, [company.id, company.industry])
 
   // 左右キーでタブ移動（tablist の標準操作）
   const onTabKey = (e: KeyboardEvent, i: number) => {
@@ -189,7 +196,7 @@ export function CompanyDetail({
             {!evaluation && workability && company.laborReal && (
               <div className="notice notice--ok">
                 🌱 働きやすさは <b>{company.laborReal.source}</b>（公開データ）の実データで算出しています。
-                ブラック度（離職率・残業代・法令違反など）は追加の公的データ連携で有効化されます。
+                労働環境リスク（離職率・残業代・法令違反など）は追加の公的データ連携で有効化されます。
               </div>
             )}
             {!evaluation && !workability && (
@@ -199,6 +206,17 @@ export function CompanyDetail({
               </div>
             )}
 
+            <CompanyCTA
+              companyId={company.id}
+              companyName={company.name}
+              website={company.website}
+              industry={company.industry}
+            />
+
+            <p className="assert-note">
+              ※ 各スコアは公開データにもとづく<b>参考指標</b>で、現在の企業の状態を断定するものではありません。
+              応募前に求人票・面接・公式情報で必ずご確認ください。
+            </p>
             <SourceLine company={company} />
           </div>
         )}
@@ -383,7 +401,7 @@ export function CompanyDetail({
               </>
             )}
 
-            <div className="section-title">ブラック度スコアの根拠</div>
+            <div className="section-title">労働環境リスクスコアの根拠</div>
             <div>
               {evaluation.factors.map((f) => (
                 <div className="factor" key={f.key}>
