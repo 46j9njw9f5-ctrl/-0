@@ -95,6 +95,20 @@ Still required for v1 release:
 8. **`注目企業候補`** rename + heuristic note.
 9. Existing test baseline (111) not reduced; new legal/integrity tests pass; build + prerender succeed; 320–390px no overflow.
 
+## 11b. Data-quality finding — missing-as-zero (RELEASE BLOCKER, separate defect PR)
+
+Automated 100-company sample audit (documented sampling: 大/小規模・上場/非上場・全業種・高/低カバレッジ・類似名) results:
+
+- 実データセットに労働リスク入力（`metrics`）を持つ実企業：**0**（推定リスクスコアなし ✅）
+- `laborReal` あり × 法人番号なし（同定不可）：**0**（労働値は法人番号一致時のみ ✅）
+- カバレッジ算出可能：全サンプル ✅
+
+**Finding:** 全データで `paidLeaveRate === 0` または `avgTenureYears === 0` の企業が **約92社**。うち約90社は出典 `しょくばらぼ（厚労省）` だが、`scripts/add-shokuba-companies.mjs` の取り込みが有給列を `inRange(値,0,100)`（0を許容）で判定しているため、**未記入セルが 0 として保存**されている（`enrich-shokuba.mjs` は `>0` のみ採用しており不整合）。
+
+- 影響：企業詳細・カードに「有給取得率 0%」を**事実として表示**してしまう（§5・§9違反）。働きやすさスコアも 0 を実値として使うため不当に低くなりうる。
+- 規模：約1.1%（8,300社中92社）。
+- 対応方針（ブリーフ §2 / §13 準拠）：**本デザインPRではデータ・パイプライン・スコアを変更しない**。検証済み欠陥として**別PR**で、`add-shokuba-companies.mjs` の有給/勤続の取り込みを `>0` に統一し、該当セルを `null`（未公表）へ是正して再生成する。是正までは公開リリースのブロッカーとする。
+
 ## 12. Non-blockers / accepted for v1
 
 - Legacy internal identifiers (`blackScore`, `gems`, route/query keys) unchanged.
